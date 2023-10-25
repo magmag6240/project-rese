@@ -1,0 +1,167 @@
+.shop-list {
+    padding: 1vw 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-list-search {
+    position: absolute;
+    top: -5vw;
+    left: 49vw;
+    z-index: 1;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+    border-radius: 5px;
+}
+
+.search-form {
+    display: flex;
+    border-radius: 5px;
+}
+
+.select-area::after,
+.select-genre::after {
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f107';
+    color: #d4d3d3;
+    font-size: 1.5vw;
+    top: 1vw;
+}
+
+.select-area::after {
+    right: 37.5vw;
+}
+
+.select-genre::after {
+    right: 29.5vw;
+}
+
+.search-area, .search-genre {
+    appearance: none;
+    height: 4vw;
+    border: none;
+    background-color: #fff;
+    font-size: 1vw;
+    cursor: pointer;
+    background-image: linear-gradient(#d4d3d3, #d4d3d3);
+    background-repeat: no-repeat;
+    background-size: 1px 60%;
+    background-position: right center;
+}
+
+.search-area {
+    padding: 0 3vw 0 1vw;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.search-genre {
+    padding: 0 2vw 0 1vw;
+}
+
+.search-keyword {
+    font-size: 1vw;
+    width: 25vw;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search-button,
+.search-keyword {
+    background-color: #fff;
+    border: none;
+    padding: 0 1vw;
+    height: 4vw;
+}
+
+.search-button::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f002';
+    background-color: #fff;
+    color: #d4d3d3;
+    font-size: 1.5vw;
+}
+
+.shop {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+    width: 20vw;
+    margin: 1vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0.2vw 0.2vw 1vw 0 #808080;
+}
+
+.shop-img {
+    height: 50%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.shop-name, .shop-info, .shop-pref, .shop-genre {
+    background-color: #fff;
+}
+
+.shop-name {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 1.5vw 1.5vw 0 1.5vw;
+}
+
+.shop-info {
+    font-size: 0.9vw;
+    margin: 0 1.5vw;
+}
+
+.shop-button {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 1vw 0 1.5vw 1.5vw;
+}
+
+.shop-detail-button {
+    background-color: #4169E1;
+    border :none;
+    border-radius: 5px;
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+}
+
+.shop-detail-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.like {
+    background-color: #fff;
+}
+
+.like-link::before, .unlike-link::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f004';
+    font-size: 2vw;
+}
+
+.unlike-link, .like-link {
+    text-decoration: none;
+}
+
+.unlike-link::before {
+    color: #FF0000;
+}
+
+.like-link::before {
+    color: #808080;
+}
+
+.like-button, .unlike-button {
+    border: none;
+    background-color: #fff;
+    margin-right: 1.5vw;
+}

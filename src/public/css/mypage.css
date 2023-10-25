@@ -1,0 +1,21 @@
+.mypage {
+
+}
+
+.mypage-contents {
+    display: flex;
+}
+
+.reserve-list {
+    width: 50%;
+    background-color: #4169E1;
+}
+
+.reserve-list-title, .like-shop-title {
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+.like-shop-list {
+    display: flex;
+}

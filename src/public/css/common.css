@@ -1,0 +1,115 @@
+* {
+    max-width: 1500px;
+    background-color: #ededed;
+}
+
+.header {
+    padding: 4vw 6vw;
+}
+
+.app-logo {
+    color: #4169E1;
+    position: absolute;
+    font-size: 2.5vw;
+    top: 3vw;
+    left: 12vw;
+}
+
+.main {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-button {
+    width: 2vw;
+    height: 2vw;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-nav {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    z-index: 2;
+    transition: .5s;
+}
+
+.menu-nav.active {
+    left: 0;
+}
+
+.menu-list {
+    padding-top: 20vw;
+    background-color: #fff;
+}
+
+.menu-list-contents {
+    list-style: none;
+    cursor: pointer;
+    margin-top: 1.3vw;
+    background-color: #fff;
+}
+
+.logout-button, .menu-link {
+    font-size: 3vw;
+    background-color: #fff;
+    color: #4169E1;
+    cursor: pointer;
+}
+
+.menu-link {
+    text-decoration: none;
+}
+
+.logout-button {
+    border: none;
+    margin-bottom: 0.4vw;
+}
+
+.menu-open::before,
+.menu-close::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 1.5vw;
+    background-color: #4169E1;
+    border-radius: 5px;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+    position: absolute;
+    color: #fff;
+    z-index: 4;
+}
+
+.menu-open::before {
+    padding: 1vw 1.65vw;
+    content: '\f00d';
+}
+
+.menu-close::before {
+    padding: 1vw 1.5vw;
+    content: '\f0c9';
+}
+
+.menu-close {
+    opacity: 1;
+}
+
+.menu-close.active {
+    opacity: 0;
+}
+
+.menu-open {
+    opacity: 0;
+    background-color: #4169E1;
+}
+
+.menu-open.active {
+    opacity: 1;
+}
