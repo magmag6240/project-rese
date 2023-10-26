@@ -19,3 +19,91 @@
 .like-shop-list {
     display: flex;
 }
+
+.shop {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+    width: 20vw;
+    margin: 1vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0.2vw 0.2vw 1vw 0 #808080;
+}
+
+.shop-img {
+    height: 50%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.shop-name,
+.shop-info,
+.shop-pref,
+.shop-genre {
+    background-color: #fff;
+}
+
+.shop-name {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 1.5vw 1.5vw 0 1.5vw;
+}
+
+.shop-info {
+    font-size: 0.9vw;
+    margin: 0 1.5vw;
+}
+
+.shop-button {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 1vw 0 1.5vw 1.5vw;
+}
+
+.shop-detail-button {
+    background-color: #4169E1;
+    border: none;
+    border-radius: 5px;
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+}
+
+.shop-detail-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.like {
+    background-color: #fff;
+}
+
+.like-link::before,
+.unlike-link::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f004';
+    font-size: 2vw;
+}
+
+.unlike-link,
+.like-link {
+    text-decoration: none;
+}
+
+.unlike-link::before {
+    color: #FF0000;
+}
+
+.like-link::before {
+    color: #808080;
+}
+
+.like-button,
+.unlike-button {
+    border: none;
+    background-color: #fff;
+    margin-right: 1.5vw;
+}

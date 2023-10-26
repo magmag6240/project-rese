@@ -10,11 +10,11 @@ class Prefecture extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'pref_name'
     ];
 
     public function shops()
     {
-        return $this->hasMany(Shop::class, 'prefecture_id', 'id');
+        return $this->hasMany(Shop::class);
     }
 }

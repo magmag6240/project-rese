@@ -10,11 +10,11 @@ class Genre extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'genre_name'
     ];
 
     public function shops()
     {
-        return $this->hasMany(Shop::class, 'genre_id', 'id');
+        return $this->hasMany(Shop::class);
     }
 }

@@ -14,7 +14,7 @@
                 <select class="search-area" type="text" name="area">
                     <option value="">All area</option>
                     @foreach($prefectures as $pref)
-                    <option value="{{ $pref->id }}">{{ $pref->name }}</option>
+                    <option value="{{ $pref->id }}">{{ $pref->pref_name }}</option>
                     @endforeach
                 </select>
             </label>
@@ -22,7 +22,7 @@
                 <select class="search-genre" name="genre">
                     <option value="">All genre</option>
                     @foreach($genres as $genre)
-                    <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+                    <option value="{{ $genre->id }}">{{ $genre->genre_name }}</option>
                     @endforeach
                 </select>
             </label>
@@ -37,17 +37,17 @@
             <span class="shop-name">{{ $item->shop_name }}</span>
             <div class="shop-info">
                 <span class="shop-pref">
-                    #{{ $item->prefecture->name }}
+                    #{{ $item->prefecture->pref_name }}
                 </span>
                 <span class="shop-genre">
-                    #{{ $item->genre->name }}
+                    #{{ $item->genre->genre_name }}
                 </span>
             </div>
             <div class="shop-button">
                 <button class="shop-detail-button">
                     <a class="shop-detail-link" href="{{ route('show', ['shop_id' => $item->id]) }}">詳しく見る</a>
                 </button>
-                @if($item->like_shop())
+                @if($item->is_liked())
                 <button class="unlike-button"><a class="unlike-link" href="{{ route('unlike', ['shop_id' => $item->id]) }}"></a></button>
                 @else
                 <button class="like-button"><a class="like-link" href="{{ route('like', ['shop_id' => $item->id]) }}"></a></button>

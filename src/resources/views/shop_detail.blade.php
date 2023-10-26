@@ -14,8 +14,8 @@
         <div class="shop-detail-info">
             <img class="shop-img" src="{{$shop_detail->image_url}}">
             <div class="shop-info">
-                <span class="shop-pref">#{{$shop_detail->prefecture->name}}</span>
-                <span class="shop-genre">#{{$shop_detail->genre->name}}</span>
+                <span class="shop-pref">#{{$shop_detail->prefecture->pref_name}}</span>
+                <span class="shop-genre">#{{$shop_detail->genre->genre_name}}</span>
             </div>
             <p class="shop-text">{{$shop_detail->shop_detail}}</p>
         </div>
@@ -32,6 +32,11 @@
             <span class="reserve-number"></span>
         </div>
         <button class="reserve-button">予約する</button>
+        @if(session('message'))
+        <div>
+            {{ session('message') }}
+        </div>
+        @endif
     </div>
 </div>
 

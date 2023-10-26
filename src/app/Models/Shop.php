@@ -32,19 +32,24 @@ class Shop extends Model
 
     public function likes()
     {
-        return $this->hasMany(Like::class, 'shop_id');
+        return $this->hasMany(Like::class);
     }
 
-    public function like_shop()
+    public function reservations()
     {
-        $user_id = Auth::id();
+        return $this->hasMany(Reservation::class);
+    }
+
+    public function is_liked()
+    {
+        $id = Auth::id();
 
         $likers = array();
         foreach ($this->likes as $like) {
             array_push($likers, $like->user_id);
         }
 
-        if (in_array($user_id, $likers)) {
+        if (in_array($id, $likers)) {
             return true;
         } else {
             return false;

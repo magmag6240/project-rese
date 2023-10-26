@@ -26,27 +26,27 @@
         <div class="like-shop">
             <p class="like-shop-title">お気に入り店舗</p>
             <div class="like-shop-list">
-                @foreach($like_shops_details as $shop)
+                @if(session('message'))
+                <div>
+                    {{ session('message') }}
+                </div>
+                @endif
+                @foreach($like_shops as $item)
                 <div class="shop">
-                    <img class="shop-img" src="{{$shop->image_url}}">
-                    <span class="shop-name">{{$shop->shop_name}}</span>
+                    <img class="shop-img" src="{{$item->shop->image_url}}">
+                    <span class="shop-name">{{$item->shop->shop_name}}</span>
                     <div class="shop-info">
                         <span class="shop-pref">
-                            #{{$shop->prefecture->name}}
+                            #{{$item->shop->prefecture->pref_name}}
                         </span>
                         <span class="shop-genre">
-                            #{{$shop->genre->name}}
+                            #{{$item->shop->genre->genre_name}}
                         </span>
                     </div>
                     <div class="shop-button">
                         <button class="shop-detail-button">
-                            <a class="shop-detail-link" href="{{route('show', ['shop_id' => $shop->id])}}">詳しく見る</a>
+                            <a class="shop-detail-link" href="{{route('show', ['shop_id' => $item->shop->id])}}">詳しく見る</a>
                         </button>
-                        @if($shop->like_shop())
-                        <button class="unlike-button"><a class="unlike-link" href="{{route('unlike', ['shop_id' => $shop->id])}}"></a></button>
-                        @else
-                        <button class="like-button"><a class="like-link" href="{{route('like', ['shop_id' => $shop->id])}}"></a></button>
-                        @endif
                     </div>
                 </div>
                 @endforeach

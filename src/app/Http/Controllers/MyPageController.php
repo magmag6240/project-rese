@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Shop;
-use App\Models\Like;
-use App\Models\Prefecture;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Like;
 
 class MyPageController extends Controller
 {
     public function index()
     {
-        $prefectures = Prefecture::all();
         $user_id = Auth::id();
-        $like_shops_id = Like::where('user_id', $user_id)->pluck('shop_id');
-        $like_shops_details = Shop::with('prefecture', 'genre')->where('id', $like_shops_id)->get();
+        $like_shops = Like::with('user', 'shop')->where('user_id', $user_id)->get();
 
-        return view('mypage', compact('prefectures', 'like_shops_details'));
+        if (is_null($like_shops)) {
+
+            return view('mypage')->with('message', 'お気に入り店は登録されていません');
+        } else {
+
+            return view('mypage', compact('like_shops'));
+        }
     }
 }
