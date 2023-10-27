@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Genre;
 use App\Models\Prefecture;
 use App\Models\Shop;
+use Carbon\Carbon;
 
 class ShopController extends Controller
 {
@@ -41,6 +42,8 @@ class ShopController extends Controller
     {
         $shop_detail = Shop::with('prefecture', 'genre')->find($id);
 
-        return view('shop_detail', compact('shop_detail'));
+        $business_hour = $shop_detail->business_hours->pluck('business_hour');
+
+        return view('shop_detail', compact('business_hour', 'shop_detail'));
     }
 }

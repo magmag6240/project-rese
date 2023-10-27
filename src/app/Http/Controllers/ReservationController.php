@@ -9,20 +9,14 @@ use App\Models\Reservation;
 
 class ReservationController extends Controller
 {
-
-    public function __construct()
+    public function store(Request $request, $shop_id)
     {
-        $this->middleware(['auth'])->only(['store']);
-    }
-
-    public function store(Request $request, $id)
-    {
-        $reserve_history = Reservation::where('shop_id', $id)->get();
+        $reserve_history = Reservation::where('shop_id', $shop_id)->get();
 
         if(is_null($reserve_history)){
             Reservation::create([
                 'user_id' => Auth::id(),
-                'shop_id' => $id,
+                'shop_id' => $shop_id,
                 'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                 'number' => $request->input('number')
@@ -36,7 +30,7 @@ class ReservationController extends Controller
         if(is_null($reserve_history_date)){
             Reservation::create([
                 'user_id' => Auth::id(),
-                'shop_id' => $id,
+                'shop_id' => $shop_id,
                 'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                 'number' => $request->input('number')
@@ -50,7 +44,7 @@ class ReservationController extends Controller
         if($other_reserve_number + $required_reserve_number <= 10){
             Reservation::create([
                 'user_id' => Auth::id(),
-                'shop_id' => $id,
+                'shop_id' => $shop_id,
                 'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                 'number' => $request->input('number')
@@ -68,7 +62,7 @@ class ReservationController extends Controller
         if(is_null($same_reserve_start) && is_null($partial_match_reserve_time_before) && is_null($partial_match_reserve_time_after)){
             Reservation::create([
                 'user_id' => Auth::id(),
-                'shop_id' => $id,
+                'shop_id' => $shop_id,
                 'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                 'number' => $request->input('number')
@@ -81,7 +75,7 @@ class ReservationController extends Controller
             if ($other_reserve_number_before + $required_reserve_number <= 10) {
                 Reservation::create([
                     'user_id' => Auth::id(),
-                    'shop_id' => $id,
+                    'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
@@ -95,7 +89,7 @@ class ReservationController extends Controller
             if ($other_reserve_number_after + $required_reserve_number <= 10) {
                 Reservation::create([
                     'user_id' => Auth::id(),
-                    'shop_id' => $id,
+                    'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
@@ -110,7 +104,7 @@ class ReservationController extends Controller
             if ($other_reserve_number_after + $other_reserve_number_before + $required_reserve_number <= 10) {
                 Reservation::create([
                     'user_id' => Auth::id(),
-                    'shop_id' => $id,
+                    'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
@@ -125,7 +119,7 @@ class ReservationController extends Controller
             if ($other_reserve_number + $other_reserve_number_before + $required_reserve_number <= 10) {
                 Reservation::create([
                     'user_id' => Auth::id(),
-                    'shop_id' => $id,
+                    'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
@@ -140,7 +134,7 @@ class ReservationController extends Controller
             if ($other_reserve_number + $other_reserve_number_after + $required_reserve_number <= 10) {
                 Reservation::create([
                     'user_id' => Auth::id(),
-                    'shop_id' => $id,
+                    'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
@@ -156,7 +150,7 @@ class ReservationController extends Controller
             if ($other_reserve_number + $other_reserve_number_after + $other_reserve_number_before + $required_reserve_number <= 10) {
                 Reservation::create([
                     'user_id' => Auth::id(),
-                    'shop_id' => $id,
+                    'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')

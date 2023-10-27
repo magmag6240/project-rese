@@ -20,8 +20,6 @@ class CreateShopsTable extends Migration
             $table->unsignedBigInteger('genre_id');
             $table->text('shop_detail');
             $table->string('image_url');
-            $table->time('start_time');
-            $table->time('end_time');
             $table->timestamps();
 
             $table->foreign('prefecture_id')->references('id')->on('prefectures')->onDelete('cascade');

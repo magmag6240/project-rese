@@ -6,31 +6,38 @@
 
 @section('content')
 <div class="mypage">
-    <p class="user-name"></p>
+    <p class="user-name">{{$user->name}}さん</p>
     <div class="mypage-contents">
         <div class="reserve-list">
             <p class="reserve-list-title">予約状況</p>
             <div class="reserve-detail">
                 <div class="reserve-detail-title">
-                    <p class="reserve-number"></p>
+                    <p class="reserve-number">予約</p>
                     <button class="reserve-delete-button"></button>
                 </div>
-                <div class="reserve-info">
-                    <span class="reserve-shop-name"></span>
-                    <span class="reserve-date"></span>
-                    <span class="reserve-time"></span>
-                    <span class="reserve-number"></span>
-                </div>
+                <table class="reserve-info">
+                    <tr class="reserve-shop-name">
+                        <td class="reserve-shop-name">Shop</td>
+                        <td class="reserve-shop-name"></td>
+                    </tr>
+                    <tr class="reserve-date">
+                        <td class="reserve-date">Date</td>
+                        <td class="reserve-date"></td>
+                    </tr>
+                    <tr class="reserve-time">
+                        <td class="reserve-time">Time</td>
+                        <td class="reserve-time"></td>
+                    </tr>
+                    <tr class="reserve-people">
+                        <td class="reserve-people">Number</td>
+                        <td class="reserve-people"></td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div class="like-shop">
             <p class="like-shop-title">お気に入り店舗</p>
             <div class="like-shop-list">
-                @if(session('message'))
-                <div>
-                    {{ session('message') }}
-                </div>
-                @endif
                 @foreach($like_shops as $item)
                 <div class="shop">
                     <img class="shop-img" src="{{$item->shop->image_url}}">

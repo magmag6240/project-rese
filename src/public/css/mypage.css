@@ -1,31 +1,93 @@
 .mypage {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .mypage-contents {
     display: flex;
+    justify-content: space-between;
+    padding: 0 15vw 1vw 7vw;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 2vw;
 }
 
 .reserve-list {
-    width: 50%;
-    background-color: #4169E1;
+    width: 30vw;
 }
 
 .reserve-list-title, .like-shop-title {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     font-weight: bold;
+    text-align: left;
+}
+
+.reserve-detail {
+    background-color: #4169E1;
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+.reserve-detail-title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4169E1;
+}
+
+.reserve-number {
+    color: #fff;
+    background-color: #4169E1;
+}
+
+.reserve-delete-button::before,
+.reserve-number::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+.reserve-number::before {
+    content: '\f017';
+    margin-right: 2vw;
+}
+
+.reserve-delete-button::before {
+    content: '\f057';
+}
+
+.reserve-delete-button {
+    background-color: #4169E1;
+    border: none;
+}
+
+.reserve-info, .reserve-shop-name, .reserve-date, .reserve-time, .reserve-people {
+    background-color: #4169E1;
+    color: #fff;
+    text-align: left;
+}
+
+.like-shop {
+    width: 40vw;
 }
 
 .like-shop-list {
     display: flex;
 }
 
+.like-shop-title {
+    text-align: left;
+}
+
 .shop {
     display: inline-flex;
     flex-direction: column;
     text-align: left;
+    margin-right: 3vw;
     width: 20vw;
-    margin: 1vw;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 1vw 0 #808080;

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
+use Carbon\Carbon;
+
 class Shop extends Model
 {
     use HasFactory;
@@ -15,9 +17,7 @@ class Shop extends Model
         'prefecture_id',
         'genre_id',
         'shop_detail',
-        'image_url',
-        'start_time',
-        'end_time'
+        'image_url'
     ];
 
     public function prefecture()
@@ -39,6 +39,12 @@ class Shop extends Model
     {
         return $this->hasMany(Reservation::class);
     }
+
+    public function business_hours()
+    {
+        return $this->belongsToMany(BusinessHour::class);
+    }
+
 
     public function is_liked()
     {

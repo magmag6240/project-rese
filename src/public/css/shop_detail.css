@@ -1,33 +1,29 @@
 .shop-detail {
     display: flex;
     justify-content: space-between;
-    padding: 0 5vw;
+    padding: 4vw 7vw 0 7vw;
 }
 
 .shop-detail-contents {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 40vw;
     text-align: left;
 }
 
-.shop-name {
-    font-size: 2vw;
-    font-weight: bold;
-}
-
 .shop-list-button {
-    font-size: 2.1vw;
-    margin: 2vh 2vh 2vh 0;
-    padding: 0 1vh;
-    border: none;
+    font-size: 1.5vw;
+    padding: 0.2vw 0.5vw;
     background-color: #fff;
-    box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw #808080;
-    border-radius: 5px;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
 .shop-list-link {
     text-decoration: none;
+}
+
+.shop-detail-title {
+    margin: 0 1vw 1.5vw 0;
 }
 
 .shop-detail-info {
@@ -35,28 +31,117 @@
     flex-direction: column;
 }
 
-.shop-reserve {
-    text-align: left;
-    width: 45%;
+.shop-name {
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 1vw;
+    position: relative;
+    top: 0.3vw;
+}
+
+.shop-img {
+    margin-bottom: 2vw;
+}
+
+.shop-info {
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+
+.shop-text {
+    line-height: 1.8vw;
+    font-size: 1vw;
+}
+
+.shop-reserve, .reserve-title, .reserve-form, .reserve-select {
     background-color: #4169E1;
+}
+
+.shop-list-button, .shop-reserve, .reserve-date,
+.reserve-time, .reserve-number,
+.reserve-confirm {
     border-radius: 5px;
-    padding: 0.3vh 2.5vw;
+}
+
+.shop-list-button, .reserve-date,.reserve-time,
+.reserve-number, .reserve-button {
+    border: none;
+}
+
+.shop-reserve {
+    position: absolute;
+    top: -5vw;
+    left: 53vw;
+    text-align: left;
+    width: 40vw;
+    height: 52vw;
+    padding: 0.3vw 2.5vw;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
 .reserve-title {
-    background-color: #4169E1;
     color: #fff;
     font-size: 2vw;
     font-weight: bold;
 }
 
+.reserve-date, .reserve-time, .reserve-number {
+    height: 2vw;
+    margin-bottom: 1vw;
+    padding-left: 1vw;
+}
+
+.reserve-date {
+    width: 12vw;
+}
+
+.reserve-time, .reserve-number {
+    appearance: none;
+    width: 33vw;
+}
+
+.reserve-time::after, .reserve-number::after {
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f107';
+    color: #d4d3d3;
+    font-size: 1.5vw;
+}
+
+.reserve-time::after {
+    top: 10.2vw;
+    left: 34vw;
+}
+
+.reserve-number::after {
+    top: 13.2vw;
+    left: 34vw;
+}
+
 .reserve-confirm {
+    padding: 1vw;
     background-color: #6495ED;
-    border-radius: 5px;
+}
+
+.reserve-confirm-table {
+    background-color: #6495ED;
+}
+
+.reserve-table-tr-top, .reserve-table-tr, .reserve-table-tr-bottom, .reserve-table-td {
+    color: #fff;
+    background-color: #6495ED;
 }
 
 .reserve-button {
     background-color: #0000ff;
     color: #fff;
-    border: none;
+    font-size: 1vw;
+    position: absolute;
+    top: 47.9vw;
+    left: 0;
+    width: 40vw;
+    height: 4vw;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

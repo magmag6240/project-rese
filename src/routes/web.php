@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\MyPageController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/like/{shop_id}', [LikeController::class, 'like'])->name('like');
     Route::get('/unlike/{shop_id}', [LikeController::class, 'unlike'])->name('unlike');
     Route::get('/thanks', []);
+    Route::post('/reserve/{shop_id}', [ReservationController::class, 'store'])->name('reserve');
     Route::get('/done', [ShopController::class, 'show']);
 
 });
