@@ -12,4 +12,5 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/menu.js', 'public/js');
+    .js('resources/js/menu.js', 'public/js')
+    .js('resources/js/reserve_confirm.js', 'public/js');

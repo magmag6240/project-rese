@@ -11,7 +11,7 @@
         <form class="search-form" action="{{ route('shop.index') }}" method="get">
             @csrf
             <label class="select-area">
-                <select class="search-area" type="text" name="area">
+                <select class="search-area" id="search_area" name="area">
                     <option value="">All area</option>
                     @foreach($prefectures as $pref)
                     <option value="{{ $pref->id }}">{{ $pref->pref_name }}</option>
@@ -19,7 +19,7 @@
                 </select>
             </label>
             <label class="select-genre">
-                <select class="search-genre" name="genre">
+                <select class="search-genre" id="search_genre" name="genre">
                     <option value="">All genre</option>
                     @foreach($genres as $genre)
                     <option value="{{ $genre->id }}">{{ $genre->genre_name }}</option>
@@ -45,7 +45,7 @@
             </div>
             <div class="shop-button">
                 <button class="shop-detail-button">
-                    <a class="shop-detail-link" href="{{ route('show', ['shop_id' => $item->id]) }}">詳しく見る</a>
+                    <a class="shop-detail-link" href="{{ route('reserve.index', ['shop_id' => $item->id]) }}">詳しく見る</a>
                 </button>
                 @if($item->is_liked())
                 <button class="unlike-button"><a class="unlike-link" href="{{ route('unlike', ['shop_id' => $item->id]) }}"></a></button>

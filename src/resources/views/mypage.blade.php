@@ -5,11 +5,13 @@
 @endsection
 
 @section('content')
+
 <div class="mypage">
     <p class="user-name">{{$user->name}}さん</p>
     <div class="mypage-contents">
         <div class="reserve-list">
             <p class="reserve-list-title">予約状況</p>
+            @foreach($reserve_shops as $reserve_shop)
             <div class="reserve-detail">
                 <div class="reserve-detail-title">
                     <p class="reserve-number">予約</p>
@@ -34,6 +36,7 @@
                     </tr>
                 </table>
             </div>
+            @endforeach
         </div>
         <div class="like-shop">
             <p class="like-shop-title">お気に入り店舗</p>
@@ -52,7 +55,7 @@
                     </div>
                     <div class="shop-button">
                         <button class="shop-detail-button">
-                            <a class="shop-detail-link" href="{{route('show', ['shop_id' => $item->shop->id])}}">詳しく見る</a>
+                            <a class="shop-detail-link" href="{{route('reserve.index', ['shop_id' => $item->shop->id])}}">詳しく見る</a>
                         </button>
                     </div>
                 </div>

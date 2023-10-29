@@ -19,7 +19,7 @@ use App\Http\Controllers\ReservationController;
 */
 
 Route::get('/', [ShopController::class, 'index'])->name('shop.index');
-Route::get('/detail/{shop_id}', [ShopController::class, 'show'])->name('show');
+Route::get('/detail/{shop_id}', [ReservationController::class, 'index'])->name('reserve.index');
 
 Route::middleware('auth')->group(function () {
 
@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/like/{shop_id}', [LikeController::class, 'like'])->name('like');
     Route::get('/unlike/{shop_id}', [LikeController::class, 'unlike'])->name('unlike');
     Route::get('/thanks', []);
-    Route::post('/reserve/{shop_id}', [ReservationController::class, 'store'])->name('reserve');
+    Route::post('/reserve/{shop_id}', [ReservationController::class, 'store'])->name('reserve.store');
     Route::get('/done', [ShopController::class, 'show']);
 
 });

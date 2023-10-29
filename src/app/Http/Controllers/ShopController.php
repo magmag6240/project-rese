@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Genre;
 use App\Models\Prefecture;
 use App\Models\Shop;
-use Carbon\Carbon;
 
 class ShopController extends Controller
 {
@@ -36,14 +35,5 @@ class ShopController extends Controller
         $items = $query->with('prefecture', 'genre')->get();
 
         return view('shop_list', compact('prefectures', 'genres', 'items', 'select_area', 'select_genre', 'keyword'));
-    }
-
-    public function show($id)
-    {
-        $shop_detail = Shop::with('prefecture', 'genre')->find($id);
-
-        $business_hour = $shop_detail->business_hours->pluck('business_hour');
-
-        return view('shop_detail', compact('business_hour', 'shop_detail'));
     }
 }
