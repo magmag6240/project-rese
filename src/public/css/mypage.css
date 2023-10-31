@@ -121,7 +121,7 @@
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    margin: 1vw 0 1.5vw 1.5vw;
+    margin: 1vw 0 0 1.5vw;
 }
 
 .shop-detail-button {
@@ -153,6 +153,7 @@
 .unlike-link,
 .like-link {
     text-decoration: none;
+    margin-right: 1.5vw;
 }
 
 .unlike-link::before {
@@ -161,11 +162,4 @@
 
 .like-link::before {
     color: #808080;
-}
-
-.like-button,
-.unlike-button {
-    border: none;
-    background-color: #fff;
-    margin-right: 1.5vw;
 }

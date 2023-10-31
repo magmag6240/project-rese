@@ -47,11 +47,13 @@
                 <button class="shop-detail-button">
                     <a class="shop-detail-link" href="{{ route('reserve.index', ['shop_id' => $item->id]) }}">詳しく見る</a>
                 </button>
-                @if($item->is_liked())
-                <button class="unlike-button"><a class="unlike-link" href="{{ route('unlike', ['shop_id' => $item->id]) }}"></a></button>
-                @else
-                <button class="like-button"><a class="like-link" href="{{ route('like', ['shop_id' => $item->id]) }}"></a></button>
-                @endif
+                <div class="like">
+                    @if($item->is_liked())
+                    <a class="unlike-link" href="{{ route('unlike', ['shop_id' => $item->id]) }}"></a>
+                    @else
+                    <a class="like-link" href="{{ route('like', ['shop_id' => $item->id]) }}"></a>
+                    @endif
+                </div>
             </div>
         </div>
         @endforeach

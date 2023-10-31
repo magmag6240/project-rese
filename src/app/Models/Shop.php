@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
-use Carbon\Carbon;
-
 class Shop extends Model
 {
     use HasFactory;
@@ -45,7 +43,6 @@ class Shop extends Model
         return $this->belongsToMany(BusinessHour::class);
     }
 
-
     public function is_liked()
     {
         $id = Auth::id();
@@ -61,4 +58,5 @@ class Shop extends Model
             return false;
         }
     }
+
 }

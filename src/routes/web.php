@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/unlike/{shop_id}', [LikeController::class, 'unlike'])->name('unlike');
     Route::get('/thanks', []);
     Route::post('/reserve/{shop_id}', [ReservationController::class, 'store'])->name('reserve.store');
+    Route::delete('/reserve_destroy/{shop_id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
     Route::get('/done', [ShopController::class, 'show']);
 
 });

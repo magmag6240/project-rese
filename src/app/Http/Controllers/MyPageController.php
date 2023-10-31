@@ -12,8 +12,8 @@ class MyPageController extends Controller
     {
         $user = Auth::user();
         $user_id = Auth::id();
-        $like_shops = Like::with('user', 'shop')->where('user_id', $user_id)->get();
-        $reserve_shops = Reservation::where('user_id', $user->id)->get();
+        $reserve_shops = Reservation::with('shop')->where('user_id', $user_id)->get();
+        $like_shops = Like::with('shop')->where('user_id', $user_id)->get();
 
         return view('mypage', compact('user', 'like_shops', 'reserve_shops'));
     }
