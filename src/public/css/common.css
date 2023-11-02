@@ -3,6 +3,11 @@
     background-color: #ededed;
 }
 
+.body.active {
+    height: 100%;
+    overflow: hidden;
+}
+
 .header {
     padding: 3vw 6vw;
 }
@@ -59,17 +64,18 @@
 }
 
 .logout-button, .menu-link {
-    font-size: 3vw;
     background-color: #fff;
     color: #4169E1;
     cursor: pointer;
 }
 
 .menu-link {
+    font-size: 3vw;
     text-decoration: none;
 }
 
 .logout-button {
+    font-size: 3.2vw;
     border: none;
     margin-bottom: 0.4vw;
 }

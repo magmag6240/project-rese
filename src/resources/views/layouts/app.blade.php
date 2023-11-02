@@ -12,7 +12,7 @@
     @yield('css')
 </head>
 
-<body>
+<body class="body">
     <header class="header">
         <div class="menu">
             <div class="menu-button">
@@ -43,6 +43,16 @@
                         <a class="menu-link" href="/login">Login</a>
                     </li>
                     @endif
+                    @can('store_manager')
+                    <li class="menu-list-contents">
+                        <a class="menu-link" href="/store_manager">For Store manager</a>
+                    </li>
+                    @endcan
+                    @can('admin')
+                    <li class="menu-list-contents">
+                        <a class="menu-link" href="/admin">For Admin</a>
+                    </li>
+                    @endcan
                 </ul>
             </nav>
         </div>

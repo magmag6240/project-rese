@@ -17,7 +17,7 @@ services:
             - ./src:/var/www/
 
     mysql:
-        image: mysql:8.0.28
+        image: mysql:8.0.26
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: laravel_db
@@ -40,3 +40,12 @@ services:
             - mysql
         ports:
             - 8080:80
+
+    mail:
+        image: mailhog/mailhog
+        container_name: mailhog
+        ports:
+            - "8025:8025"
+        environment:
+            MH_STORAGE: maildir
+            MH_MAILDIR_PATH: /tmp

@@ -25,14 +25,23 @@
     border-bottom-left-radius: 10px;
 }
 
+.form-group,
 .form-mail,
 .form-password,
 .login-form,
 .form-input,
 .mail-icon,
 .password-icon,
-.form-button {
+.form-button,
+.login-error {
     background-color: #fff;
+}
+
+.login-error {
+    width: fit-content;
+    font-size: 0.8em;
+    margin-left: 6vw;
+    color: #f00;
 }
 
 .form-mail {

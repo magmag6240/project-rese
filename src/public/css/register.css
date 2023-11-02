@@ -26,6 +26,7 @@
     border-bottom-left-radius: 10px;
 }
 
+.form-group,
 .form-name,
 .form-mail,
 .form-password,
@@ -34,8 +35,16 @@
 .name-icon,
 .mail-icon,
 .password-icon,
-.form-button {
+.form-button,
+.register-error {
     background-color: #fff;
+}
+
+.register-error {
+    width: fit-content;
+    font-size: 0.8vw;
+    margin-left: 6vw;
+    color: #f00;
 }
 
 .form-name {

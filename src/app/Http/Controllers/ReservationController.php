@@ -171,8 +171,7 @@ class ReservationController extends Controller
 
     public function destroy($id)
     {
-        $user_id = Auth::id();
-        $reserve = Reservation::where('user_id', $user_id)->get();
+        $reserve = Reservation::where('id', $id)->first();
         $reserve->delete();
 
         return redirect()->back();
