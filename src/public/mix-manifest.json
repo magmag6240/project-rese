@@ -1,6 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/menu.js": "/js/menu.js",
-    "/js/reserve_confirm.js": "/js/reserve_confirm.js",
-    "/js/stripe.js": "/js/stripe.js"
+    "/js/mypage.js": "/js/mypage.js",
+    "/js/reserve_confirm.js": "/js/reserve_confirm.js"
 }

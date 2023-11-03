@@ -39,6 +39,10 @@
                         <td class="reserve-table-td">{{$item->number}}人</td>
                     </tr>
                 </table>
+                <form class="reserve-edit" action="{{route('reserve.edit', ['reserve_id' => $item->id ])}}" method="get">
+                    @csrf
+                    <button class="reserve-edit-button" type="submit">予約内容変更</button>
+                </form>
             </div>
             @endforeach
         </div>

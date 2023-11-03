@@ -32,9 +32,11 @@
                             <button class="logout-button" type="submit">Logout</button>
                         </li>
                     </form>
+                    @can('general')
                     <li class="menu-list-contents">
                         <a class="menu-link" href="/mypage">Mypage</a>
                     </li>
+                    @endcan
                     @else
                     <li class="menu-list-contents">
                         <a class="menu-link" href="/register">Register</a>

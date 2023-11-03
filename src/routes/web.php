@@ -33,6 +33,8 @@ Route::middleware('verified')->group(function () {
     Route::get('/like/{shop_id}', [LikeController::class, 'like'])->name('like');
     Route::get('/unlike/{shop_id}', [LikeController::class, 'unlike'])->name('unlike');
     Route::post('/reserve/{shop_id}', [ReservationController::class, 'store'])->name('reserve.store');
+    Route::get('/reserve/edit/{reserve_id}', [ReservationController::class, 'edit'])->name('reserve.edit');
+    Route::patch('/reserve/update/{reserve_id}', [ReservationController::class, 'update'])->name('reserve.update');
     Route::delete('/reserve_destroy/{reserve_id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
     Route::get('/done', [ShopController::class, 'show']);
 
@@ -45,10 +47,10 @@ Route::middleware('verified')->group(function () {
 
     Route::group(['prefix' => 'store_manager'], function () {
         Route::get('/', [StoreManagerController::class, 'index']);
-        Route::get('/new/{id}', [StoreManagerController::class, 'new']);
-        Route::post('/create/{id}', [StoreManagerController::class, 'create']);
-        Route::get('/edit/{id}', [StoreManagerController::class, 'edit'])->name('store_manager.edit');
-        Route::patch('/update/{id}', [StoreManagerController::class, 'update'])->name('store_manager.update');
-        Route::get('/reserve_list/{id}', [StoreManagerController::class, 'reserve_list'])->name('store_manager.reserve_list');
+        Route::get('/new', [StoreManagerController::class, 'new'])->name('store_manager.new');
+        Route::post('/create', [StoreManagerController::class, 'create'])->name('store_manager.create');
+        Route::get('/edit', [StoreManagerController::class, 'edit'])->name('store_manager.edit');
+        Route::patch('/update', [StoreManagerController::class, 'update'])->name('store_manager.update');
+        Route::get('/reserve_list', [StoreManagerController::class, 'reserve_list'])->name('store_manager.reserve_list');
     });
 });

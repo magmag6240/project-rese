@@ -1,0 +1,147 @@
+.reserve-edit {
+    display: flex;
+    padding: 2vw 10vw;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.reserve-confirm {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+}
+
+.reserve-change {
+    align-self: center;
+}
+
+.reserve-change::before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 3vw;
+    font-weight: 900;
+    content: '\f103';
+    color: #0000CD;
+}
+
+.reserve-before, .reserve-after, .reserve-before-title, .reserve-after-title {
+    background-color: #5287e9;
+}
+
+.reserve-before, .reserve-after {
+    border-radius: 10px;
+    padding: 1vw 2.5vw;
+}
+
+.reserve-before-title, .reserve-after-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+.reserve-confirm-table {
+    margin: 1vw 0;
+}
+
+.reserve-confirm-table,
+.confirm-table-tr,
+.confirm-table-td {
+    border: none;
+    font-size: 1.1vw;
+    color: #fff;
+    background-color: #5287e9;
+}
+
+.confirm-table-td {
+    padding: 0.5vw 1vw;
+    width: 10vw;
+}
+
+.reserve-edit-contents {
+    width: 40vw;
+    background-color: #4169E1;
+    border-radius: 10px;
+    padding: 2vw 3vw;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+.reserve-edit-title {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4169E1;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2vw;
+    background-color: #4169E1;
+}
+
+.reserve-date-title, .reserve-time-title, .reserve-number-title {
+    background-color: #4169E1;
+    color: #fff;
+}
+
+.reserve-date,
+.reserve-time,
+.reserve-number {
+    height: 2vw;
+    border: none;
+    margin-bottom: 2vw;
+    padding: 0 1vw;
+}
+
+.reserve-date {
+    border-radius: 5px;
+    font-size: 1vw;
+    width: 15vw;
+}
+
+.reserve-time,
+.reserve-number {
+    position: relative;
+    appearance: none;
+    border-radius: 5px;
+    font-size: 1vw;
+    width: 20vw;
+}
+
+.reserve-select-number, .reserve-select-time {
+    background-color: #4169E1;
+}
+
+.reserve-select-time::after,
+.reserve-select-number::after {
+    position: absolute;
+    left: 20vw;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.5vw;
+    font-weight: 900;
+    content: '\f107';
+    color: #d4d3d3;
+}
+
+.reserve-edit-alarm {
+    position: absolute;
+    color: #FFFF00;
+    background-color: #4169E1;
+    top: 25vw;
+    word-break: keep-all;
+}
+
+.information-update-button{
+    position: absolute;
+    color: #fff;
+    background-color: #0000FF;
+    border: none;
+    left: -3vw;
+    top: 29.3vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 40vw;
+    padding: 1vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+}

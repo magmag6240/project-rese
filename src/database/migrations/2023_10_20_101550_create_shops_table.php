@@ -16,12 +16,14 @@ class CreateShopsTable extends Migration
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
             $table->string('shop_name');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('prefecture_id');
             $table->unsignedBigInteger('genre_id');
             $table->text('shop_detail');
             $table->string('image_url');
             $table->timestamps();
 
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('prefecture_id')->references('id')->on('prefectures')->onDelete('cascade');
             $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
         });

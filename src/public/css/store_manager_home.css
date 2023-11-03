@@ -1,0 +1,44 @@
+.store-manager-home {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 9vw;
+}
+
+.user-name {
+    font-size: 1.7vw;
+    font-weight: bold;
+}
+
+.store-manage-page-list {
+    display: flex;
+}
+
+.page-group {
+    width: 32vw;
+    margin: 2vw;
+    padding: 3vw 2vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+.page-group-button {
+    background-color: #4169E1;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+    padding: 0.5vw 1vw;
+    margin-bottom: 2vw;
+}
+
+.store-manage-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3vw;
+}
+
+.store-manage-text {
+    background-color: #7FFFF0;
+    border: 1px solid #4169E1;
+    font-size: 1vw;
+}

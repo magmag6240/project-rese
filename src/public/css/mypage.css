@@ -74,6 +74,22 @@
     font-size: 1.2vw;
 }
 
+.reserve-edit {
+    background-color: #4169E1;
+}
+
+.reserve-edit-button {
+    align-self: center;
+    border: none;
+    padding: 0.5vw 0;
+    margin-top: 1vw;
+    width: 10vw;
+    font-size: 1vw;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
 .like-shop {
     width: 48vw;
 }

@@ -19,6 +19,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $fillable = [
         'name',
+        'role',
         'email',
         'password',
     ];
@@ -45,6 +46,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function sendEmailVerificationNotification()
     {
         $this->notify(new \App\Notifications\VerifyEmailJapanese);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     public function likes()
