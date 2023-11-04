@@ -6,7 +6,8 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\MyPageController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ReservationController;
-use App\Http\Controllers\StoreManagerController;
+use App\Http\Controllers\ShopManagerController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StripePaymentController;
 
 /*
@@ -40,17 +41,18 @@ Route::middleware('verified')->group(function () {
 
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', [AdminController::class, 'index']);
-        Route::get('/detail/{id}', [AdminController::class, 'show'])->name('admin.show');
-        Route::patch('/update/{id}', [AdminController::class, 'update'])->name('admin.update');
-        Route::post('/delete/{id}', [AdminController::class, 'destroy'])->name('admin.delete');
+        Route::get('/shop_manager_list', [AdminController::class, 'show'])->name('admin.show');
+        Route::get('/new', [AdminController::class, 'new'])->name('admin.new');
+        Route::patch('/update', [AdminController::class, 'update'])->name('admin.update');
     });
 
-    Route::group(['prefix' => 'store_manager'], function () {
-        Route::get('/', [StoreManagerController::class, 'index']);
-        Route::get('/new', [StoreManagerController::class, 'new'])->name('store_manager.new');
-        Route::post('/create', [StoreManagerController::class, 'create'])->name('store_manager.create');
-        Route::get('/edit', [StoreManagerController::class, 'edit'])->name('store_manager.edit');
-        Route::patch('/update', [StoreManagerController::class, 'update'])->name('store_manager.update');
-        Route::get('/reserve_list', [StoreManagerController::class, 'reserve_list'])->name('store_manager.reserve_list');
+    Route::group(['prefix' => 'shop_manager'], function () {
+        Route::get('/', [ShopManagerController::class, 'index']);
+        Route::get('/new', [ShopManagerController::class, 'new'])->name('shop_manager.new');
+        Route::post('/store', [ShopManagerController::class, 'store'])->name('shop_manager.store');
+        Route::get('/shop_list', [ShopManagerController::class, 'shop_list'])->name('shop_manager.shop_list');
+        Route::get('/edit/{shop_id}', [ShopManagerController::class, 'edit'])->name('shop_manager.edit');
+        Route::patch('/update/{shop_id}', [ShopManagerController::class, 'update'])->name('shop_manager.update');
+        Route::get('/reserve_list/{shop_id}', [ShopManagerController::class, 'reserve_list'])->name('shop_manager.reserve_list');
     });
 });

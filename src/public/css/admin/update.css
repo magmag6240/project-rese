@@ -1,0 +1,79 @@
+.admin-new {
+    display: inline-flex;
+    flex-direction: column;
+    width: 55vw;
+    margin: 4vw 0;
+    padding: 2vw 0;
+    border-radius: 10px;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+    background-color: #4169E1;
+}
+
+.admin-update-title {
+    font-size: 1.7vw;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2vw;
+    background-color: #4169E1;
+}
+
+.update-form, .update-table-title, .update-table-td {
+    background-color: #4169E1;
+}
+
+.update-table-td {
+    position: relative;
+}
+
+.update-form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: left;
+}
+
+.update-table-title {
+    color: #fff;
+    font-size: 1.1vw;
+    width: 10vw;
+}
+
+.user {
+    position: relative;
+    appearance: none;
+    outline: none;
+    width: 15vw;
+}
+
+.user-select {
+    background-color: #4169E1;
+}
+
+.user-select::after {
+    position: absolute;
+    left: 13vw;
+    font-family: 'Font Awesome 5 Free';
+    font-size: 1.5vw;
+    font-weight: 900;
+    content: '\f107';
+    color: #d4d3d3;
+}
+
+.role, .user {
+    border: none;
+    padding: 0.5vw;
+    margin-bottom: 1vw;
+    font-size: 1vw;
+    border-radius: 5px;
+}
+
+.information-update-button {
+    border: none;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    padding: 0.5vw 1vw;
+    margin-top: 1vw;
+    align-self: center;
+    color: #fff;
+    background-color: #0000ff;
+}

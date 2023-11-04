@@ -12,6 +12,7 @@ class Shop extends Model
 
     protected $fillable = [
         'shop_name',
+        'user_id',
         'prefecture_id',
         'genre_id',
         'shop_detail',
@@ -41,6 +42,11 @@ class Shop extends Model
     public function business_hours()
     {
         return $this->belongsToMany(BusinessHour::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     public function is_liked()

@@ -45,9 +45,9 @@
                         <a class="menu-link" href="/login">Login</a>
                     </li>
                     @endif
-                    @can('store_manager')
+                    @can('shop_manager')
                     <li class="menu-list-contents">
-                        <a class="menu-link" href="/store_manager">For Store manager</a>
+                        <a class="menu-link" href="/shop_manager">For Store manager</a>
                     </li>
                     @endcan
                     @can('admin')

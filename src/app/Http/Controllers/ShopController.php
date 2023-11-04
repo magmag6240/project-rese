@@ -34,6 +34,6 @@ class ShopController extends Controller
 
         $items = $query->with('prefecture', 'genre')->get();
 
-        return view('shop_list', compact('prefectures', 'genres', 'items', 'select_area', 'select_genre', 'keyword'));
+        return view('general/shop_list', compact('prefectures', 'genres', 'items', 'select_area', 'select_genre', 'keyword'));
     }
 }

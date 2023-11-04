@@ -16,7 +16,7 @@ class ReservationController extends Controller
 
         $business_hour = $shop_detail->business_hours->pluck('business_hour');
 
-        return view('shop_detail', compact('business_hour', 'shop_detail'));
+        return view('general/shop_detail', compact('business_hour', 'shop_detail'));
     }
 
     public function store(Request $request, $shop_id)
@@ -31,7 +31,7 @@ class ReservationController extends Controller
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                 'number' => $request->input('number')
             ]);
-            return view('done');
+            return view('general/done');
         }
 
         $required_date = Carbon::parse($request->input('reserve_date'))->format('Y-m-d');
@@ -45,7 +45,7 @@ class ReservationController extends Controller
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                 'number' => $request->input('number')
             ]);
-            return view('done');
+            return view('general/done');
         }
 
         $required_reserve_number = $request->input('number');
@@ -64,7 +64,7 @@ class ReservationController extends Controller
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                 'number' => $request->input('number')
             ]);
-            return view('done');
+            return view('general/done');
         }
 
         if(is_null($same_reserve_start) && !is_null($partial_match_reserve_time_before) && is_null($partial_match_reserve_time_after)){
@@ -77,7 +77,7 @@ class ReservationController extends Controller
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
                 ]);
-                return view('done');
+                return view('general/done');
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -93,7 +93,7 @@ class ReservationController extends Controller
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
                 ]);
-                return view('done');
+                return view('general/done');
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -110,7 +110,7 @@ class ReservationController extends Controller
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
                 ]);
-                return view('done');
+                return view('general/done');
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -127,7 +127,7 @@ class ReservationController extends Controller
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
                 ]);
-                return view('done');
+                return view('general/done');
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -144,7 +144,7 @@ class ReservationController extends Controller
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
                 ]);
-                return view('done');
+                return view('general/done');
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -162,7 +162,7 @@ class ReservationController extends Controller
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
                     'number' => $request->input('number')
                 ]);
-                return view('done');
+                return view('general/done');
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -173,7 +173,7 @@ class ReservationController extends Controller
     {
         $reserve = Reservation::with('shop')->where('id', $reserve_id)->first();
         $business_hour = $reserve->shop->business_hours->pluck('business_hour');
-        return view('mypage_reserve_edit', compact('reserve', 'business_hour'));
+        return view('general/mypage_reserve_edit', compact('reserve', 'business_hour'));
     }
 
     public function update(Request $request, $reserve_id)
@@ -192,7 +192,7 @@ class ReservationController extends Controller
         if (is_null($same_reserve_start) && is_null($partial_match_reserve_time_before) && is_null($partial_match_reserve_time_after)) {
             $reserve_edit = $request->only(['reserve_date', 'start_time', 'number']);
             Reservation::find($reserve->id)->update($reserve_edit);
-            return view('mypage_reserve_update_done');
+            return view('general/mypage_reserve_update_done');
         }
 
         if (is_null($same_reserve_start) && !is_null($partial_match_reserve_time_before) && is_null($partial_match_reserve_time_after)) {
@@ -200,7 +200,7 @@ class ReservationController extends Controller
             if ($other_reserve_number_before + $required_reserve_number <= 10) {
                 $reserve_edit = $request->only(['reserve_date', 'start_time', 'number']);
                 Reservation::find($reserve->id)->update($reserve_edit);
-                return view('mypage_reserve_update_done');
+                return view('general/mypage_reserve_update_done');
             } else {
                 return redirect()->route('reserve.edit', ['reserve_id' => $reserve->id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -211,7 +211,7 @@ class ReservationController extends Controller
             if ($other_reserve_number_after + $required_reserve_number <= 10) {
                 $reserve_edit = $request->only(['reserve_date', 'start_time', 'number']);
                 Reservation::find($reserve->id)->update($reserve_edit);
-                return view('mypage_reserve_update_done');
+                return view('general/mypage_reserve_update_done');
             } else {
                 return redirect()->route('reserve.edit', ['reserve_id' => $reserve->id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -223,7 +223,7 @@ class ReservationController extends Controller
             if ($other_reserve_number_after + $other_reserve_number_before + $required_reserve_number <= 10) {
                 $reserve_edit = $request->only(['reserve_date', 'start_time', 'number']);
                 Reservation::find($reserve->id)->update($reserve_edit);
-                return view('mypage_reserve_update_done');
+                return view('general/mypage_reserve_update_done');
             } else {
                 return redirect()->route('reserve.edit', ['reserve_id' => $reserve->id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -235,7 +235,7 @@ class ReservationController extends Controller
             if ($other_reserve_number + $other_reserve_number_before + $required_reserve_number <= 10) {
                 $reserve_edit = $request->only(['reserve_date', 'start_time', 'number']);
                 Reservation::find($reserve->id)->update($reserve_edit);
-                return view('mypage_reserve_update_done');
+                return view('general/mypage_reserve_update_done');
             } else {
                 return redirect()->route('reserve.edit', ['reserve_id' => $reserve->id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -247,7 +247,7 @@ class ReservationController extends Controller
             if ($other_reserve_number + $other_reserve_number_after + $required_reserve_number <= 10) {
                 $reserve_edit = $request->only(['reserve_date', 'start_time', 'number']);
                 Reservation::find($reserve->id)->update($reserve_edit);
-                return view('mypage_reserve_update_done');
+                return view('general/mypage_reserve_update_done');
             } else {
                 return redirect()->route('reserve.edit', ['reserve_id' => $reserve->id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -260,7 +260,7 @@ class ReservationController extends Controller
             if ($other_reserve_number + $other_reserve_number_after + $other_reserve_number_before + $required_reserve_number <= 10) {
                 $reserve_edit = $request->only(['reserve_date', 'start_time', 'number']);
                 Reservation::find($reserve->id)->update($reserve_edit);
-                return view('mypage_reserve_update_done');
+                return view('general/mypage_reserve_update_done');
             } else {
                 return redirect()->route('reserve.edit', ['reserve_id' => $reserve->id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }

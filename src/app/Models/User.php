@@ -48,11 +48,6 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new \App\Notifications\VerifyEmailJapanese);
     }
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
     public function likes()
     {
         return $this->hasMany(Like::class);
@@ -62,5 +57,4 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Reservation::class);
     }
-
 }

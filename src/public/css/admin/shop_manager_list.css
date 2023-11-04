@@ -1,0 +1,91 @@
+.admin-shop-manager-list {
+    display: inline-flex;
+    flex-direction: column;
+    width: 65vw;
+    padding: 1.2vw 0;
+    margin: 3vw 0;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.shop-manager-list-title {
+    position: relative;
+    top: -2.5vw;
+    font-size: 1.7vw;
+    font-weight: bold;
+    padding: 1.5vw 0;
+    width: 65vw;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #4169E1;
+    color: #fff;
+}
+
+.shop-manager-list-table {
+    align-self: center;
+    border-bottom-style: hidden;
+    background-color: #fff;
+    margin-bottom: 1vw;
+}
+
+.shop-manager-list-th {
+    padding: 1vw 0;
+    font-size: 1.2vw;
+    background-color: #fff;
+}
+
+.shop-manager-list-tr {
+    border: 0.15vw solid #c0c0c0;
+    border-right-style: hidden;
+    border-left-style: hidden;
+}
+
+.shop-manager-list-td {
+    background-color: #fff;
+    padding: 1vw 3vw;
+    font-size: 1vw;
+}
+
+.home-button {
+    align-self: center;
+    border: none;
+    padding: 0.5vw 0;
+    width: 5vw;
+    margin-top: 2.5vw;
+    border-radius: 5px;
+    background-color: #4169E1;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.pagination {
+    background-color: #fff;
+    padding: 2vw;
+}
+
+.current-paginate-page,
+.another-paginate-page,
+.another-paginate,
+.page-link-prev,
+.page-link-next {
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 0.4vw 0.8vw;
+    cursor: pointer;
+    color: #fff;
+    border: 0.5px solid #00BFFF;
+    background-color: #00BFFF;
+}
+
+.another-paginate-page {
+    color: #fff;
+}
+
+.current-paginate-page {
+    color: #fff;
+    background-color: #00008B;
+    border: 0.5px solid #00008B;
+}

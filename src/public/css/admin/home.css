@@ -1,4 +1,4 @@
-.store-manager-home {
+.admin-home {
     display: flex;
     flex-direction: column;
     padding: 3vw 9vw;
@@ -9,12 +9,12 @@
     font-weight: bold;
 }
 
-.store-manage-page-list {
+.admin-page-list {
     display: flex;
 }
 
 .page-group {
-    width: 32vw;
+    width: 40vw;
     margin: 2vw;
     padding: 3vw 2vw;
     background-color: #fff;
@@ -31,14 +31,13 @@
     margin-bottom: 2vw;
 }
 
-.store-manage-link {
+.new-link, .shop-manager-list-link {
     text-decoration: none;
     color: #fff;
     font-size: 1.3vw;
 }
 
-.store-manage-text {
-    background-color: #7FFFF0;
+.admin-text {
     border: 1px solid #4169E1;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
