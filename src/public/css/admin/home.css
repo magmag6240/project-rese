@@ -14,9 +14,9 @@
 }
 
 .page-group {
-    width: 40vw;
+    width: 30vw;
     margin: 2vw;
-    padding: 3vw 2vw;
+    padding: 3vw 1vw;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
@@ -31,7 +31,7 @@
     margin-bottom: 2vw;
 }
 
-.new-link, .shop-manager-list-link {
+.new-link, .shop-manager-list-link, .mail-link {
     text-decoration: none;
     color: #fff;
     font-size: 1.3vw;

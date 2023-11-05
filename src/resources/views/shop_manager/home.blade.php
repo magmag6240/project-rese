@@ -18,6 +18,12 @@
             <p class="shop-manage-text">掲載中の店舗情報を変更する</p>
             <p class="shop-manage-text">掲載中の店舗の予約情報を確認する</p>
         </div>
+        <div class="page-group">
+            <button class="page-group-button">
+                <a class="mail-link" href="{{ route('shop_manager.mail.index') }}">メールフォーム</a>
+            </button>
+            <p class="shop_manager-text">利用者へEmailを送信する</p>
+        </div>
     </div>
 </div>
 

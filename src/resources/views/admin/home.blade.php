@@ -21,6 +21,12 @@
             </button>
             <p class="admin-text">掲載中の店舗の代表者情報を閲覧する</p>
         </div>
+        <div class="page-group">
+            <button class="page-group-button">
+                <a class="mail-link" href="{{ route('admin.mail.index') }}">メールフォーム</a>
+            </button>
+            <p class="admin-text">利用者へEmailを送信する</p>
+        </div>
     </div>
 </div>
 

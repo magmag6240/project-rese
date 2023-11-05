@@ -8,6 +8,7 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ShopManagerController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\StripePaymentController;
 
 /*
@@ -44,6 +45,8 @@ Route::middleware('verified')->group(function () {
         Route::get('/shop_manager_list', [AdminController::class, 'show'])->name('admin.show');
         Route::get('/new', [AdminController::class, 'new'])->name('admin.new');
         Route::patch('/update', [AdminController::class, 'update'])->name('admin.update');
+        Route::get('/mail', [MailController::class, 'index'])->name('admin.mail.index');
+        Route::get('/mail/send', [MailController::class, 'send'])->name('admin.mail.send');
     });
 
     Route::group(['prefix' => 'shop_manager'], function () {
@@ -54,5 +57,7 @@ Route::middleware('verified')->group(function () {
         Route::get('/edit/{shop_id}', [ShopManagerController::class, 'edit'])->name('shop_manager.edit');
         Route::patch('/update/{shop_id}', [ShopManagerController::class, 'update'])->name('shop_manager.update');
         Route::get('/reserve_list/{shop_id}', [ShopManagerController::class, 'reserve_list'])->name('shop_manager.reserve_list');
+        Route::get('/mail', [MailController::class, 'index'])->name('shop_manager.mail.index');
+        Route::get('/mail/send', [MailController::class, 'send'])->name('shop_manager.mail.send');
     });
 });
