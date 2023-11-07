@@ -1,7 +1,7 @@
 .shop-manager-shop-list {
     display: inline-flex;
     flex-direction: column;
-    width: 65vw;
+    width: 90vw;
     padding: 1.2vw 0;
     margin: 3vw 0;
     border-radius: 10px;
@@ -14,7 +14,7 @@
     font-size: 1.7vw;
     font-weight: bold;
     padding: 1.5vw 0;
-    width: 65vw;
+    width: 90vw;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background-color: #4169E1;
@@ -46,7 +46,7 @@
     font-size: 1vw;
 }
 
-.shop-edit-link, .shop-reserve-list-link {
+.shop-edit-link, .shop-menu-new-link, .shop-menu-edit-link, .shop-reserve-list-link {
     text-decoration: none;
     font-size: 1vw;
     margin: 0 1vw;

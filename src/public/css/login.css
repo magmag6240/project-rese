@@ -39,7 +39,7 @@
 
 .login-error {
     width: fit-content;
-    font-size: 0.8em;
+    font-size: 0.8vw;
     margin-left: 6vw;
     color: #f00;
 }

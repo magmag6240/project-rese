@@ -123,7 +123,7 @@
     margin: 1vw 0 1.5vw 1.5vw;
 }
 
-.shop-detail-button {
+.shop-detail-button, .evaluate-button {
     background-color: #4169E1;
     border :none;
     border-radius: 5px;
@@ -132,7 +132,7 @@
     cursor: pointer;
 }
 
-.shop-detail-link {
+.shop-detail-link, .shop-evaluate-link {
     text-decoration: none;
     color: #fff;
 }

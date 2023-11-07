@@ -32,6 +32,12 @@
             <td class="shop-edit-link">
                 <a class="shop-edit-link" href="{{route('shop_manager.edit',['shop_id' => $shop->id])}}">店舗情報変更</a>
             </td>
+            <td class="shop-menu-new-link">
+                <a class="shop-menu-new-link" href="{{route('shop_manager.menu.new',['shop_id' => $shop->id])}}">コースメニュー新規作成</a>
+            </td>
+            <td class="shop-menu-edit-link">
+                <a class="shop-menu-edit-link" href="{{route('shop_manager.menu.edit',['shop_id' => $shop->id])}}">コースメニュー変更・更新</a>
+            </td>
             <td class="shop-reserve-list-link">
                 <a class="shop-reserve-list-link" href="{{route('shop_manager.reserve_list',['shop_id' => $shop->id])}}">予約情報</a>
             </td>

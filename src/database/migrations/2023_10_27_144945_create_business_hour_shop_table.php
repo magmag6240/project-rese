@@ -21,7 +21,6 @@ class CreateBusinessHourShopTable extends Migration
 
             $table->foreign('shop_id')->references('id')->on('shops')->onDelete('cascade');
             $table->foreign('business_hour_id')->references('id')->on('business_hours')->onDelete('cascade');
-
         });
     }
 

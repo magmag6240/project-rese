@@ -38,6 +38,8 @@ Route::middleware('verified')->group(function () {
     Route::get('/reserve/edit/{reserve_id}', [ReservationController::class, 'edit'])->name('reserve.edit');
     Route::patch('/reserve/update/{reserve_id}', [ReservationController::class, 'update'])->name('reserve.update');
     Route::delete('/reserve_destroy/{reserve_id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
+    Route::get('/shop_evaluate/{shop_id}', [ShopController::class, 'evaluate'])->name('evaluate.index');
+    Route::post('/shop_evaluate/post/{shop_id}', [ShopController::class, 'post'])->name('evaluate.post');
     Route::get('/done', [ShopController::class, 'show']);
 
     Route::group(['prefix' => 'admin'], function () {
@@ -57,6 +59,10 @@ Route::middleware('verified')->group(function () {
         Route::get('/edit/{shop_id}', [ShopManagerController::class, 'edit'])->name('shop_manager.edit');
         Route::patch('/update/{shop_id}', [ShopManagerController::class, 'update'])->name('shop_manager.update');
         Route::get('/reserve_list/{shop_id}', [ShopManagerController::class, 'reserve_list'])->name('shop_manager.reserve_list');
+        Route::get('/menu/new/{shop_id}', [ShopManagerController::class, 'menu_new'])->name('shop_manager.menu.new');
+        Route::post('/menu/store/{shop_id}', [ShopManagerController::class, 'menu_store'])->name('shop_manager.menu.store');
+        Route::get('/menu/edit/{shop_id}', [ShopManagerController::class, 'menu_edit'])->name('shop_manager.menu.edit');
+        Route::patch('/menu/update/{shop_id}', [ShopManagerController::class, 'menu_update'])->name('shop_manager.menu.update');
         Route::get('/mail', [MailController::class, 'index'])->name('shop_manager.mail.index');
         Route::get('/mail/send', [MailController::class, 'send'])->name('shop_manager.mail.send');
     });

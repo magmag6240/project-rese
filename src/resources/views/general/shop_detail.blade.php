@@ -26,6 +26,11 @@
         <form class="reserve-form" action="{{ route('reserve.store', ['shop_id' => $shop_detail->id]) }}" method="post">
             @csrf
             <input class="reserve-date" type="date" name="reserve_date" id="reserve_date">
+            <div class="form-error">
+                @error('reserve_date')
+                {{ $message }}
+                @enderror
+            </div>
             <label class="reserve-select-time">
                 <select class="reserve-time" name="start_time" id="start_time">
                     <option value="">選択してください</option>
@@ -34,6 +39,11 @@
                     @endforeach
                 </select>
             </label>
+            <div class="form-error">
+                @error('start_time')
+                {{ $message }}
+                @enderror
+            </div>
             <label class="reserve-select-number">
                 <select class="reserve-number" name="number" id="number">
                     <option value="">選択してください</option>
@@ -49,6 +59,11 @@
                     <option value="10">10人</option>
                 </select>
             </label>
+            <div class="form-error">
+                @error('number')
+                {{ $message }}
+                @enderror
+            </div>
             <div class="reserve-confirm">
                 <table class="reserve-confirm-table">
                     <tr class="confirm-table-tr">

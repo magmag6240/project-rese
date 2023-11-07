@@ -14,15 +14,16 @@
             <p class="shop-manage-text">掲載する店舗の情報を入力し、店舗ページを作成する</p>
         </div>
         <div class="page-group">
-            <button class="page-group-button"><a class="shop-manage-link" href="{{ route('shop_manager.shop_list') }}">店舗情報 変更 / 店舗予約状況 閲覧</a></button>
+            <button class="page-group-button"><a class="shop-manage-link" href="{{ route('shop_manager.shop_list') }}">店舗情報 詳細</a></button>
             <p class="shop-manage-text">掲載中の店舗情報を変更する</p>
+            <p class="shop-manage-text">掲載中の店舗のコースプランを登録・編集する</p>
             <p class="shop-manage-text">掲載中の店舗の予約情報を確認する</p>
         </div>
         <div class="page-group">
             <button class="page-group-button">
-                <a class="mail-link" href="{{ route('shop_manager.mail.index') }}">メールフォーム</a>
+                <a class="shop-manage-link" href="{{ route('shop_manager.mail.index') }}">メールフォーム</a>
             </button>
-            <p class="shop_manager-text">利用者へEmailを送信する</p>
+            <p class="shop-manage-text">利用者へEmailを送信する</p>
         </div>
     </div>
 </div>

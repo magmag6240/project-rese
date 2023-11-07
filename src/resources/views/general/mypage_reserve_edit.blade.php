@@ -59,6 +59,11 @@
             @csrf
             <span class="reserve-date-title">Date</span>
             <input class="reserve-date" type="date" name="reserve_date" id="reserve_date">
+            <div class="form-error">
+                @error('reserve_date')
+                {{ $message }}
+                @enderror
+            </div>
             <span class="reserve-time-title">Time</span>
             <label class="reserve-select-time">
                 <select class="reserve-time" name="start_time" id="start_time">
@@ -68,6 +73,11 @@
                     @endforeach
                 </select>
             </label>
+            <div class="form-error">
+                @error('start_time')
+                {{ $message }}
+                @enderror
+            </div>
             <span class="reserve-number-title">Number</span>
             <label class="reserve-select-number">
                 <select class="reserve-number" name="number" id="number">
@@ -84,6 +94,11 @@
                     <option value="10">10人</option>
                 </select>
             </label>
+            <div class="form-error">
+                @error('number')
+                {{ $message }}
+                @enderror
+            </div>
             @if(session('message'))
             <div class="reserve-edit-alarm">
                 {{ session('message') }}

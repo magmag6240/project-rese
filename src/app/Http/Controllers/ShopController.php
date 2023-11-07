@@ -20,7 +20,7 @@ class ShopController extends Controller
 
         $query = Shop::query();
 
-        if(!empty($select_area)){
+        if (!empty($select_area)) {
             $query->where('prefecture_id', 'LIKE', $select_area);
         }
 
@@ -35,5 +35,15 @@ class ShopController extends Controller
         $items = $query->with('prefecture', 'genre')->get();
 
         return view('general/shop_list', compact('prefectures', 'genres', 'items', 'select_area', 'select_genre', 'keyword'));
+    }
+
+    public function evaluate($shop_id)
+    {
+        $shop = Shop::where('id', $shop_id)->first();
+        return view('general/shop_evaluate', compact('shop'));
+    }
+
+    public function post()
+    {
     }
 }

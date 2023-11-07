@@ -2,6 +2,8 @@
     "/js/app.js": "/js/app.js",
     "/js/menu.js": "/js/menu.js",
     "/js/mail.js": "/js/mail.js",
+    "/js/evaluate.js": "/js/evaluate.js",
     "/js/shop_edit.js": "/js/shop_edit.js",
+    "/js/shop_menu_edit.js": "/js/shop_menu_edit.js",
     "/js/reserve_confirm.js": "/js/reserve_confirm.js"
 }

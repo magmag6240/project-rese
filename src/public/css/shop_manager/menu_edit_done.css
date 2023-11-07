@@ -1,0 +1,32 @@
+.done {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 40vw;
+    height: 25vw;
+    margin-top: 3vw;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+.done-text {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 7vw;
+    background-color: #fff;
+}
+
+.home-button {
+    align-self: center;
+    border: none;
+    padding: 0.5vw 0;
+    width: 5vw;
+    margin-top: 2.5vw;
+    border-radius: 5px;
+    background-color: #4169E1;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #fff;
+}

@@ -1,0 +1,86 @@
+.shop-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 4vw 7vw 0 7vw;
+}
+
+.shop-detail-contents {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    text-align: left;
+}
+
+.shop-list-button {
+    font-size: 1.5vw;
+    border-radius: 5px;
+    border: none;
+    padding: 0.2vw 0.5vw;
+    background-color: #fff;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+.shop-list-link {
+    text-decoration: none;
+}
+
+.shop-detail-title {
+    margin: 0 1vw 1.5vw 0;
+}
+
+.shop-detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-name {
+    position: relative;
+    top: 0.3vw;
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 1vw;
+}
+
+.shop-img {
+    margin-bottom: 2vw;
+}
+
+.shop-area-genre {
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+.shop-text {
+    font-size: 1vw;
+    line-height: 1.8vw;
+}
+
+.shop-evaluate {
+    position: absolute;
+    top: -5vw;
+    left: 53vw;
+    text-align: left;
+    width: 40vw;
+    height: 52vw;
+    border-radius: 5px;
+    padding: 0.3vw 2.5vw;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+    background-color: #4169E1;
+}
+
+.evaluate-form {
+    position: relative;
+    background-color: #4169E1;
+}
+
+.evaluate-title {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4169E1;
+}
+
+.star {
+    font-size: 3vw;
+    color: #a09a9a;
+}

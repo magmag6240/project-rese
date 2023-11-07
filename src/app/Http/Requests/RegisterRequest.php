@@ -33,15 +33,15 @@ class RegisterRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => '名前は必ずしてください',
-            'name.string' => '名前は文字列で指定してください',
-            'name.max' => '名前は191文字以下で指定してください',
-            'email.required' => 'メールアドレスは必ず指定してください',
-            'email.email' => '有効なメールアドレスを指定してください',
-            'email.max' => 'メールアドレスは191文字以下で指定してください',
-            'password.required' => 'パスワードは必ず指定してください',
-            'password.min' => 'メールアドレスは8文字以上で指定してください',
-            'password.max' => 'メールアドレスは191文字以下で指定してください',
+            'name.required' => '名前は必須項目です',
+            'name.string' => '名前は文字列で入力してください',
+            'name.max' => '名前は191文字以下で入力してください',
+            'email.required' => 'メールアドレスは必須項目です',
+            'email.email' => '有効なメールアドレスを入力してください',
+            'email.max' => 'メールアドレスは191文字以下で入力してください',
+            'password.required' => 'パスワードは必須項目です',
+            'password.min' => 'メールアドレスは8文字以上で入力してください',
+            'password.max' => 'メールアドレスは191文字以下で入力してください',
         ];
     }
 }

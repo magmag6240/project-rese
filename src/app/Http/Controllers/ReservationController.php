@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Reservation;
 use App\Models\Shop;
+use App\Http\Requests\ReservationRequest;
 
 class ReservationController extends Controller
 {
@@ -19,7 +20,7 @@ class ReservationController extends Controller
         return view('general/shop_detail', compact('business_hour', 'shop_detail'));
     }
 
-    public function store(Request $request, $shop_id)
+    public function store(ReservationRequest $request, $shop_id)
     {
         $reserve_history = Reservation::where('shop_id', $shop_id)->get();
 
@@ -176,7 +177,7 @@ class ReservationController extends Controller
         return view('general/mypage_reserve_edit', compact('reserve', 'business_hour'));
     }
 
-    public function update(Request $request, $reserve_id)
+    public function update(ReservationRequest $request, $reserve_id)
     {
         $reserve = Reservation::with('shop')->where('id', $reserve_id)->first();
         $shop_id = $reserve->shop->id;

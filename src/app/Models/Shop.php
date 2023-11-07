@@ -39,6 +39,11 @@ class Shop extends Model
         return $this->hasMany(Reservation::class);
     }
 
+    public function Menus()
+    {
+        return $this->hasMany(Menu::class);
+    }
+
     public function business_hours()
     {
         return $this->belongsToMany(BusinessHour::class);
@@ -47,6 +52,11 @@ class Shop extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function evaluations()
+    {
+        return $this->hasMany(Evaluation::class);
     }
 
     public function is_liked()

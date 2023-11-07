@@ -8,6 +8,7 @@ use Database\Seeders\GenreSeeder;
 use Database\Seeders\BusinessHourSeeder;
 use Database\Seeders\ShopSeeder;
 use Database\Seeders\BusinessHourShopSeeder;
+use Database\Seeders\MenuSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,7 +17,8 @@ class DatabaseSeeder extends Seeder
         GenreSeeder::class,
         BusinessHourSeeder::class,
         ShopSeeder::class,
-        BusinessHourShopSeeder::class
+        BusinessHourShopSeeder::class,
+        MenuSeeder::class
     ];
 
     /**
