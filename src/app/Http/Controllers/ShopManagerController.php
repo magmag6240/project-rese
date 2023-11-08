@@ -22,7 +22,7 @@ class ShopManagerController extends Controller
     {
         $prefectures = Prefecture::all();
         $genres = Genre::all();
-        return view('shop_manager/create', compact('prefectures', 'genres'));
+        return view('shop_manager/shop/create', compact('prefectures', 'genres'));
     }
 
     public function store(Request $request)
@@ -35,7 +35,7 @@ class ShopManagerController extends Controller
             'shop_detail' => $request->input('shop_detail'),
             'image_url' => $request->input('shop_image_url')
         ]);
-        return view('shop_manager/create_done');
+        return view('shop_manager/shop/create_done');
     }
 
     public function shop_list()
@@ -51,14 +51,14 @@ class ShopManagerController extends Controller
         $prefectures = Prefecture::all();
         $genres = Genre::all();
         $manage_shop = Shop::with('prefecture', 'genre')->where('id', $shop_id)->first();
-        return view('shop_manager/edit', compact('prefectures', 'genres', 'manage_shop'));
+        return view('shop_manager/shop/edit', compact('prefectures', 'genres', 'manage_shop'));
     }
 
     public function update(Request $request, $shop_id)
     {
         $shop_edit = $request->only(['shop_name', 'prefecture_id', 'genre_id', 'shop_detail', 'image_url']);
         Shop::find($shop_id)->update($shop_edit);
-        return view('shop_manager/edit_done');
+        return view('shop_manager/shop/edit_done');
     }
 
     public function reserve_list($shop_id)
@@ -70,7 +70,7 @@ class ShopManagerController extends Controller
     public function menu_new($shop_id)
     {
         $shop = Shop::where('id', $shop_id)->first();
-        return view('shop_manager/menu_create', compact('shop'));
+        return view('shop_manager/menu/create', compact('shop'));
     }
 
     public function menu_store(Request $request, $shop_id)
@@ -81,21 +81,28 @@ class ShopManagerController extends Controller
             'price' => $request->input('price'),
             'menu_detail' => $request->input('menu_detail')
         ]);
-        return view('shop_manager/menu_create_done');
+        return view('shop_manager/menu/create_done');
     }
 
-    public function menu_edit($shop_id)
+    public function menu_list($shop_id)
     {
         $user_id = Auth::id();
         $shop = Shop::where('id', $shop_id)->first();
         $menu = Menu::where('shop_id', $shop_id)->get();
-        return view('shop_manager/menu_edit', compact('shop', 'menu'));
+        return view('shop_manager/menu/edit_list', compact('shop', 'menu'));
+    }
+
+    public function menu_edit($menu_id)
+    {
+        $user_id = Auth::id();
+        $menu = Menu::where('id', $menu_id)->get();
+        return view('shop_manager/menu/edit', compact('menu'));
     }
 
     public function menu_update(Request $request, $shop_id)
     {
         $shop_edit = $request->only(['menu_name', 'shop_id', 'price']);
         Menu::find($shop_id)->update($shop_edit);
-        return view('shop_manager/menu_edit_done');
+        return view('shop_manager/menu/edit_done');
     }
 }

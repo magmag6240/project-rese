@@ -61,8 +61,9 @@ Route::middleware('verified')->group(function () {
         Route::get('/reserve_list/{shop_id}', [ShopManagerController::class, 'reserve_list'])->name('shop_manager.reserve_list');
         Route::get('/menu/new/{shop_id}', [ShopManagerController::class, 'menu_new'])->name('shop_manager.menu.new');
         Route::post('/menu/store/{shop_id}', [ShopManagerController::class, 'menu_store'])->name('shop_manager.menu.store');
-        Route::get('/menu/edit/{shop_id}', [ShopManagerController::class, 'menu_edit'])->name('shop_manager.menu.edit');
-        Route::patch('/menu/update/{shop_id}', [ShopManagerController::class, 'menu_update'])->name('shop_manager.menu.update');
+        Route::get('/menu/list/{shop_id}', [ShopManagerController::class, 'menu_list'])->name('shop_manager.menu.list');
+        Route::get('/menu/edit/{menu_id}', [ShopManagerController::class, 'menu_edit'])->name('shop_manager.menu.edit');
+        Route::patch('/menu/update/{menu_id}', [ShopManagerController::class, 'menu_update'])->name('shop_manager.menu.update');
         Route::get('/mail', [MailController::class, 'index'])->name('shop_manager.mail.index');
         Route::get('/mail/send', [MailController::class, 'send'])->name('shop_manager.mail.send');
     });
