@@ -64,6 +64,14 @@
                 {{ $message }}
                 @enderror
             </div>
+            <label class="reserve-select-menu">
+                <select class="reserve-menu" name="menu" id="menu">
+                    <option value="">選択してください</option>
+                    @foreach($menu as $menu)
+                    <option value="{{$menu}}">{{$menu}}</option>
+                    @endforeach
+                </select>
+            </label>
             <div class="reserve-confirm">
                 <table class="reserve-confirm-table">
                     <tr class="confirm-table-tr">

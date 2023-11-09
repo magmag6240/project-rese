@@ -16,5 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/mail.js', 'public/js')
     .js('resources/js/evaluate.js', 'public/js')
     .js('resources/js/shop_edit.js', 'public/js')
+    .js('resources/js/camera.js', 'public/js')
+    .js('resources/js/jsQR.js', 'public/js')
     .js('resources/js/shop_menu_edit.js', 'public/js')
     .js('resources/js/reserve_confirm.js', 'public/js');

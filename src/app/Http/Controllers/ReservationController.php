@@ -14,10 +14,9 @@ class ReservationController extends Controller
     public function index($id)
     {
         $shop_detail = Shop::with('prefecture', 'genre')->find($id);
-
         $business_hour = $shop_detail->business_hours->pluck('business_hour');
-
-        return view('general/shop_detail', compact('business_hour', 'shop_detail'));
+        $menu = $shop_detail->menus->pluck('menu_name');
+        return view('general/shop_detail', compact('business_hour', 'shop_detail', 'menu'));
     }
 
     public function store(ReservationRequest $request, $shop_id)

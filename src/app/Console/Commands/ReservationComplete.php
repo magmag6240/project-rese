@@ -3,27 +3,27 @@
 namespace App\Console\Commands;
 
 use App\Models\Reservation;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\RemainderEmail;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\CompleteReservationEmail;
 
-class SendReminders extends Command
+class ReservationComplete extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'remainder:send';
+    protected $signature = 'reservation:complete';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Send remainder emails to users';
+    protected $description = 'Send complete reservation emails to users';
 
     /**
      * Create a new command instance.
@@ -42,13 +42,13 @@ class SendReminders extends Command
      */
     public function handle()
     {
-        $today = Carbon::today()->format('Y-m-d');
-        $today_reserve_users = Reservation::where('reserve_date', $today)->get();
+        $from = Carbon::now()->subMinutes(2);
 
-        foreach($today_reserve_users as $reserve){
+        $reserve_complete = Reservation::where('created_at', '>', $from)->get();
+        foreach ($reserve_complete as $reserve) {
             $users = User::where('id', $reserve->user_id)->get();
             foreach ($users as $user) {
-                Mail::to($user->email)->send(new RemainderEmail($user));
+            Mail::to($user->email)->send(new CompleteReservationEmail($user));
             }
         }
     }

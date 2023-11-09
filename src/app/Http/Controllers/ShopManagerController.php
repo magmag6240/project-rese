@@ -45,6 +45,11 @@ class ShopManagerController extends Controller
         return view('shop_manager/shop_list', compact('shops'));
     }
 
+    public function qr_code()
+    {
+        return view('shop_manager/qr_code');
+    }
+
     public function edit($shop_id)
     {
         $user_id = Auth::id();
@@ -95,14 +100,15 @@ class ShopManagerController extends Controller
     public function menu_edit($menu_id)
     {
         $user_id = Auth::id();
-        $menu = Menu::where('id', $menu_id)->get();
+        $menu = Menu::where('id', $menu_id)->first();
         return view('shop_manager/menu/edit', compact('menu'));
     }
 
-    public function menu_update(Request $request, $shop_id)
+    public function menu_update(Request $request, $menu_id)
     {
-        $shop_edit = $request->only(['menu_name', 'shop_id', 'price']);
-        Menu::find($shop_id)->update($shop_edit);
-        return view('shop_manager/menu/edit_done');
+        $menu = Menu::where('id', $menu_id)->get();
+        $shop_edit = $request->only(['menu_name', 'price', 'menu_detail']);
+        Menu::find($menu_id)->update($shop_edit);
+        return view('shop_manager/menu/edit_done', compact('menu'));
     }
 }

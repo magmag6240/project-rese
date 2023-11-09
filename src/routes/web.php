@@ -48,7 +48,8 @@ Route::middleware('verified')->group(function () {
         Route::get('/new', [AdminController::class, 'new'])->name('admin.new');
         Route::patch('/update', [AdminController::class, 'update'])->name('admin.update');
         Route::get('/mail', [MailController::class, 'index'])->name('admin.mail.index');
-        Route::get('/mail/send', [MailController::class, 'send'])->name('admin.mail.send');
+        Route::get('/mail/invite', [MailController::class, 'invitation_store_manager'])->name('admin.mail.invite');
+        Route::get('/mail/notice', [MailController::class, 'mail_all_users'])->name('admin.mail.notice');
     });
 
     Route::group(['prefix' => 'shop_manager'], function () {
@@ -64,6 +65,7 @@ Route::middleware('verified')->group(function () {
         Route::get('/menu/list/{shop_id}', [ShopManagerController::class, 'menu_list'])->name('shop_manager.menu.list');
         Route::get('/menu/edit/{menu_id}', [ShopManagerController::class, 'menu_edit'])->name('shop_manager.menu.edit');
         Route::patch('/menu/update/{menu_id}', [ShopManagerController::class, 'menu_update'])->name('shop_manager.menu.update');
+        Route::get('/qr_code', [ShopManagerController::class, 'qr_code'])->name('shop_manager.qr_code');
         Route::get('/mail', [MailController::class, 'index'])->name('shop_manager.mail.index');
         Route::get('/mail/send', [MailController::class, 'send'])->name('shop_manager.mail.send');
     });

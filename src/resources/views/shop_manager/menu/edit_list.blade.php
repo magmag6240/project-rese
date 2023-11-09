@@ -30,14 +30,11 @@
                 {{$menu->menu_detail}}
             </td>
             <td class="menu-edit-link">
-                <a class="menu-edit-link" href="{{route('shop_manager.menu.edit',['menu_id' => $menu->id])}}">コースプラン内容変更</a>
+                <a class="menu-edit-link" href="{{route('shop_manager.menu.edit', ['menu_id' => $menu->id])}}">コースプラン内容変更</a>
             </td>
         </tr>
         @endforeach
     </table>
-    <div class="menu-paginate">
-        
-    </div>
 </div>
 
 @endsection

@@ -23,37 +23,18 @@
     </div>
     <div class="shop-evaluate">
         <p class="evaluate-title">評価</p>
-        <form class="evaluate-form" action="{{ route('evaluate.post', ['shop_id' => $shop->id]) }}" method="post">
-            @csrf
-            <div class="evaluate-star">
-                <span class="star" id="1">★</span>
-                <span class="star" id="2">★</span>
-                <span class="star" id="3">★</span>
-                <span class="star" id="4">★</span>
-                <span class="star" id="5">★</span>
+        <div class="evaluate-list">
+            @foreach($evaluate as $data)
+            <div class="evaluate-group">
+                <p class="evaluate-contents-title">点数</p>
+                <p class="evaluate-contents">{{$data->stars}}</p>
             </div>
-            <div class="comments">
-                <div>
-                    <p>タイトル</p>
-                    <input type="text">
-                </div>
-                <div>
-                    <p>感想</p>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
+            <div class="evaluate-group">
+                <p class="evaluate-contents-title">感想</p>
+                <p class="evaluate-contents">{{$data->comments}}</p>
             </div>
-            <div class="evaluate-confirm">
-                <div>
-                    <p>タイトル</p>
-                    <span></span>
-                </div>
-                <div>
-                    <p>感想</p>
-                    <span></span>
-                </div>
-            </div>
-            <button class="reserve-button" type="submit">投稿する</button>
-        </form>
+            @endforeach
+        </div>
     </div>
 </div>
 <script src="{{ mix('js/evaluate.js') }}"></script>

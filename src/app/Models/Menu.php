@@ -19,4 +19,9 @@ class Menu extends Model
     {
         return $this->belongsTo(Shop::class);
     }
+
+    public function reservations()
+    {
+        return $this->hasManyThrough(Reservation::class, Shop::class);
+    }
 }

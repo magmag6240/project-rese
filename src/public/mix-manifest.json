@@ -4,6 +4,8 @@
     "/js/mail.js": "/js/mail.js",
     "/js/evaluate.js": "/js/evaluate.js",
     "/js/shop_edit.js": "/js/shop_edit.js",
+    "/js/camera.js": "/js/camera.js",
+    "/js/jsQR.js": "/js/jsQR.js",
     "/js/shop_menu_edit.js": "/js/shop_menu_edit.js",
     "/js/reserve_confirm.js": "/js/reserve_confirm.js"
 }

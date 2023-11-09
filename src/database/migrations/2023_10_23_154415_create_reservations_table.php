@@ -17,6 +17,7 @@ class CreateReservationsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('shop_id');
+            $table->unsignedBigInteger('menu_id')->nullable();
             $table->date('reserve_date');
             $table->time('start_time');
             $table->integer('number');
@@ -24,6 +25,7 @@ class CreateReservationsTable extends Migration
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('shop_id')->references('id')->on('shops')->onDelete('cascade');
+            $table->foreign('menu_id')->references('id')->on('menus');
         });
     }
 

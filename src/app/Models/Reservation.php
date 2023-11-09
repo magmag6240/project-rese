@@ -13,6 +13,7 @@ class Reservation extends Model
     protected $fillable = [
         'user_id',
         'shop_id',
+        'menu_id',
         'reserve_date',
         'start_time',
         'number'
@@ -26,6 +27,11 @@ class Reservation extends Model
     public function shop()
     {
         return $this->belongsTo(Shop::class);
+    }
+
+    public function menu()
+    {
+        return $this->hasOneThrough(Menu::class, Shop::class);
     }
 
     function getStartTimeAttribute($value)

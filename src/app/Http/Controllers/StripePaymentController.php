@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StripeRequest;
+use Illuminate\Http\Request;
 use Stripe\Stripe;
+use Stripe\Customer;
 use Stripe\Charge;
 
 class StripePaymentController extends Controller
 {
+    public function index()
+    {
+        return view('');
+    }
 
-    public function store(StripeRequest $request)
+    public function store(Request $request)
     {
         Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
 

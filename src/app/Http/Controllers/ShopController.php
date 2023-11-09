@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Evaluation;
 use Illuminate\Http\Request;
 use App\Models\Genre;
 use App\Models\Prefecture;
@@ -40,7 +41,13 @@ class ShopController extends Controller
     public function evaluate($shop_id)
     {
         $shop = Shop::where('id', $shop_id)->first();
-        return view('general/shop_evaluate', compact('shop'));
+        $evaluate = Evaluation::where('shop_id', $shop_id)->get();
+
+        if(is_null($evaluate)){
+            return view('general/shop_evaluate_null', compact('shop'));
+        }else{
+            return view('general/shop_evaluate', compact('shop', 'evaluate'));
+        }
     }
 
     public function post()

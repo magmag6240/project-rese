@@ -38,6 +38,10 @@
                         <td class="reserve-table-td">Number</td>
                         <td class="reserve-table-td">{{$item->number}}人</td>
                     </tr>
+                    <tr class="reserve-table-tr">
+                        <td class="reserve-table-td">QR code</td>
+                        <td class="reserve-table-td">{{QrCode::generate($item->id)}}</td>
+                    </tr>
                 </table>
                 <button class="reserve-edit-button"><a href="{{route('reserve.edit', ['reserve_id' => $item->id ])}}">予約内容変更</a></button>
             </div>
