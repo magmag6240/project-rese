@@ -1,18 +1,24 @@
 #wrapper {
-    margin: 0px auto 0px auto;
-    width: 320px;
-    height: auto;
+    position: relative;
 }
 
-#msg {
-    margin: 0px;
-    padding: 10px;
-    background-color: lightgray;
-    text-align: center;
+#video {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
 }
 
-#canvas {
-    width: 100%;
-    height: auto;
-    background-color: silver;
+#camera-canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+}
+
+#rect-canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
 }

@@ -9,12 +9,14 @@ use Database\Seeders\BusinessHourSeeder;
 use Database\Seeders\ShopSeeder;
 use Database\Seeders\BusinessHourShopSeeder;
 use Database\Seeders\MenuSeeder;
+use Database\Seeders\StarSeeder;
 
 class DatabaseSeeder extends Seeder
 {
     private const SEEDERS = [
         PrefectureSeeder::class,
         GenreSeeder::class,
+        StarSeeder::class,
         BusinessHourSeeder::class,
         ShopSeeder::class,
         BusinessHourShopSeeder::class,

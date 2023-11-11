@@ -50,7 +50,4 @@ class ShopController extends Controller
         }
     }
 
-    public function post()
-    {
-    }
 }

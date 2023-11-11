@@ -8,6 +8,7 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ShopManagerController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EvaluationController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\StripePaymentController;
 
@@ -38,8 +39,9 @@ Route::middleware('verified')->group(function () {
     Route::get('/reserve/edit/{reserve_id}', [ReservationController::class, 'edit'])->name('reserve.edit');
     Route::patch('/reserve/update/{reserve_id}', [ReservationController::class, 'update'])->name('reserve.update');
     Route::delete('/reserve_destroy/{reserve_id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
-    Route::get('/shop_evaluate/{shop_id}', [ShopController::class, 'evaluate'])->name('evaluate.index');
-    Route::post('/shop_evaluate/post/{shop_id}', [ShopController::class, 'post'])->name('evaluate.post');
+    Route::get('/shop_evaluate/{shop_id}', [ShopController::class, 'evaluate'])->name('evaluate');
+    Route::get('/evaluate/{shop_id}', [EvaluationController::class, 'index'])->name('evaluate.index');
+    Route::post('/evaluate/post/', [EvaluationController::class, 'create'])->name('evaluate.create');
     Route::get('/done', [ShopController::class, 'show']);
 
     Route::group(['prefix' => 'admin'], function () {

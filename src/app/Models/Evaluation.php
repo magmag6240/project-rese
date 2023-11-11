@@ -10,7 +10,9 @@ class Evaluation extends Model
     use HasFactory;
 
     protected $fillable = [
-        'stars',
+        'user_id',
+        'shop_id',
+        'star_id',
         'comments'
     ];
 
@@ -22,5 +24,10 @@ class Evaluation extends Model
     public function shop()
     {
         return $this->belongsTo(Shop::class);
+    }
+
+    public function star()
+    {
+        return $this->belongsTo(Star::class);
     }
 }
