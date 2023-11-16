@@ -11,6 +11,8 @@ class InformationEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $email;
+
     /**
      * Create a new message instance.
      *

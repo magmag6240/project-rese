@@ -1,0 +1,50 @@
+.confirm-payment {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #4169E1;
+    color: #fff;
+    padding: 1.5vw 5vw;
+    margin-top: 5vw;
+    border-radius: 10px;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+.confirm-title {
+    font-size: 1.5vw;
+    font-weight: bold;
+    background-color: #4169E1;
+}
+
+.confirm-text {
+    font-size: 1vw;
+    padding-top: 1vw;
+    background-color: #4169E1;
+}
+
+.reserve-confirm,
+.reserve-confirm-table,
+.confirm-table-tr,
+.confirm-table-td {
+    border: none;
+    font-size: 1.1vw;
+    color: #fff;
+    background-color: #5287e9;
+}
+
+.reserve-confirm {
+    border-radius: 5px;
+    padding: 1vw;
+    margin: 2vw 0;
+    width: fit-content;
+    align-self: center;
+}
+
+.confirm-table-td {
+    padding: 0.5vw 1vw;
+    width: 13vw;
+}
+
+.stripe-form {
+    margin: 1vw;
+    background-color: #4169E1;
+}

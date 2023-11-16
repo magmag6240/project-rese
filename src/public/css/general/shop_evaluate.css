@@ -33,12 +33,21 @@
     flex-direction: column;
 }
 
-.shop-name {
+.shop-name, .shop-avg {
     position: relative;
     top: 0.3vw;
     font-size: 2vw;
     font-weight: bold;
     margin: 1vw;
+}
+
+.shop-avg::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f005';
+    color: #FFD700;
+    font-size: 2vw;
+    margin: 1vw 1vw 1vw 0;
 }
 
 .shop-img {
@@ -68,11 +77,6 @@
     background-color: #4169E1;
 }
 
-.evaluate-form {
-    position: relative;
-    background-color: #4169E1;
-}
-
 .evaluate-title {
     font-size: 2vw;
     font-weight: bold;
@@ -80,11 +84,48 @@
     background-color: #4169E1;
 }
 
-.star {
-    font-size: 3vw;
-    color: #a09a9a;
+.evaluate-list {
+    background-color: #1E90FF;
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+    padding: 1vw;
+    border: 1px solid #808080;
+    border-radius: 5px;
 }
 
-.evaluate-text {
+.evaluate-contents {
+    background-color: #1E90FF;
     color: #fff;
+    font-size: 1.2vw;
+}
+
+.pagination {
+    text-align: center;
+    background-color: #4169E1;
+    padding: 2vw;
+}
+
+.current-paginate-page,
+.another-paginate-page,
+.another-paginate,
+.page-link-prev,
+.page-link-next {
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 0.4vw 0.8vw;
+    cursor: pointer;
+    color: #fff;
+    border: 0.5px solid #00BFFF;
+    background-color: #00BFFF;
+}
+
+.another-paginate-page {
+    color: #fff;
+}
+
+.current-paginate-page {
+    color: #fff;
+    background-color: #00008B;
+    border: 0.5px solid #00008B;
 }

@@ -43,7 +43,7 @@
                         <td class="reserve-table-td">{{QrCode::generate($item->id)}}</td>
                     </tr>
                 </table>
-                <button class="reserve-edit-button"><a href="{{route('reserve.edit', ['reserve_id' => $item->id ])}}">予約内容変更</a></button>
+                <button class="reserve-edit-button"><a class="reserve-edit-link" href="{{route('reserve.edit', ['reserve_id' => $item->id ])}}">予約内容変更</a></button>
             </div>
             @endforeach
         </div>
@@ -65,6 +65,9 @@
                     <div class="shop-button">
                         <button class="shop-detail-button">
                             <a class="shop-detail-link" href="{{route('reserve.index', ['shop_id' => $item->shop->id])}}">詳しく見る</a>
+                        </button>
+                        <button class="evaluate-button">
+                            <a class="shop-evaluate-link" href="{{route('evaluate', ['shop_id' => $item->id])}}">評価詳細</a>
                         </button>
                         <div class="like">
                             @if($item->is_liked())

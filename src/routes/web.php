@@ -26,10 +26,6 @@ use App\Http\Controllers\StripePaymentController;
 Route::get('/', [ShopController::class, 'index'])->name('shop.index');
 Route::get('/detail/{shop_id}', [ReservationController::class, 'index'])->name('reserve.index');
 
-Route::prefix('stripe')->group(function () {
-    Route::post('/store', [StripePaymentController::class, 'store'])->name('stripe.store');
-});
-
 Route::middleware('verified')->group(function () {
 
     Route::get('/mypage', [MyPageController::class, 'index']);
@@ -39,9 +35,10 @@ Route::middleware('verified')->group(function () {
     Route::get('/reserve/edit/{reserve_id}', [ReservationController::class, 'edit'])->name('reserve.edit');
     Route::patch('/reserve/update/{reserve_id}', [ReservationController::class, 'update'])->name('reserve.update');
     Route::delete('/reserve_destroy/{reserve_id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
+    Route::post('/stripe/store', [StripePaymentController::class, 'store'])->name('stripe.store');
     Route::get('/shop_evaluate/{shop_id}', [ShopController::class, 'evaluate'])->name('evaluate');
     Route::get('/evaluate/{shop_id}', [EvaluationController::class, 'index'])->name('evaluate.index');
-    Route::post('/evaluate/post/', [EvaluationController::class, 'create'])->name('evaluate.create');
+    Route::post('/evaluate/post/{shop_id}', [EvaluationController::class, 'create'])->name('evaluate.create');
     Route::get('/done', [ShopController::class, 'show']);
 
     Route::group(['prefix' => 'admin'], function () {
@@ -69,6 +66,6 @@ Route::middleware('verified')->group(function () {
         Route::patch('/menu/update/{menu_id}', [ShopManagerController::class, 'menu_update'])->name('shop_manager.menu.update');
         Route::get('/qr_code', [ShopManagerController::class, 'qr_code'])->name('shop_manager.qr_code');
         Route::get('/mail', [MailController::class, 'index'])->name('shop_manager.mail.index');
-        Route::get('/mail/send', [MailController::class, 'send'])->name('shop_manager.mail.send');
+        Route::post('/mail/send', [MailController::class, 'send'])->name('shop_manager.mail.send');
     });
 });

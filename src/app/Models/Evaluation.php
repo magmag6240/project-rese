@@ -30,4 +30,5 @@ class Evaluation extends Model
     {
         return $this->belongsTo(Star::class);
     }
+
 }

@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Models\Reservation;
 use App\Models\Shop;
 use App\Http\Requests\ReservationRequest;
+use App\Models\Menu;
 
 class ReservationController extends Controller
 {
@@ -15,8 +16,8 @@ class ReservationController extends Controller
     {
         $shop_detail = Shop::with('prefecture', 'genre')->find($id);
         $business_hour = $shop_detail->business_hours->pluck('business_hour');
-        $menu = $shop_detail->menus->pluck('menu_name');
-        return view('general/shop_detail', compact('business_hour', 'shop_detail', 'menu'));
+        $menu_detail = Menu::where('shop_id', $id)->get();
+        return view('general/shop_detail', compact('business_hour', 'shop_detail', 'menu_detail'));
     }
 
     public function store(ReservationRequest $request, $shop_id)
@@ -29,9 +30,17 @@ class ReservationController extends Controller
                 'shop_id' => $shop_id,
                 'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                'number' => $request->input('number')
+                'number' => $request->input('number'),
+                'menu_id' => $request->input('menu_id')
             ]);
-            return view('general/done');
+            if(is_null($request->input('menu_id'))) {
+                return view('general/done');
+            }
+            if(!is_null($request->input('menu_id'))) {
+                $reserve_confirm = Reservation::where('user_id', Auth::id())->latest()->first();
+                $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+            }
         }
 
         $required_date = Carbon::parse($request->input('reserve_date'))->format('Y-m-d');
@@ -43,9 +52,17 @@ class ReservationController extends Controller
                 'shop_id' => $shop_id,
                 'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                'number' => $request->input('number')
+                'number' => $request->input('number'),
+                'menu_id' => $request->input('menu_id')
             ]);
-            return view('general/done');
+            if (is_null($request->input('menu_id'))) {
+                return view('general/done');
+            }
+            if (!is_null($request->input('menu_id'))) {
+                $reserve_confirm = Reservation::with('shop')->where('user_id', Auth::id())->latest()->first();
+                $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+            }
         }
 
         $required_reserve_number = $request->input('number');
@@ -62,9 +79,17 @@ class ReservationController extends Controller
                 'shop_id' => $shop_id,
                 'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                 'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                'number' => $request->input('number')
+                'number' => $request->input('number'),
+                'menu_id' => $request->input('menu_id')
             ]);
-            return view('general/done');
+            if (is_null($request->input('menu_id'))) {
+                return view('general/done');
+            }
+            if (!is_null($request->input('menu_id'))) {
+                $reserve_confirm = Reservation::with('shop')->where('user_id', Auth::id())->latest()->first();
+                $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+            }
         }
 
         if(is_null($same_reserve_start) && !is_null($partial_match_reserve_time_before) && is_null($partial_match_reserve_time_after)){
@@ -75,9 +100,17 @@ class ReservationController extends Controller
                     'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                    'number' => $request->input('number')
+                    'number' => $request->input('number'),
+                    'menu_id' => $request->input('menu_id')
                 ]);
-                return view('general/done');
+                if (is_null($request->input('menu_id'))) {
+                    return view('general/done');
+                }
+                if (!is_null($request->input('menu_id'))) {
+                    $reserve_confirm = Reservation::with('shop')->where('user_id', Auth::id())->latest()->first();
+                    $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                    return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+                }
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -91,9 +124,17 @@ class ReservationController extends Controller
                     'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                    'number' => $request->input('number')
+                    'number' => $request->input('number'),
+                    'menu_id' => $request->input('menu_id')
                 ]);
-                return view('general/done');
+                if (is_null($request->input('menu_id'))) {
+                    return view('general/done');
+                }
+                if (!is_null($request->input('menu_id'))) {
+                    $reserve_confirm = Reservation::with('shop')->where('user_id', Auth::id())->latest()->first();
+                    $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                    return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+                }
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -108,9 +149,17 @@ class ReservationController extends Controller
                     'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                    'number' => $request->input('number')
+                    'number' => $request->input('number'),
+                    'menu_id' => $request->input('menu_id')
                 ]);
-                return view('general/done');
+                if (is_null($request->input('menu_id'))) {
+                    return view('general/done');
+                }
+                if (!is_null($request->input('menu_id'))) {
+                    $reserve_confirm = Reservation::with('shop')->where('user_id', Auth::id())->latest()->first();
+                    $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                    return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+                }
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -125,9 +174,17 @@ class ReservationController extends Controller
                     'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                    'number' => $request->input('number')
+                    'number' => $request->input('number'),
+                    'menu_id' => $request->input('menu_id')
                 ]);
-                return view('general/done');
+                if (is_null($request->input('menu_id'))) {
+                    return view('general/done');
+                }
+                if (!is_null($request->input('menu_id'))) {
+                    $reserve_confirm = Reservation::with('shop')->where('user_id', Auth::id())->latest()->first();
+                    $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                    return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+                }
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -142,9 +199,17 @@ class ReservationController extends Controller
                     'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                    'number' => $request->input('number')
+                    'number' => $request->input('number'),
+                    'menu_id' => $request->input('menu_id')
                 ]);
-                return view('general/done');
+                if (is_null($request->input('menu_id'))) {
+                    return view('general/done');
+                }
+                if (!is_null($request->input('menu_id'))) {
+                    $reserve_confirm = Reservation::with('shop')->where('user_id', Auth::id())->latest()->first();
+                    $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                    return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+                }
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -160,9 +225,17 @@ class ReservationController extends Controller
                     'shop_id' => $shop_id,
                     'reserve_date' => Carbon::parse($request->input('reserve_date'))->format('Y-m-d'),
                     'start_time' => Carbon::parse($request->input('start_time'))->format('H:i:s'),
-                    'number' => $request->input('number')
+                    'number' => $request->input('number'),
+                    'menu_id' => $request->input('menu_id')
                 ]);
-                return view('general/done');
+                if (is_null($request->input('menu_id'))) {
+                    return view('general/done');
+                }
+                if (!is_null($request->input('menu_id'))) {
+                    $reserve_confirm = Reservation::with('shop')->where('user_id', Auth::id())->latest()->first();
+                    $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+                    return view('general/confirm_payment', compact('reserve_confirm', 'menu_data'));
+                }
             } else {
                 return redirect()->route('reserve.index', ['shop_id' => $shop_id])->with('message', '予約をお取りすることができませんでした。日時を再度ご検討ください。');
             }
@@ -274,5 +347,4 @@ class ReservationController extends Controller
 
         return redirect()->back();
     }
-
 }

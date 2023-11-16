@@ -11,6 +11,7 @@
         <div class="shop-detail-title">
             <button class="shop-list-button"><a class="shop-list-link" href="/"><</a></button>
             <span class="shop-name">{{$shop->shop_name}}</span>
+            <span class="shop-avg">{{$evaluate_star}}</span>
         </div>
         <div class="shop-detail-info">
             <img class="shop-img" src="{{$shop->image_url}}">
@@ -23,20 +24,17 @@
     </div>
     <div class="shop-evaluate">
         <p class="evaluate-title">評価</p>
+        @foreach($evaluate as $data)
         <div class="evaluate-list">
-            @foreach($evaluate as $data)
-            <div class="evaluate-group">
-                <p class="evaluate-contents-title">点数</p>
-                <p class="evaluate-contents">{{$data->stars}}</p>
-            </div>
-            <div class="evaluate-group">
-                <p class="evaluate-contents-title">感想</p>
-                <p class="evaluate-contents">{{$data->comments}}</p>
-            </div>
-            @endforeach
+            <span class="evaluate-contents">点数: {{$data->user->name}}</span>
+            <span class="evaluate-contents">点数: {{$data->star_id}}/5</span>
+            <span class="evaluate-contents">感想: {{$data->comments}}</span>
+        </div>
+        @endforeach
+        <div class="evaluate-paginate">
+            {{$evaluate->links('vendor.pagination.evaluate_paginate')}}
         </div>
     </div>
 </div>
-<script src="{{ mix('js/evaluate.js') }}"></script>
 
 @endsection

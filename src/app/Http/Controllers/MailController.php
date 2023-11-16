@@ -19,9 +19,13 @@ class MailController extends Controller
         $user_role = Auth::user()->role;
         if($user_role == 'shop_manager'){
             $shops = Shop::where('user_id', Auth::id())->get();
+            
             foreach($shops as $shop){
-                $users = Reservation::with('user')->where('shop_id', $shop->id)->get();
-                return view('shop_manager/mail', compact('users'));
+                $users = Reservation::with('user', 'shop')->where('shop_id', $shop->id)->get();
+                foreach($users as $user){
+                    $data = User::where('id', $user->user_id)->get();
+                    return view('emails/information', compact('data'));
+                }
             }
         }
         if ($user_role == 'admin') {
@@ -32,8 +36,11 @@ class MailController extends Controller
 
     public function send(Request $request)
     {
-        $mail_recipient = $request->input('user');
-        Mail::to($mail_recipient)->send(new InformationEmail());
+        
+        $mail_recipient = 
+        $mail_content = $request->information;
+        Mail::to($mail_recipient)->send(new InformationEmail($mail_content));
+        return view('shop_manager/mail_done');
     }
 
     public function invitation_store_manager(Request $request)

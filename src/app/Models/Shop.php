@@ -39,7 +39,7 @@ class Shop extends Model
         return $this->hasMany(Reservation::class);
     }
 
-    public function Menus()
+    public function menus()
     {
         return $this->hasMany(Menu::class);
     }

@@ -1,13 +1,12 @@
 .shop-detail {
     display: flex;
     justify-content: space-between;
-    padding: 4vw 7vw 0 7vw;
+    padding: 2vw 7vw 0 7vw;
 }
 
 .shop-detail-contents {
     display: flex;
     flex-direction: column;
-    width: 40vw;
     text-align: left;
 }
 
@@ -25,12 +24,34 @@
 }
 
 .shop-detail-title {
-    margin: 0 1vw 1.5vw 0;
+    margin: 0 1vw 1vw 0;
 }
 
-.shop-detail-info {
+.js-tab-panel {
+    width: 40vw;
+}
+
+.js-tab-panel-group {
     display: flex;
-    flex-direction: column;
+}
+
+.active_tab {
+    background: #00BFFF;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.inactive_tab {
+    padding: 5px 10px;
+}
+
+.active_content {
+    display: inline;
+    font-size: 3rem;
+}
+
+.inactive_content {
+    display: none;
 }
 
 .shop-name {
@@ -42,6 +63,7 @@
 }
 
 .shop-img {
+    width: 40vw;
     margin-bottom: 2vw;
 }
 
@@ -55,13 +77,34 @@
     line-height: 1.8vw;
 }
 
+.menu-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+    padding: 1vw 1.5vw;
+    background-color: #7B68EE;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.menu-info {
+    background-color: #7B68EE;
+    font-size: 1.3vw;
+}
+
+.menu-detail {
+    background-color: #7B68EE;
+    font-size: 1vw;
+    word-break: keep-all;
+}
+
 .shop-reserve {
     position: absolute;
     top: -5vw;
     left: 53vw;
     text-align: left;
     width: 40vw;
-    height: 52vw;
+    height: 50vw;
     border-radius: 5px;
     padding: 0.3vw 2.5vw;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
@@ -73,6 +116,31 @@
     background-color: #4169E1;
 }
 
+.form-error-date, .form-error-time, .form-error-number {
+    position: absolute;
+    width: fit-content;
+    font-size: 1vw;
+    color: #f00;
+    background-color: #FFFACD;
+    padding: 0 0.5vw;
+    border-radius: 5px;
+}
+
+.form-error-date {
+    top: 0;
+    left: 15.2vw;
+}
+
+.form-error-time {
+    top: 3.3vw;
+    left: 14.7vw;
+}
+
+.form-error-number {
+    top: 6.3vw;
+    left: 15.8vw;
+}
+
 .reserve-title {
     font-size: 2vw;
     font-weight: bold;
@@ -80,7 +148,12 @@
     background-color: #4169E1;
 }
 
-.reserve-date, .reserve-time, .reserve-number {
+.reserve-menu-text {
+    color: #fff;
+    background-color: #4169E1;
+}
+
+.reserve-date, .reserve-time, .reserve-number, .reserve-menu {
     height: 2vw;
     border: none;
     margin-bottom: 1vw;
@@ -93,7 +166,7 @@
     width: 12vw;
 }
 
-.reserve-time, .reserve-number {
+.reserve-time, .reserve-number, .reserve-menu {
     position: relative;
     appearance: none;
     border-radius: 5px;
@@ -101,7 +174,7 @@
     width: 33vw;
 }
 
-.reserve-select-time::after, .reserve-select-number::after {
+.reserve-select-time::after, .reserve-select-number::after, .reserve-select-menu::after{
     position: absolute;
     left: 31.5vw;
     font-family: 'Font Awesome 5 Free';
@@ -133,13 +206,13 @@
     position: absolute;
     color: #FFFF00;
     background-color: #4169E1;
-    top: 25vw;
+    top: 35vw;
     word-break: keep-all;
 }
 
 .reserve-button {
     position: absolute;
-    top: 40.6vw;
+    top: 38.6vw;
     left: -2.5vw;
     width: 40vw;
     height: 4vw;

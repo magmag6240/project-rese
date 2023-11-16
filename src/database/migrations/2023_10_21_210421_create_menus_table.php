@@ -18,7 +18,7 @@ class CreateMenusTable extends Migration
             $table->unsignedBigInteger('shop_id');
             $table->string('menu_name');
             $table->integer('price');
-            $table->text('menu_detail')->nullable();
+            $table->text('menu_detail');
             $table->timestamps();
 
             $table->foreign('shop_id')->references('id')->on('shops')->onDelete('cascade');

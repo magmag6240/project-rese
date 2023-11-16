@@ -13,7 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/menu.js', 'public/js')
-    .js('resources/js/evaluate.js', 'public/js')
     .js('resources/js/shop_edit.js', 'public/js')
+    .js('resources/js/tab.js', 'public/js')
     .js('resources/js/shop_menu_edit.js', 'public/js')
     .js('resources/js/reserve_confirm.js', 'public/js');

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/general/shop_evaluate.css') }}">
+<link rel="stylesheet" href="{{ asset('css/general/shop_evaluate_null.css') }}">
 @endsection
 
 @section('content')
@@ -28,6 +28,5 @@
         </div>
     </div>
 </div>
-<script src="{{ mix('js/evaluate.js') }}"></script>
 
 @endsection

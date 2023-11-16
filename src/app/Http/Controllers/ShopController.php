@@ -33,7 +33,7 @@ class ShopController extends Controller
             $query->where('shop_name', 'LIKE', "%{$keyword}%");
         }
 
-        $items = $query->with('prefecture', 'genre')->get();
+        $items = $query->with('prefecture', 'genre', 'evaluations')->get();
 
         return view('general/shop_list', compact('prefectures', 'genres', 'items', 'select_area', 'select_genre', 'keyword'));
     }
@@ -41,13 +41,15 @@ class ShopController extends Controller
     public function evaluate($shop_id)
     {
         $shop = Shop::where('id', $shop_id)->first();
-        $evaluate = Evaluation::where('shop_id', $shop_id)->get();
+        $evaluate = Evaluation::with('star')->where('shop_id', $shop_id)->paginate(2);
+        $evaluate_star = Evaluation::with('star')->where('shop_id', $shop_id)->pluck('star_id')->avg();
 
-        if(is_null($evaluate)){
+        if(is_null($evaluate_star)){
             return view('general/shop_evaluate_null', compact('shop'));
-        }else{
-            return view('general/shop_evaluate', compact('shop', 'evaluate'));
+        }
+
+        if(!is_null($evaluate_star)){
+            return view('general/shop_evaluate', compact('shop', 'evaluate', 'evaluate_star'));
         }
     }
-
 }

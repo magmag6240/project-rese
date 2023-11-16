@@ -29,11 +29,6 @@ class Reservation extends Model
         return $this->belongsTo(Shop::class);
     }
 
-    public function menu()
-    {
-        return $this->hasOneThrough(Menu::class, Shop::class);
-    }
-
     function getStartTimeAttribute($value)
     {
         return $value = Carbon::parse($value)->format('H:i');

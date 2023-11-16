@@ -2,28 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Menu;
+use App\Models\Reservation;
+use Illuminate\Support\Facades\Auth;
 use Stripe\Stripe;
-use Stripe\Customer;
 use Stripe\Charge;
 
 class StripePaymentController extends Controller
 {
-    public function index()
+    public function store()
     {
-        return view('');
-    }
-
-    public function store(Request $request)
-    {
-        Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
-
+        $reserve_confirm = Reservation::where('user_id', Auth::id())->latest()->first();
+        $menu_data = Menu::where('id', $reserve_confirm->menu_id)->first();
+        Stripe::setApiKey(env('STRIPE_SECRET'));
         $charge = Charge::create(array(
-            'amount' => 100,
+            'amount' => $reserve_confirm->number * $menu_data->price,
             'currency' => 'jpy',
             'source' => request()->stripeToken,
         ));
-        return back();
-
+        return view('general/done');
     }
 }
