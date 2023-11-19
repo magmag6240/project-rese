@@ -176,6 +176,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+        App\Providers\AdminLoginServiceProvider::class,
+        App\Providers\ShopManagerLoginServiceProvider::class,
     ],
 
     /*

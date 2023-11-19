@@ -7,7 +7,10 @@
 @section('content')
 
 <div class="shop-info-new">
-    <h1 class="shop-create-title">登録店舗情報 新規作成</h1>
+    <div class="shop-create-title">
+        <button class="shop-manager-button" type="button"><a class="shop-manager-home-link" href="/shop_manager"><</a></button>
+        <h1 class="shop-create-title-text">登録店舗情報 新規作成</h1>
+    </div>
     <form class="create-form" action="{{route('shop_manager.store')}}" method="post">
         @csrf
         <table class="create-form-table">

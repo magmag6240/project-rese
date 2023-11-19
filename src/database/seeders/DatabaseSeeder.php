@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\AdminSeeder;
+use Database\Seeders\ShopManagerSeeder;
 use Database\Seeders\PrefectureSeeder;
 use Database\Seeders\GenreSeeder;
 use Database\Seeders\BusinessHourSeeder;
@@ -16,6 +18,8 @@ class DatabaseSeeder extends Seeder
 {
     private const SEEDERS = [
         UserSeeder::class,
+        AdminSeeder::class,
+        ShopManagerSeeder::class,
         PrefectureSeeder::class,
         GenreSeeder::class,
         StarSeeder::class,

@@ -25,36 +25,40 @@
                     <li class="menu-list-contents">
                         <a class="menu-link" href="/">Home</a>
                     </li>
-                    @if(Auth::check())
+                    @if (!Auth::guard('admin')->check() && !Auth::guard('web')->check() && !Auth::guard('shop_manager')->check())
+                    <li class="menu-list-contents">
+                        <a class="menu-link" href="/register">Register</a>
+                    </li>
+                    <li class="menu-list-contents">
+                        <span class="menu-link">Login</span><br>
+                        <a class="menu-link" href="/login">user</a>
+                        <a class="menu-link" href="/admin/login">admin</a>
+                        <a class="menu-link" href="/shop_manager/login">shop-manager</a>
+                    </li>
+                    @endif
+                    @if (Auth::guard('admin')->check() || Auth::guard('web')->check() || Auth::guard('shop_manager')->check())
                     <form class="logout-form" action="/logout" method="post">
                         @csrf
                         <li class="menu-list-contents">
                             <button class="logout-button" type="submit">Logout</button>
                         </li>
                     </form>
-                    @can('general')
+                    @endif
+                    @if (Auth::guard('web')->check())
                     <li class="menu-list-contents">
                         <a class="menu-link" href="/mypage">Mypage</a>
                     </li>
-                    @endcan
-                    @else
-                    <li class="menu-list-contents">
-                        <a class="menu-link" href="/register">Register</a>
-                    </li>
-                    <li class="menu-list-contents">
-                        <a class="menu-link" href="/login">Login</a>
-                    </li>
                     @endif
-                    @can('shop_manager')
-                    <li class="menu-list-contents">
-                        <a class="menu-link" href="/shop_manager">For Store manager</a>
-                    </li>
-                    @endcan
-                    @can('admin')
+                    @if (Auth::guard('admin')->check())
                     <li class="menu-list-contents">
                         <a class="menu-link" href="/admin">For Admin</a>
                     </li>
-                    @endcan
+                    @endif
+                    @if (Auth::guard('shop_manager')->check())
+                    <li class="menu-list-contents">
+                        <a class="menu-link" href="/shop_manager">For ShopManager</a>
+                    </li>
+                    @endif
                 </ul>
             </nav>
         </div>

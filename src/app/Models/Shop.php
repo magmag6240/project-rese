@@ -12,7 +12,7 @@ class Shop extends Model
 
     protected $fillable = [
         'shop_name',
-        'user_id',
+        'shop_manager_id',
         'prefecture_id',
         'genre_id',
         'shop_detail',

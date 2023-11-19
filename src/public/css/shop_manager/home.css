@@ -1,7 +1,7 @@
 .shop-manager-home {
     display: flex;
     flex-direction: column;
-    padding: 3vw 9vw;
+    padding: 3vw;
 }
 
 .user-name {
@@ -11,12 +11,13 @@
 
 .shop-manage-page-list {
     display: flex;
+    align-self: center;
 }
 
 .page-group {
     width: 40vw;
     margin: 2vw;
-    padding: 3vw 2vw;
+    padding: 3vw 1.5vw;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;

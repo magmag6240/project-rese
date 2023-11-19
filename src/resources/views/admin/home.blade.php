@@ -11,9 +11,9 @@
     <div class="admin-page-list">
         <div class="page-group">
             <button class="page-group-button">
-                <a class="new-link" href="{{ route('admin.new') }}">店舗代表者 新規作成</a>
+                <a class="new-link" href="{{ route('admin.new_shop_manager') }}">店舗代表者 登録用メール作成</a>
             </button>
-            <p class="admin-text">掲載する店舗の代表者を登録する</p>
+            <p class="admin-text">店舗代表者の登録用メールを送信する</p>
         </div>
         <div class="page-group">
             <button class="page-group-button">

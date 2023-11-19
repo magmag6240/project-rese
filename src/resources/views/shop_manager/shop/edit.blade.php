@@ -7,6 +7,63 @@
 @section('content')
 
 <div class="shop-info-edit">
+    <div class="shop-edit-contents">
+        <div class="shop-edit-title">
+            <button class="shop-list-button" type="button"><a class="shop-list-link" href="/shop_manager/shop_list"><</a></button>
+            <h1 class="shop-edit-title-text">店舗情報編集</h1>
+        </div>
+        <form class="edit-form" action="{{ route('shop_manager.update', $manage_shop->id) }}" method="post">
+            @method('patch')
+            @csrf
+            <table class="edit-form-table">
+                <tr class="edit-form-table-tr">
+                    <td class="edit-table-title">Shop name</td>
+                    <td class="edit-table-td">
+                        <input class="shop-name" type="text" name="name" id="shop_name">
+                    </td>
+                </tr>
+                <tr class="edit-form-table-tr">
+                    <td class="edit-table-title">Prefecture</td>
+                    <td class="edit-table-td">
+                        <label class="shop-select-area">
+                            <select class="shop-area" id="area" name="prefecture_id">
+                                <option value="">select area</option>
+                                @foreach($prefectures as $pref)
+                                <option value="{{ $pref->id }}">{{ $pref->pref_name }}</option>
+                                @endforeach
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr class="edit-form-table-tr">
+                    <td class="edit-table-title">Genre</td>
+                    <td class="edit-table-td">
+                        <label class="shop-select-genre">
+                            <select class="shop-genre" id="genre" name="genre_id">
+                                <option value="">select genre</option>
+                                @foreach($genres as $genre)
+                                <option value="{{ $genre->id }}">{{ $genre->genre_name }}</option>
+                                @endforeach
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr class="edit-form-table-tr">
+                    <td class="edit-table-title">Shop Introduction</td>
+                    <td class="edit-table-td">
+                        <textarea class="shop-detail" name="shop_detail" id="shop_detail" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr class="edit-form-table-tr">
+                    <td class="edit-table-title">Shop Image URL</td>
+                    <td class="edit-table-td">
+                        <input class="shop-image-url" type="url" name="image_url" id="image_url">
+                    </td>
+                </tr>
+            </table>
+            <button class="information-update-button" type="submit">変更</button>
+        </form>
+    </div>
     <div class="shop-edit-confirm">
         <div class="shop-info-before">
             <p class="shop-before-title">変更前</p>
@@ -59,60 +116,6 @@
                 </tr>
             </table>
         </div>
-    </div>
-    <div class="shop-edit-contents">
-        <h1 class="shop-edit-title">店舗情報編集</h1>
-        <form class="edit-form" action="{{ route('shop_manager.update', $manage_shop->id) }}" method="post">
-            @method('patch')
-            @csrf
-            <table class="edit-form-table">
-                <tr class="edit-form-table-tr">
-                    <td class="edit-table-title">Shop name</td>
-                    <td class="edit-table-td">
-                        <input class="shop-name" type="text" name="name" id="shop_name">
-                    </td>
-                </tr>
-                <tr class="edit-form-table-tr">
-                    <td class="edit-table-title">Prefecture</td>
-                    <td class="edit-table-td">
-                        <label class="shop-select-area">
-                            <select class="shop-area" id="area" name="prefecture_id">
-                                <option value="">select area</option>
-                                @foreach($prefectures as $pref)
-                                <option value="{{ $pref->id }}">{{ $pref->pref_name }}</option>
-                                @endforeach
-                            </select>
-                        </label>
-                    </td>
-                </tr>
-                <tr class="edit-form-table-tr">
-                    <td class="edit-table-title">Genre</td>
-                    <td class="edit-table-td">
-                        <label class="shop-select-genre">
-                            <select class="shop-genre" id="genre" name="genre_id">
-                                <option value="">select genre</option>
-                                @foreach($genres as $genre)
-                                <option value="{{ $genre->id }}">{{ $genre->genre_name }}</option>
-                                @endforeach
-                            </select>
-                        </label>
-                    </td>
-                </tr>
-                <tr class="edit-form-table-tr">
-                    <td class="edit-table-title">Shop Introduction</td>
-                    <td class="edit-table-td">
-                        <textarea class="shop-detail" name="shop_detail" id="shop_detail" cols="30" rows="10"></textarea>
-                    </td>
-                </tr>
-                <tr class="edit-form-table-tr">
-                    <td class="edit-table-title">Shop Image URL</td>
-                    <td class="edit-table-td">
-                        <input class="shop-image-url" type="url" name="image_url" id="image_url">
-                    </td>
-                </tr>
-            </table>
-            <button class="information-update-button" type="submit">変更</button>
-        </form>
     </div>
 </div>
 <script src="{{ mix('js/shop_edit.js') }}"></script>

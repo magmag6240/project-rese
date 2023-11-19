@@ -5,65 +5,9 @@
     text-align: left;
 }
 
-.menu-edit-confirm {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-}
-
-.menu-info-change {
-    align-self: center;
-}
-
-.menu-info-change::before {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 3vw;
-    font-weight: 900;
-    content: '\f103';
-    color: #0000CD;
-}
-
-.menu-info-before,
-.menu-info-after,
-.menu-before-title,
-.menu-after-title {
-    background-color: #5287e9;
-}
-
-.menu-info-before,
-.menu-info-after {
-    border-radius: 10px;
-    padding: 1vw 2.5vw;
-}
-
-.menu-before-title,
-.menu-after-title {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.3vw;
-}
-
-.menu-confirm-before, .menu-confirm-after {
-    margin: 1vw 0;
-}
-
-.confirm-table-title,
-.confirm-table-tr,
-.confirm-table-td {
-    border: none;
-    font-size: 1.1vw;
-    color: #fff;
-    background-color: #5287e9;
-}
-
-.confirm-table-td {
-    padding: 0.5vw 1vw;
-    width: 20vw;
-}
-
 .menu-edit-contents {
     width: 45vw;
-    height: 45vw;
+    height: 40vw;
     background-color: #4169E1;
     border-radius: 10px;
     padding: 1.5vw 3vw;
@@ -71,10 +15,37 @@
 }
 
 .menu-edit-title {
+    display: flex;
+    align-self: center;
+    position: relative;
+    background-color: #4169E1;
+}
+
+.menu-edit-title-text {
+    position: relative;
+    left: 2vw;
     font-size: 1.7vw;
     font-weight: bold;
     color: #fff;
     background-color: #4169E1;
+}
+
+.shop-list-button {
+    position: absolute;
+    align-self: center;
+    border: none;
+    top: 1.3vw;
+    left: -1vw;
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.7vw;
+    border-radius: 5px;
+    background-color: #E0FFFF;
+}
+
+.shop-list-link {
+    text-decoration: none;
+    color: #000;
 }
 
 .menu-edit-select, .select-menu {
@@ -145,7 +116,7 @@
     background-color: #0000FF;
     border: none;
     left: -3vw;
-    top: 34.8vw;
+    top: 29.8vw;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 45vw;
@@ -153,3 +124,66 @@
     font-size: 1.2vw;
     cursor: pointer;
 }
+
+.menu-edit-confirm {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+
+.menu-info-change {
+    align-self: center;
+}
+
+.menu-info-change::before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 3vw;
+    font-weight: 900;
+    content: '\f103';
+    color: #0000CD;
+}
+
+.menu-info-before,
+.menu-info-after,
+.menu-before-title,
+.menu-after-title {
+    background-color: #5287e9;
+}
+
+.menu-info-before,
+.menu-info-after {
+    border-radius: 10px;
+    padding: 1vw 2.5vw;
+}
+
+.menu-before-title,
+.menu-after-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+.menu-confirm-before,
+.menu-confirm-after {
+    margin: 1vw 0;
+}
+
+.confirm-table-title,
+.confirm-table-tr,
+.confirm-table-td {
+    border: none;
+    font-size: 1.1vw;
+    color: #fff;
+    background-color: #5287e9;
+}
+
+.confirm-table-title {
+    width: 15vw;
+}
+
+.confirm-table-td {
+    padding: 0.5vw 1vw;
+    width: 25vw;
+    word-break: keep-all;
+}
+

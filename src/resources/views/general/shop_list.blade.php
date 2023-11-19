@@ -51,6 +51,7 @@
                 <button class="evaluate-button">
                     <a class="shop-evaluate-link" href="{{route('evaluate', ['shop_id' => $item->id])}}">評価詳細</a>
                 </button>
+                @if (Auth::guard('web')->check())
                 <div class="like">
                     @if($item->is_liked())
                     <a class="unlike-link" href="{{ route('unlike', ['shop_id' => $item->id]) }}"></a>
@@ -58,6 +59,7 @@
                     <a class="like-link" href="{{ route('like', ['shop_id' => $item->id]) }}"></a>
                     @endif
                 </div>
+                @endif
             </div>
         </div>
         @endforeach

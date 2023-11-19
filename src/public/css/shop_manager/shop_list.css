@@ -61,9 +61,25 @@
     color: #3CB371;
 }
 
+.shop-manager-button {
+    align-self: center;
+    border: none;
+    padding: 0.5vw 0;
+    margin: 1vw;
+    font-size: 1vw;
+    width: 5vw;
+    border-radius: 5px;
+    background-color: #4169E1;
+}
+
+.shop-manager-home-link {
+    text-decoration: none;
+    color: #fff;
+}
+
 .pagination {
     background-color: #fff;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 .current-paginate-page,

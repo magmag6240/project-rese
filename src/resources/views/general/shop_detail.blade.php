@@ -86,7 +86,9 @@
                     @endforeach
                 </select>
             </label>
-            <p class="reserve-menu-text">※コースを選択された場合、コース分の金額は事前決済となります。</p>
+            <p class="reserve-menu-text">
+                ※コースを選択された場合、コース分の金額は事前決済となります。予約変更などによる差額分は現地精算となります。
+            </p>
             <div class="reserve-confirm">
                 <table class="reserve-confirm-table">
                     <tr class="confirm-table-tr">
@@ -116,7 +118,13 @@
                 {{ session('message') }}
             </div>
             @endif
+            @if (Auth::guard('web')->check())
             <button class="reserve-button" type="submit">予約する</button>
+            @endif
+            @if (Auth::guard('shop_manager')->check() || Auth::guard('admin')->check())
+            <p class="reserve-text">※一般ユーザーのみ予約可能です。</p>
+            @endif
+            <p class="reserve-text">※会員登録完了後にご予約いただけます。</p>
         </form>
     </div>
 </div>

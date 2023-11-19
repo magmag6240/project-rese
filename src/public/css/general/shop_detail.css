@@ -47,7 +47,7 @@
 
 .active_content {
     display: inline;
-    font-size: 3rem;
+    font-size: 1.5vw;
 }
 
 .inactive_content {
@@ -149,8 +149,10 @@
 }
 
 .reserve-menu-text {
+    margin-top: 0;
     color: #fff;
     background-color: #4169E1;
+    word-break: keep-all;
 }
 
 .reserve-date, .reserve-time, .reserve-number, .reserve-menu {
@@ -206,7 +208,7 @@
     position: absolute;
     color: #FFFF00;
     background-color: #4169E1;
-    top: 35vw;
+    top: 33.5vw;
     word-break: keep-all;
 }
 
@@ -228,3 +230,9 @@
     text-decoration: none;
     color: #fff;
 }
+
+.reserve-text {
+    background-color: #4169E1;
+    color: #fff;
+}
+

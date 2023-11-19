@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ShopManager;
 
+use App\Http\Controllers\Controller;
 use App\Models\Genre;
 use App\Models\Menu;
 use App\Models\Prefecture;
@@ -14,8 +15,10 @@ class ShopManagerController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
-        return view('shop_manager/home', compact('user'));
+        $user = Auth::guard('shop_manager')->user();
+        $shop = Shop::where('shop_manager_id', Auth::guard('shop_manager')->id())->first();
+        $reserve_history = Reservation::where('shop_id', optional($shop)->id)->first();
+        return view('shop_manager/home', compact('user', 'shop', 'reserve_history'));
     }
 
     public function new()
@@ -29,7 +32,7 @@ class ShopManagerController extends Controller
     {
         Shop::create([
             'shop_name' => $request->input('name'),
-            'user_id' => Auth::id(),
+            'shop_manager_id' => Auth::guard('shop_manager')->id(),
             'prefecture_id' => $request->input('area'),
             'genre_id' =>$request->input('genre'),
             'shop_detail' => $request->input('shop_detail'),
@@ -40,8 +43,8 @@ class ShopManagerController extends Controller
 
     public function shop_list()
     {
-        $user_id = Auth::id();
-        $shops = Shop::with('prefecture', 'genre')->where('user_id', $user_id)->paginate(5);
+        $shop_manager_id = Auth::guard('shop_manager')->id();
+        $shops = Shop::with('prefecture', 'genre')->where('shop_manager_id', $shop_manager_id)->paginate(5);
         return view('shop_manager/shop_list', compact('shops'));
     }
 
@@ -52,7 +55,7 @@ class ShopManagerController extends Controller
 
     public function edit($shop_id)
     {
-        $user_id = Auth::id();
+        $shop_manager_id = Auth::guard('shop_manager')->id();
         $prefectures = Prefecture::all();
         $genres = Genre::all();
         $manage_shop = Shop::with('prefecture', 'genre')->where('id', $shop_id)->first();
@@ -99,7 +102,7 @@ class ShopManagerController extends Controller
 
     public function menu_edit($menu_id)
     {
-        $user_id = Auth::id();
+        $shop_manager_id = Auth::guard('shop_manager')->id();
         $menu = Menu::where('id', $menu_id)->first();
         return view('shop_manager/menu/edit', compact('menu'));
     }

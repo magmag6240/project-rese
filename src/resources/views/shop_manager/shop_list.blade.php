@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="shop-manager-shop-list">
-    <h1 class="shop-list-title">管理店舗一覧</h1>
+    <h1 class="shop-list-title">店舗管理ページ</h1>
     <table class="shop-list-table">
         <tr class="shop-list-tr">
             <th class="shop-list-th">id</th>
@@ -44,9 +44,10 @@
         </tr>
         @endforeach
     </table>
-    <div class="shop-paginate">
+    <div class="shop-list-paginate">
         {{$shops->links('vendor.pagination.shop_manager_shop_list_paginate')}}
     </div>
+    <button class="shop-manager-button" type="button"><a class="shop-manager-home-link" href="/shop_manager">戻る</a></button>
 </div>
 
 @endsection

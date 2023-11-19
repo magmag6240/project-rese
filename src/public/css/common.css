@@ -72,6 +72,7 @@
 .menu-link {
     font-size: 3vw;
     text-decoration: none;
+    margin: 0 1vw;
 }
 
 .logout-button {

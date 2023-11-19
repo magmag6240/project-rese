@@ -1,9 +1,17 @@
-@extends('shop_manager.mail')
-@section('information')
-    DM 例文
-    いつも〇〇をご利用いただき誠にありがとうございます！
-    冬がだんだんと近づき寒くなってきましたが、いかがお過ごしでしょうか。
-    〇〇では、冬季限定メニューとして〇〇をご用意いたしました。
-    （メニュー紹介を入れる。例：寒い冬だからこそ体の内側からあったまる、シェフ自慢のメニューとなっています！）
-    それでは、またのお越しを心よりお待ちしております！
-@endsection
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <p>店舗からのお知らせ</p>
+    ーーーー
+    <p>{{$contents}}</p>
+    ーーーー
+</body>
+
+</html>

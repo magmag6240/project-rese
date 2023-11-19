@@ -5,62 +5,6 @@
     text-align: left;
 }
 
-.shop-edit-confirm {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-}
-
-.shop-info-change {
-    align-self: center;
-}
-
-.shop-info-change::before {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 3vw;
-    font-weight: 900;
-    content: '\f103';
-    color: #0000CD;
-}
-
-.shop-info-before,
-.shop-info-after,
-.shop-before-title,
-.shop-after-title {
-    background-color: #5287e9;
-}
-
-.shop-info-before,
-.shop-info-after {
-    border-radius: 10px;
-    padding: 1vw 2.5vw;
-}
-
-.shop-before-title,
-.shop-after-title {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.3vw;
-}
-
-.shop-confirm-table {
-    margin: 1vw 0;
-}
-
-.shop-confirm-table,
-.confirm-table-tr,
-.confirm-table-td {
-    border: none;
-    font-size: 1.1vw;
-    color: #fff;
-    background-color: #5287e9;
-}
-
-.confirm-table-td {
-    padding: 0.5vw 1vw;
-    width: 20vw;
-}
-
 .shop-edit-contents {
     width: 45vw;
     height: 45vw;
@@ -71,8 +15,34 @@
 }
 
 .shop-edit-title {
+    display: flex;
+    align-self: center;
+    position: relative;
+    background-color: #4169E1;
+}
+
+.shop-list-button {
+    border: none;
+    position: absolute;
+    top: 1.3vw;
+    left: -1vw;
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.7vw;
+    border-radius: 5px;
+    background-color: #E0FFFF;
+}
+
+.shop-list-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.shop-edit-title-text {
     font-size: 1.7vw;
     font-weight: bold;
+    position: relative;
+    left: 2.3vw;
     color: #fff;
     background-color: #4169E1;
 }
@@ -85,7 +55,9 @@
     background-color: #4169E1;
 }
 
-.edit-table-title, .edit-table-tr, .edit-table-td {
+.edit-table-title,
+.edit-table-tr,
+.edit-table-td {
     background-color: #4169E1;
 }
 
@@ -157,3 +129,60 @@
     font-size: 1.2vw;
     cursor: pointer;
 }
+
+.shop-edit-confirm {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+
+.shop-info-change {
+    align-self: center;
+}
+
+.shop-info-change::before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 3vw;
+    font-weight: 900;
+    content: '\f103';
+    color: #0000CD;
+}
+
+.shop-info-before,
+.shop-info-after,
+.shop-before-title,
+.shop-after-title {
+    background-color: #5287e9;
+}
+
+.shop-info-before,
+.shop-info-after {
+    border-radius: 10px;
+    padding: 1vw 2.5vw;
+}
+
+.shop-before-title,
+.shop-after-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+.shop-confirm-table {
+    margin: 1vw 0;
+}
+
+.shop-confirm-table,
+.confirm-table-tr,
+.confirm-table-td {
+    border: none;
+    font-size: 1.1vw;
+    color: #fff;
+    background-color: #5287e9;
+}
+
+.confirm-table-td {
+    padding: 0.5vw 1vw;
+    width: 20vw;
+}
+

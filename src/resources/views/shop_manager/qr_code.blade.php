@@ -7,16 +7,43 @@
 @section('content')
 
 <div class="qr-code-reader">
-    <h1>QRコードリーダー</h1>
-    <p>予約完了時に発行されたQRコードをカメラにかざしてください</p>
-    <div class="qr-code" id="wrapper">
-        <video id="video" autoplay muted playsinline></video>
-        <canvas id="camera-canvas"></canvas>
-        <canvas id="rect-canvas"></canvas>
-        <span id="qr-msg">QRコード: 見つかりません</span>
+    <div class="qr-code-reader-title">
+        <button class="shop-manager-home-button"><a class="shop-manager-home-link" href="/shop_manager"><</a></button>
+        <h1 class="qr-code-reader-title-text">QRコードリーダー</h1>
     </div>
+    <p class="qr-code-text">予約完了時に発行されたQRコードをカメラにかざしてください</p>
+    <script>
+        let capture;
+
+        function setup() {
+            pixelDensity(1);
+            createCanvas(640, 550);
+            capture = createCapture(VIDEO);
+            capture.size(640, 480);
+            capture.hide();
+        }
+
+        function draw() {
+            background(0);
+            image(capture, 0, 0);
+
+            capture.loadPixels();
+            const code = jsQR(capture.pixels, capture.width, capture.height, {
+                inversionAttempts: "dontInvert"
+            });
+            fill(255);
+            textSize(16);
+            textAlign(CENTER);
+            if (code) {
+                text(`QRコードのデータ: ${code.data}`, width / 2, height / 1.05);
+            } else {
+                text(`QRコードが見つかりません`, width / 2, height / 1.05);
+            }
+        }
+    </script>
 </div>
 
-<script src="{{ mix('js/jsQR.js') }}"></script>
-<script src="{{ mix('js/camera.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+
 @endsection

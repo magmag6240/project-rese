@@ -3,11 +3,10 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class InvitationStoreManagerEmail extends Mailable
+class NewShopManagerEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +27,6 @@ class InvitationStoreManagerEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.invitation_store_manager');
+        return $this->view('emails.new_shop_manager')->subject('店舗代表者登録用メール');
     }
 }

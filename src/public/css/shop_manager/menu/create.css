@@ -10,11 +10,34 @@
 }
 
 .shop-menu-new-title {
+    display: flex;
+    align-self: center;
+    position: relative;
+    background-color: #4169E1;
+}
+
+.shop-menu-new-title-text {
     font-size: 1.7vw;
     font-weight: bold;
     color: #fff;
-    margin-bottom: 1.5vw;
     background-color: #4169E1;
+}
+
+.shop-list-button {
+    border: none;
+    position: absolute;
+    top: 1.3vw;
+    left: -4vw;
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.7vw;
+    border-radius: 5px;
+    background-color: #E0FFFF;
+}
+
+.shop-list-link {
+    text-decoration: none;
+    color: #000000;
 }
 
 .create-form,

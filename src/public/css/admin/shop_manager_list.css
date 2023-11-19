@@ -1,7 +1,7 @@
 .admin-shop-manager-list {
     display: inline-flex;
     flex-direction: column;
-    width: 65vw;
+    width: 60vw;
     padding: 1.2vw 0;
     margin: 3vw 0;
     border-radius: 10px;
@@ -14,7 +14,7 @@
     font-size: 1.7vw;
     font-weight: bold;
     padding: 1.5vw 0;
-    width: 65vw;
+    width: 60vw;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background-color: #4169E1;
@@ -51,7 +51,7 @@
     border: none;
     padding: 0.5vw 0;
     width: 5vw;
-    margin-top: 2.5vw;
+    margin-top: 1vw;
     border-radius: 5px;
     background-color: #4169E1;
 }
@@ -63,7 +63,7 @@
 
 .pagination {
     background-color: #fff;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 .current-paginate-page,

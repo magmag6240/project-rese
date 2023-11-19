@@ -1,0 +1,68 @@
+.shop-manager-menu-list {
+    display: inline-flex;
+    flex-direction: column;
+    width: 90vw;
+    padding: 1.2vw 0;
+    margin: 3vw 0;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.menu-list-title {
+    position: relative;
+    top: -2.5vw;
+    font-size: 1.7vw;
+    font-weight: bold;
+    padding: 1.5vw 0;
+    width: 90vw;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #4169E1;
+    color: #fff;
+}
+
+.menu-list-table {
+    align-self: center;
+    border-bottom-style: hidden;
+    background-color: #fff;
+    margin-bottom: 1vw;
+}
+
+.menu-list-th {
+    padding: 1vw 0;
+    font-size: 1.2vw;
+    background-color: #fff;
+}
+
+.menu-list-tr {
+    border: 0.15vw solid #c0c0c0;
+    border-right-style: hidden;
+    border-left-style: hidden;
+}
+
+.menu-list-td {
+    background-color: #fff;
+    padding: 1vw 2.5vw;
+    font-size: 1vw;
+}
+
+.menu-edit-link {
+    text-decoration: none;
+    color: #0000FF;
+}
+
+.shop-list-button {
+    align-self: center;
+    border: none;
+    padding: 0.5vw 0;
+    margin: 1vw;
+    font-size: 1vw;
+    width: 5vw;
+    border-radius: 5px;
+    background-color: #4169E1;
+}
+
+.shop-list-link {
+    text-decoration: none;
+    color: #fff;
+}

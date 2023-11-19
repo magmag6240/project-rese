@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
@@ -11,14 +10,16 @@ class NoticeEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $contents;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($contents)
     {
-        //
+        $this->contents = $contents;
     }
 
     /**
@@ -28,6 +29,6 @@ class NoticeEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.notice');
+        return $this->view('emails.notice')->with(['contents' => $this->contents])->subject('Rese-information');;
     }
 }

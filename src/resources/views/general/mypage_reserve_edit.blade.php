@@ -25,7 +25,7 @@
                 </tr>
                 <tr class="confirm-table-tr">
                     <td class="confirm-table-td">Number</td>
-                    <td class="confirm-table-td">{{$reserve->number}}</td>
+                    <td class="confirm-table-td">{{$reserve->number}}人</td>
                 </tr>
             </table>
         </div>
