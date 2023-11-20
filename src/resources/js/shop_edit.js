@@ -1,7 +1,7 @@
 
 const shop_name = document.getElementById("shop_name");
-const area = document.getElementById("area");
-const genre = document.getElementById("genre");
+const prefecture_id = document.getElementById("prefecture_id");
+const genre_id = document.getElementById("genre_id");
 const shop_detail = document.getElementById("shop_detail");
 const image_url = document.getElementById("image_url");
 
@@ -10,14 +10,14 @@ shop_name.addEventListener("change", function () {
     shop_name_confirm.textContent = shop_name.value;
 });
 
-area.addEventListener("change", function () {
-    const area_confirm = document.getElementById("area_confirm");
-    area_confirm.textContent = area.options[area.selectedIndex].textContent;
+prefecture_id.addEventListener("change", function () {
+    const prefecture_id_confirm = document.getElementById("prefecture_id_confirm");
+    prefecture_id_confirm.textContent = prefecture_id.options[prefecture_id.selectedIndex].textContent;
 });
 
-genre.addEventListener("change", function () {
-    const genre_confirm = document.getElementById("genre_confirm");
-    genre_confirm.textContent = genre.options[genre.selectedIndex].textContent;
+genre_id.addEventListener("change", function () {
+    const genre_id_confirm = document.getElementById("genre_id_confirm");
+    genre_id_confirm.textContent = genre_id.options[genre_id.selectedIndex].textContent;
 });
 
 shop_detail.addEventListener("change", function () {

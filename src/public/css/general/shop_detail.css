@@ -38,10 +38,12 @@
 .active_tab {
     background: #00BFFF;
     text-align: center;
+    font-size: 1.1vw;
     padding: 5px 10px;
 }
 
 .inactive_tab {
+    font-size: 1.1vw;
     padding: 5px 10px;
 }
 
@@ -153,6 +155,7 @@
     color: #fff;
     background-color: #4169E1;
     word-break: keep-all;
+    font-size: 1vw;
 }
 
 .reserve-date, .reserve-time, .reserve-number, .reserve-menu {
@@ -234,5 +237,6 @@
 .reserve-text {
     background-color: #4169E1;
     color: #fff;
+    font-size: 1vw;
 }
 

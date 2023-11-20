@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="login-content">
-    <div class="login-title">Login</div>
+    <div class="login-title">Login for shop-manager</div>
     <form class="login-form" action="/shop_manager/login" method="post">
         @csrf
         <div class="form-group">

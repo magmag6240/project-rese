@@ -4,21 +4,21 @@ var __webpack_exports__ = {};
   !*** ./resources/js/shop_edit.js ***!
   \***********************************/
 var shop_name = document.getElementById("shop_name");
-var area = document.getElementById("area");
-var genre = document.getElementById("genre");
+var prefecture_id = document.getElementById("prefecture_id");
+var genre_id = document.getElementById("genre_id");
 var shop_detail = document.getElementById("shop_detail");
 var image_url = document.getElementById("image_url");
 shop_name.addEventListener("change", function () {
   var shop_name_confirm = document.getElementById("shop_name_confirm");
   shop_name_confirm.textContent = shop_name.value;
 });
-area.addEventListener("change", function () {
-  var area_confirm = document.getElementById("area_confirm");
-  area_confirm.textContent = area.options[area.selectedIndex].textContent;
+prefecture_id.addEventListener("change", function () {
+  var prefecture_id_confirm = document.getElementById("prefecture_id_confirm");
+  prefecture_id_confirm.textContent = prefecture_id.options[prefecture_id.selectedIndex].textContent;
 });
-genre.addEventListener("change", function () {
-  var genre_confirm = document.getElementById("genre_confirm");
-  genre_confirm.textContent = genre.options[genre.selectedIndex].textContent;
+genre_id.addEventListener("change", function () {
+  var genre_id_confirm = document.getElementById("genre_id_confirm");
+  genre_id_confirm.textContent = genre_id.options[genre_id.selectedIndex].textContent;
 });
 shop_detail.addEventListener("change", function () {
   var shop_detail_confirm = document.getElementById("shop_detail_confirm");

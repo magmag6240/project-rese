@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="register-content">
-    <div class="register-title">Registration</div>
+    <div class="register-title">Registration for shop-manager</div>
     <form class="register-form" action="/shop_manager/register" method="post">
         @csrf
         <div class="form-group">

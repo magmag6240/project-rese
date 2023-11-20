@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\MyPageController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\ThanksController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ShopManager\ShopManagerController;
 use App\Http\Controllers\ShopManager\ShopManagerLoginController;
@@ -70,6 +71,7 @@ Route::prefix('shop_manager')->group(function () {
 );
 
 Route::middleware('verified')->group(function () {
+    Route::get('/thanks', [ThanksController::class, 'index']);
     Route::get('/mypage', [MyPageController::class, 'index']);
     Route::get('/like/{shop_id}', [LikeController::class, 'like'])->name('like');
     Route::get('/unlike/{shop_id}', [LikeController::class, 'unlike'])->name('unlike');
