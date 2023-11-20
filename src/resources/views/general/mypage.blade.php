@@ -11,41 +11,100 @@
     <div class="mypage-contents">
         <div class="reserve-list">
             <p class="reserve-list-title">予約状況</p>
-            @foreach($reserve_shops as $item)
-            <div class="reserve-detail">
-                <form class="reserve-delete" action="{{route('reserve.destroy', ['reserve_id' => $item->id ])}}" method="post">
-                    @method('DELETE')
-                    @csrf
-                    <div class="reserve-detail-title">
-                        <p class="reserve-number">予約{{$item->id}}</p>
-                        <button class="reserve-delete-button" type="submit"></button>
+            <div class="js-tab-panel">
+                <div class="js-tab-panel-group">
+                    <p class="js-tab active_tab">予定</p>
+                    <p class="js-tab inactive_tab">履歴</p>
+                </div>
+                <div class="js-panel active_content">
+                    @foreach($reserve_shops_from_now_on as $item)
+                    <div class="reserve-detail">
+                        <form class="reserve-delete" action="{{route('reserve.destroy', ['reserve_id' => $item->id ])}}" method="post">
+                            @method('DELETE')
+                            @csrf
+                            <div class="reserve-detail-title">
+                                <p class="reserve-number">予約{{$item->id}}</p>
+                                @if(is_null($item->menu_id))
+                                <button class="reserve-delete-button" type="submit" onclick='return confirm("予約を削除しますか？")'></button>
+                                @endif
+                            </div>
+                        </form>
+                        <table class="reserve-table">
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Shop</td>
+                                <td class="reserve-table-td">{{$item->shop->shop_name}}</td>
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Date</td>
+                                <td class="reserve-table-td">{{$item->reserve_date}}</td>
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Time</td>
+                                <td class="reserve-table-td">{{$item->start_time}}</td>
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Number</td>
+                                <td class="reserve-table-td">{{$item->number}}人</td>
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Menu</td>
+                                @if(is_null($item->menu_id))
+                                <td class="reserve-table-td">座席のみのご予約</td>
+                                @else
+                                <td class="reserve-table-td">コースプランあり</td>
+                                @endif
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">QR code</td>
+                                <td class="reserve-table-td">{{QrCode::generate($item->id)}}</td>
+                            </tr>
+                        </table>
+                        @if(is_null($item->menu_id))
+                        <button class="reserve-edit-button"><a class="reserve-edit-link" href="{{route('reserve.edit', ['reserve_id' => $item->id ])}}">予約内容変更</a></button>
+                        @endif
                     </div>
-                </form>
-                <table class="reserve-table">
-                    <tr class="reserve-table-tr">
-                        <td class="reserve-table-td">Shop</td>
-                        <td class="reserve-table-td">{{$item->shop->shop_name}}</td>
-                    </tr>
-                    <tr class="reserve-table-tr">
-                        <td class="reserve-table-td">Date</td>
-                        <td class="reserve-table-td">{{$item->reserve_date}}</td>
-                    </tr>
-                    <tr class="reserve-table-tr">
-                        <td class="reserve-table-td">Time</td>
-                        <td class="reserve-table-td">{{$item->start_time}}</td>
-                    </tr>
-                    <tr class="reserve-table-tr">
-                        <td class="reserve-table-td">Number</td>
-                        <td class="reserve-table-td">{{$item->number}}人</td>
-                    </tr>
-                    <tr class="reserve-table-tr">
-                        <td class="reserve-table-td">QR code</td>
-                        <td class="reserve-table-td">{{QrCode::generate($item->id)}}</td>
-                    </tr>
-                </table>
-                <button class="reserve-edit-button"><a class="reserve-edit-link" href="{{route('reserve.edit', ['reserve_id' => $item->id ])}}">予約内容変更</a></button>
+                    @endforeach
+                </div>
+                <div class="js-panel inactive_content">
+                    @foreach($reserve_shops_history as $item)
+                    <div class="reserve-detail">
+                        <div class="reserve-detail-title">
+                            <p class="reserve-number">予約{{$item->id}}</p>
+                        </div>
+                        <table class="reserve-table">
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Shop</td>
+                                <td class="reserve-table-td">{{$item->shop->shop_name}}</td>
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Date</td>
+                                <td class="reserve-table-td">{{$item->reserve_date}}</td>
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Time</td>
+                                <td class="reserve-table-td">{{$item->start_time}}</td>
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Number</td>
+                                <td class="reserve-table-td">{{$item->number}}人</td>
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">Menu</td>
+                                @if(is_null($item->menu_id))
+                                <td class="reserve-table-td">座席のみのご予約</td>
+                                @else
+                                <td class="reserve-table-td">コースプランあり</td>
+                                @endif
+                            </tr>
+                            <tr class="reserve-table-tr">
+                                <td class="reserve-table-td">QR code</td>
+                                <td class="reserve-table-td">{{QrCode::generate($item->id)}}</td>
+                            </tr>
+                        </table>
+                        @endforeach
+                    </div>
+                </div>
             </div>
-            @endforeach
         </div>
         <div class="like-shop">
             <p class="like-shop-title">お気に入り店舗</p>
@@ -80,5 +139,8 @@
             </div>
         </div>
     </div>
+</div>
 
-    @endsection
+<script src="{{ mix('js/tab.js') }}"></script>
+
+@endsection

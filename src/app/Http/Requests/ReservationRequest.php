@@ -35,12 +35,12 @@ class ReservationRequest extends FormRequest
         return [
             'reserve_date.required' => '予約日は必須項目です',
             'reserve_date.date' => '予約日は日付形式で入力してください',
-            'reserve_date.after_or_equal:today' => '予約可能日は本日以降です',
+            'reserve_date.after_or_equal' => '予約可能日は本日以降です',
             'start_time.required' => '予約時刻は必須項目です',
-            'start_time.date_format:H:i:s' => '予約時刻は"時:分"の形式で入力してください',
+            'start_time.date_format' => '予約時刻は"時:分"の形式で入力してください',
             'number.required' => '人数は必須項目です',
             'number.numeric' => '人数は数字で入力してください',
-            'number.max:10' => 'このページから予約できる人数は10人までです'
+            'number.max' => 'このページから予約できる人数は10人までです'
         ];
     }
 }

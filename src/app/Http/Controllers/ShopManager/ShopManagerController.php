@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\ShopManager;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\MenuRequest;
+use App\Http\Requests\ShopRequest;
 use App\Models\Genre;
 use App\Models\Menu;
 use App\Models\Prefecture;
 use App\Models\Reservation;
 use App\Models\Shop;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ShopManagerController extends Controller
@@ -28,15 +29,15 @@ class ShopManagerController extends Controller
         return view('shop_manager/shop/create', compact('prefectures', 'genres'));
     }
 
-    public function store(Request $request)
+    public function store(ShopRequest $request)
     {
         Shop::create([
-            'shop_name' => $request->input('name'),
+            'shop_name' => $request->input('shop_name'),
             'shop_manager_id' => Auth::guard('shop_manager')->id(),
-            'prefecture_id' => $request->input('area'),
-            'genre_id' =>$request->input('genre'),
+            'prefecture_id' => $request->input('prefecture_id'),
+            'genre_id' =>$request->input('genre_id'),
             'shop_detail' => $request->input('shop_detail'),
-            'image_url' => $request->input('shop_image_url')
+            'image_url' => $request->input('image_url')
         ]);
         return view('shop_manager/shop/create_done');
     }
@@ -62,7 +63,7 @@ class ShopManagerController extends Controller
         return view('shop_manager/shop/edit', compact('prefectures', 'genres', 'manage_shop'));
     }
 
-    public function update(Request $request, $shop_id)
+    public function update(ShopRequest $request, $shop_id)
     {
         $shop_edit = $request->only(['shop_name', 'prefecture_id', 'genre_id', 'shop_detail', 'image_url']);
         Shop::find($shop_id)->update($shop_edit);
@@ -81,11 +82,11 @@ class ShopManagerController extends Controller
         return view('shop_manager/menu/create', compact('shop'));
     }
 
-    public function menu_store(Request $request, $shop_id)
+    public function menu_store(MenuRequest $request, $shop_id)
     {
         Menu::create([
             'shop_id' => $shop_id,
-            'menu_name' => $request->input('name'),
+            'menu_name' => $request->input('menu_name'),
             'price' => $request->input('price'),
             'menu_detail' => $request->input('menu_detail')
         ]);
@@ -107,7 +108,7 @@ class ShopManagerController extends Controller
         return view('shop_manager/menu/edit', compact('menu'));
     }
 
-    public function menu_update(Request $request, $menu_id)
+    public function menu_update(MenuRequest $request, $menu_id)
     {
         $menu = Menu::where('id', $menu_id)->get();
         $shop_edit = $request->only(['menu_name', 'price', 'menu_detail']);

@@ -91,7 +91,7 @@
 
 .edit-form-table-td {
     position: relative;
-    height: 4vw;
+    height: 6vw;
     border: none;
     padding: 0 1vw;
 }
@@ -187,3 +187,30 @@
     word-break: keep-all;
 }
 
+.form-error-menu-name,
+.form-error-menu-detail,
+.form-error-price {
+    position: absolute;
+    z-index: 1;
+    width: fit-content;
+    font-size: 1vw;
+    color: #f00;
+    background-color: #FFFACD;
+    padding: 0 0.5vw;
+    border-radius: 5px;
+}
+
+.form-error-menu-name {
+    top: 4vw;
+    left: 1vw;
+}
+
+.form-error-price {
+    top: 4vw;
+    left: 2vw;
+}
+
+.form-error-menu-detail {
+    top: 9.7vw;
+    left: 2vw;
+}

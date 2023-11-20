@@ -17,19 +17,34 @@
             <tr class="create-form-table-tr">
                 <td class="create-table-title">Menu name</td>
                 <td class="create-table-td">
-                    <input class="menu-name" type="text" name="name" id="name">
+                    <input class="menu-name" type="text" name="menu_name" id="menu_name">
+                    <div class="form-error-menu-name">
+                        @error('menu_name')
+                        {{ $message }}
+                        @enderror
+                    </div>
                 </td>
             </tr>
             <tr class="create-form-table-tr">
                 <td class="create-table-title">Price</td>
                 <td class="create-table-td">
                     <input class="menu-price" type="text" name="price" id="price">
+                    <div class="form-error-price">
+                        @error('price')
+                        {{ $message }}
+                        @enderror
+                    </div>
                 </td>
             </tr>
             <tr class="create-form-table-tr">
                 <td class="create-table-title">Menu Introduction</td>
                 <td class="create-table-td">
                     <textarea class="menu-detail" name="menu_detail" id="menu_detail" cols="30" rows="10"></textarea>
+                    <div class="form-error-menu-detail">
+                        @error('menu_detail')
+                        {{ $message }}
+                        @enderror
+                    </div>
                 </td>
             </tr>
         </table>

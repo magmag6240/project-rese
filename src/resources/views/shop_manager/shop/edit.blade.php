@@ -19,45 +19,69 @@
                 <tr class="edit-form-table-tr">
                     <td class="edit-table-title">Shop name</td>
                     <td class="edit-table-td">
-                        <input class="shop-name" type="text" name="name" id="shop_name">
+                        <input class="shop-name" type="text" name="shop_name" id="shop_name">
+                        <div class="form-error-shop-name">
+                            @error('shop_name')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </td>
                 </tr>
                 <tr class="edit-form-table-tr">
                     <td class="edit-table-title">Prefecture</td>
                     <td class="edit-table-td">
                         <label class="shop-select-area">
-                            <select class="shop-area" id="area" name="prefecture_id">
+                            <select class="shop-area" id="prefecture_id" name="prefecture_id">
                                 <option value="">select area</option>
                                 @foreach($prefectures as $pref)
                                 <option value="{{ $pref->id }}">{{ $pref->pref_name }}</option>
                                 @endforeach
                             </select>
                         </label>
+                        <div class="form-error-prefecture">
+                            @error('prefecture_id')
+                            {{ $message }}
+                            @enderror
                     </td>
                 </tr>
                 <tr class="edit-form-table-tr">
                     <td class="edit-table-title">Genre</td>
                     <td class="edit-table-td">
                         <label class="shop-select-genre">
-                            <select class="shop-genre" id="genre" name="genre_id">
+                            <select class="shop-genre" id="genre_id" name="genre_id">
                                 <option value="">select genre</option>
                                 @foreach($genres as $genre)
                                 <option value="{{ $genre->id }}">{{ $genre->genre_name }}</option>
                                 @endforeach
                             </select>
                         </label>
+                        <div class="form-error-genre">
+                            @error('genre_id')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </td>
                 </tr>
                 <tr class="edit-form-table-tr">
                     <td class="edit-table-title">Shop Introduction</td>
                     <td class="edit-table-td">
                         <textarea class="shop-detail" name="shop_detail" id="shop_detail" cols="30" rows="10"></textarea>
+                        <div class="form-error-shop-detail">
+                            @error('shop_detail')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </td>
                 </tr>
                 <tr class="edit-form-table-tr">
                     <td class="edit-table-title">Shop Image URL</td>
                     <td class="edit-table-td">
                         <input class="shop-image-url" type="url" name="image_url" id="image_url">
+                        <div class="form-error-image-url">
+                        @error('image_url')
+                        {{ $message }}
+                        @enderror
+                    </div>
                     </td>
                 </tr>
             </table>

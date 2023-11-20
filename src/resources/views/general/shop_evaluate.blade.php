@@ -26,7 +26,7 @@
         <p class="evaluate-title">評価</p>
         @foreach($evaluate as $data)
         <div class="evaluate-list">
-            <span class="evaluate-contents">点数: {{$data->user->name}}</span>
+            <span class="evaluate-contents">ユーザー: {{$data->user->name}}様</span>
             <span class="evaluate-contents">点数: {{$data->star_id}}/5</span>
             <span class="evaluate-contents">感想: {{$data->comments}}</span>
         </div>

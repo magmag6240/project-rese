@@ -124,7 +124,9 @@
             @if (Auth::guard('shop_manager')->check() || Auth::guard('admin')->check())
             <p class="reserve-text">※一般ユーザーのみ予約可能です。</p>
             @endif
+            @if (!Auth::guard('web')->check() && !Auth::guard('shop_manager')->check() && !Auth::guard('admin')->check())
             <p class="reserve-text">※会員登録完了後にご予約いただけます。</p>
+            @endif
         </form>
     </div>
 </div>

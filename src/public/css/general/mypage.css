@@ -204,3 +204,30 @@
 .like-link::before {
     color: #808080;
 }
+
+.js-tab-panel {
+    width: 30vw;
+}
+
+.js-tab-panel-group {
+    display: flex;
+}
+
+.active_tab {
+    background: #00BFFF;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.inactive_tab {
+    padding: 5px 10px;
+}
+
+.active_content {
+    display: inline;
+    font-size: 1.5vw;
+}
+
+.inactive_content {
+    display: none;
+}

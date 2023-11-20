@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EvaluateRequest;
 use App\Models\Evaluation;
+use App\Models\Reservation;
 use App\Models\Star;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class EvaluationController extends Controller
@@ -12,15 +13,16 @@ class EvaluationController extends Controller
     public function index()
     {
         $stars = Star::all();
-        return view('general/evaluate_new', compact('stars'));
+        $reserve_shops = Reservation::with('shop')->where('user_id', Auth::id())->get();
+        return view('general/evaluate_new', compact('stars', 'reserve_shops'));
     }
 
-    public function create(Request $request, $shop_id)
+    public function create(EvaluateRequest $request)
     {
         Evaluation::create([
             'user_id' => Auth::id(),
-            'shop_id' => $shop_id,
-            'stars_id' => $request->input('stars'),
+            'shop_id' => $request->input('shop_id'),
+            'star_id' => $request->input('star_id'),
             'comments' => $request->input('comments')
         ]);
         return view('general/evaluate_done');

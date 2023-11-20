@@ -24,6 +24,7 @@
 
 .create-table-td {
     position: relative;
+    height: 5vw;
 }
 
 .create-form {
@@ -39,7 +40,7 @@
 }
 
 .evaluate-star,
-.title,
+.evaluate-shop,
 .comments {
     border: none;
     outline: none;
@@ -48,22 +49,22 @@
     border-radius: 5px;
 }
 
-.evaluate-star,.title,
+.evaluate-star,.evaluate-shop,
 .comments {
     width: 25vw;
 }
 
-.evaluate-star {
+.evaluate-star, .evaluate-shop {
     position: relative;
     appearance: none;
     font-size: 1vw;
 }
 
-.select-star {
+.select-star, .select-shop {
     background-color: #4169E1;
 }
 
-.select-star::after {
+.select-star::after, .select-shop::after {
     position: absolute;
     left: 23vw;
     font-family: 'Font Awesome 5 Free';
@@ -82,4 +83,32 @@
     align-self: center;
     color: #fff;
     background-color: #0000ff;
+}
+
+.form-error-stars,
+.form-error-shop,
+.form-error-comments {
+    position: absolute;
+    z-index: 1;
+    width: fit-content;
+    font-size: 1vw;
+    color: #f00;
+    background-color: #FFFACD;
+    padding: 0 0.5vw;
+    border-radius: 5px;
+}
+
+.form-error-stars {
+    top: 3.2vw;
+    left: 5vw;
+}
+
+.form-error-shop {
+    top: 3.2vw;
+    left: 6vw;
+}
+
+.form-error-comments {
+    top: 9.7vw;
+    left: 5vw;
 }

@@ -48,6 +48,7 @@
 
 .create-table-td {
     position: relative;
+    height: 5vw;
 }
 
 .create-form {
@@ -67,14 +68,10 @@
 .menu-detail {
     border: none;
     outline: none;
+    width: 25vw;
     padding: 0.4vw 0.5vw;
     margin-bottom: 1vw;
     border-radius: 5px;
-}
-
-.menu-name,
-.menu-detail {
-    width: 25vw;
 }
 
 .information-create-button {
@@ -86,4 +83,32 @@
     align-self: center;
     color: #fff;
     background-color: #0000ff;
+}
+
+.form-error-menu-name,
+.form-error-menu-detail,
+.form-error-price {
+    position: absolute;
+    z-index: 1;
+    width: fit-content;
+    font-size: 1vw;
+    color: #f00;
+    background-color: #FFFACD;
+    padding: 0 0.5vw;
+    border-radius: 5px;
+}
+
+.form-error-menu-name {
+    top: 3vw;
+    left: 5vw;
+}
+
+.form-error-price {
+    top: 3vw;
+    left: 6vw;
+}
+
+.form-error-menu-detail {
+    top: 9.7vw;
+    left: 5vw;
 }

@@ -20,18 +20,33 @@
                     <td class="edit-form-table-title">Menu name</td>
                     <td class="edit-form-table-td">
                         <input class="menu-name" type="text" name="menu_name" id="menu_name">
+                        <div class="form-error-menu-name">
+                            @error('menu_name')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </td>
                 </tr>
                 <tr class="edit-form-table-tr">
                     <td class="edit-form-table-title">Price</td>
                     <td class="edit-form-table-td">
                         <input class="menu-price" type="text" name="price" id="price">
+                        <div class="form-error-price">
+                            @error('price')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </td>
                 </tr>
                 <tr class="edit-form-table-tr">
                     <td class="edit-form-table-title">Menu Introduction</td>
                     <td class="edit-form-table-td">
                         <textarea class="menu-detail" name="menu_detail" id="menu_detail" cols="30" rows="10"></textarea>
+                        <div class="form-error-menu-detail">
+                            @error('menu_detail')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </td>
                 </tr>
             </table>
