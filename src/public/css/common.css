@@ -1,6 +1,23 @@
 * {
-    max-width: 1500px;
     background-color: #ededed;
+}
+
+@media (min-width:768px) {
+    * {
+        max-width: 768px;
+    }
+}
+
+@media (min-width:1024px) {
+    * {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width:1440px) {
+    * {
+        max-width: 1440px;
+    }
 }
 
 .body.active {
@@ -8,16 +25,51 @@
     overflow: hidden;
 }
 
-.header {
-    padding: 3vw 6vw;
+@media (min-width:768px) {
+    .header {
+        padding: 5vw 7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .header {
+        padding: 4vw 6.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .header {
+        padding: 3vw 6vw;
+    }
 }
 
 .app-logo {
     color: #4169E1;
     position: absolute;
-    font-size: 2.5vw;
-    top: 2vw;
-    left: 12vw;
+}
+
+@media (min-width:768px) {
+    .app-logo{
+        font-size: 3.5vw;
+        top: 3.5vw;
+        left: 15vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .app-logo {
+        font-size: 3.1vw;
+        top: 2.6vw;
+        left: 13.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .app-logo {
+        font-size: 2.9vw;
+        top: 1.8vw;
+        left: 12vw;
+    }
 }
 
 .main {
@@ -27,12 +79,31 @@
 }
 
 .menu-button {
-    width: 2vw;
-    height: 2vw;
     position: relative;
     z-index: 3;
     cursor: pointer;
     border-radius: 5px;
+}
+
+@media (min-width:768px) {
+    .menu-button {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-button {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-button {
+        width: 2vw;
+        height: 2vw;
+    }
 }
 
 .menu-nav {
@@ -52,15 +123,32 @@
 }
 
 .menu-list {
-    padding-top: 20vw;
     background-color: #fff;
+}
+
+@media (min-width:768px) {
+    .menu-list {
+        padding-top: 38vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-list {
+        padding-top: 30vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-list {
+        padding-top: 20vw;
+    }
 }
 
 .menu-list-contents {
     list-style: none;
     cursor: pointer;
-    margin-top: 0.5vw;
     background-color: #fff;
+    margin-top: 1.5vw;
 }
 
 .logout-button, .menu-link {
@@ -70,22 +158,54 @@
 }
 
 .menu-link {
-    font-size: 3vw;
     text-decoration: none;
-    margin: 0 1vw;
+}
+
+@media (min-width:768px) {
+    .menu-link {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-link {
+        font-size: 3.8vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-link {
+        font-size: 3vw;
+    }
 }
 
 .logout-button {
-    font-size: 3.2vw;
     border: none;
-    margin-bottom: 0.4vw;
+    margin-bottom: 0.5vw;
+}
+
+@media (min-width:768px) {
+    .logout-button {
+        font-size: 4.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .logout-button {
+        font-size: 4.1vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .logout-button {
+        font-size: 3.3vw;
+    }
 }
 
 .menu-open::before,
 .menu-close::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    font-size: 1.5vw;
     background-color: #4169E1;
     border-radius: 5px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
@@ -95,13 +215,54 @@
 }
 
 .menu-open::before {
-    padding: 1vw 1.65vw;
     content: '\f00d';
+}
+
+@media (min-width:768px) {
+    .menu-open::before {
+        font-size: 2.5vw;
+        padding: 1.2vw 2.25vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-open::before {
+        font-size: 2.2vw;
+        padding: 1.1vw 1.9vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-open::before {
+        font-size: 2vw;
+        padding: 1vw 1.7vw;
+    }
 }
 
 .menu-close::before {
     padding: 1vw 1.5vw;
     content: '\f0c9';
+}
+
+@media (min-width:768px) {
+    .menu-close::before {
+        font-size: 2.5vw;
+        padding: 1.2vw 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-close::before {
+        font-size: 2.2vw;
+        padding: 1.1vw 1.7vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-close::before {
+        font-size: 2vw;
+        padding: 1vw 1.5vw;
+    }
 }
 
 .menu-close {
@@ -114,7 +275,6 @@
 
 .menu-open {
     opacity: 0;
-    background-color: #4169E1;
 }
 
 .menu-open.active {
