@@ -1,10 +1,10 @@
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .shop-detail {
         padding: 5vw 10vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .shop-detail {
         display: flex;
         justify-content: space-between;
@@ -12,7 +12,7 @@
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .shop-detail {
         display: flex;
         justify-content: space-between;
@@ -27,21 +27,21 @@
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .shop-list-button {
         font-size: 2.7vw;
         padding: 0.2vw 0.7vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .shop-list-button {
         font-size: 1.8vw;
         padding: 0.2vw 0.6vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .shop-list-button {
         font-size: 1.5vw;
         padding: 0.2vw 0.5vw;
@@ -57,19 +57,19 @@
     margin: 0 1vw 0.3vw 0;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .js-tab-panel {
         width: 80vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .js-tab-panel {
         width: 42vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .js-tab-panel {
         width: 40vw;
     }
@@ -85,19 +85,19 @@
     padding: 5px;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .active_tab {
         font-size: 2vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .active_tab {
         font-size: 1.5vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .active_tab {
         font-size: 1.1vw;
     }
@@ -107,19 +107,19 @@
     padding: 5px;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .inactive_tab {
         font-size: 2vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .inactive_tab {
         font-size: 1.5vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .inactive_tab {
         font-size: 1.1vw;
     }
@@ -141,81 +141,81 @@
     margin: 1vw;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .shop-name {
         font-size: 3.1vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .shop-name {
         font-size: 2.3vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .shop-name {
         font-size: 2vw;
     }
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .shop-img {
         width: 80vw;
         margin-bottom: 2.5vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .shop-img {
         width: 42vw;
         margin-bottom: 2.3vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .shop-img {
         width: 40vw;
         margin-bottom: 2vw;
     }
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .shop-area-genre {
         font-size: 1.8vw;
         margin-bottom: 1.5vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .shop-area-genre {
         font-size: 1.35vw;
         margin-bottom: 1.5vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .shop-area-genre {
         font-size: 1vw;
         margin-bottom: 1vw;
     }
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .shop-text {
         font-size: 1.8vw;
         line-height: 3vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .shop-text {
         font-size: 1.35vw;
         line-height: 2.5vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .shop-text {
         font-size: 1vw;
         line-height: 1.8vw;
@@ -230,21 +230,21 @@
     border-radius: 5px;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .menu-group {
         margin: 1.8vw;
         padding: 2vw 3vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .menu-group {
         margin: 1.5vw;
         padding: 1.3vw 1.7vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .menu-group {
         margin: 1vw;
         padding: 1vw 1.5vw;
@@ -255,19 +255,19 @@
     background-color: #7B68EE;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .menu-info {
         font-size: 2.3vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .menu-info {
         font-size: 1.8vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .menu-info {
         font-size: 1.3vw;
     }
@@ -278,19 +278,19 @@
     word-break: keep-all;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .menu-detail {
         font-size: 1.8vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .menu-detail {
         font-size: 1.3vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .menu-detail {
         font-size: 1vw;
     }
@@ -303,7 +303,7 @@
     background-color: #4169E1;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .shop-reserve {
         position: relative;
         top: 1vw;
@@ -314,7 +314,7 @@
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .shop-reserve {
         position: absolute;
         top: -2vw;
@@ -325,7 +325,7 @@
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .shop-reserve {
         position: absolute;
         top: -5vw;
@@ -351,81 +351,81 @@
     border-radius: 5px;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .form-error-date, .form-error-time, .form-error-number {
         font-size: 2vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .form-error-date, .form-error-time, .form-error-number {
         font-size: 1.3vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .form-error-date, .form-error-time, .form-error-number {
         font-size: 1vw;
     }
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .form-error-date {
         top: 0.5vw;
         left: 30vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .form-error-date {
         top: 0.4vw;
         left: 17vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .form-error-date {
         top: 0;
         left: 15.2vw;
     }
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .form-error-time {
         top: 6.5vw;
         left: 30vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .form-error-time {
         top: 4.7vw;
         left: 14.7vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .form-error-time {
         top: 3.3vw;
         left: 14.7vw;
     }
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .form-error-number {
         top: 12.5vw;
         left: 30vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .form-error-number {
         top: 9vw;
         left: 15.8vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .form-error-number {
         top: 6.3vw;
         left: 15.8vw;
@@ -438,19 +438,19 @@
     background-color: #4169E1;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .reserve-title {
         font-size: 3.3vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .reserve-title {
         font-size: 2.3vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .reserve-title {
         font-size: 2vw;
     }
@@ -463,20 +463,26 @@
     word-break: keep-all;
 }
 
-@media screen and (min-width:768px) {
-    .reserve-menu-text {
+.reserve-text {
+    color: #fff;
+    background-color: #4169E1;
+    word-break: keep-all;
+}
+
+@media (min-width:768px) {
+    .reserve-menu-text, .reserve-text {
         font-size: 2vw;
     }
 }
 
-@media screen and (min-width:1024px) {
-    .reserve-menu-text {
+@media (min-width:1024px) {
+    .reserve-menu-text, .reserve-text {
         font-size: 1.3vw;
     }
 }
 
-@media screen and (min-width:1440px) {
-    .reserve-menu-text {
+@media (min-width:1440px) {
+    .reserve-menu-text, .reserve-text {
         font-size: 1vw;
     }
 }
@@ -486,7 +492,7 @@
     outline: none;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .reserve-date, .reserve-time, .reserve-number, .reserve-menu {
         height: 4vw;
         margin-bottom: 2vw;
@@ -494,7 +500,7 @@
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .reserve-date, .reserve-time, .reserve-number, .reserve-menu {
         height: 3vw;
         margin-bottom: 1.3vw;
@@ -502,7 +508,7 @@
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .reserve-date, .reserve-time, .reserve-number, .reserve-menu {
         height: 2vw;
         margin-bottom: 1vw;
@@ -514,21 +520,21 @@
     border-radius: 5px;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .reserve-date {
         font-size: 1.7vw;
         width: 27vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .reserve-date {
         font-size: 1.3vw;
         width: 15vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .reserve-date {
         font-size: 1vw;
         width: 12vw;
@@ -541,21 +547,21 @@
     border-radius: 5px;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .reserve-time, .reserve-number, .reserve-menu {
         font-size: 1.7vw;
         width: 65vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .reserve-time, .reserve-number, .reserve-menu {
         font-size: 1.3vw;
         width: 35vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .reserve-time, .reserve-number, .reserve-menu {
         font-size: 1vw;
         width: 33vw;
@@ -571,14 +577,14 @@
     z-index: 1;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .reserve-select-time::after, .reserve-select-number::after, .reserve-select-menu::after {
         left: 60vw;
         font-size: 3vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .reserve-select-time::after, .reserve-select-number::after, .reserve-select-menu::after {
         left: 32.5vw;
         font-size: 2vw;
@@ -594,7 +600,7 @@
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .reserve-select-time::after, .reserve-select-number::after, .reserve-select-menu::after {
         left: 31vw;
         font-size: 1.5vw;
@@ -616,19 +622,19 @@
     background-color: #5287e9;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .reserve-confirm, .reserve-confirm-table, .confirm-table-tr, .confirm-table-td {
         font-size: 2vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .reserve-confirm, .reserve-confirm-table, .confirm-table-tr, .confirm-table-td {
         font-size: 1.3vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .reserve-confirm, .reserve-confirm-table, .confirm-table-tr, .confirm-table-td {
         font-size: 1.1vw;
     }
@@ -638,42 +644,42 @@
     border-radius: 5px;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .reserve-confirm {
         padding: 1.5vw 1vw;
         width: 65vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .reserve-confirm {
         padding: 1.5vw 1vw;
         width: 33vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .reserve-confirm {
         padding: 1.5vw 1vw;
         width: 32vw;
     }
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .confirm-table-td {
         padding: 1vw 1.5vw;
         width: 30vw;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .confirm-table-td {
         padding: 0.5vw 1vw;
         width: 17vw;
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .confirm-table-td {
         padding: 0.5vw 1vw;
         width: 15vw;
@@ -696,7 +702,7 @@
     background-color: #0000ff;
 }
 
-@media screen and (min-width:768px) {
+@media (min-width:768px) {
     .reserve-button {
         position: absolute;
         top: 71.8vw;
@@ -707,7 +713,7 @@
     }
 }
 
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     .reserve-button {
         position: absolute;
         top: 47vw;
@@ -718,7 +724,7 @@
     }
 }
 
-@media screen and (min-width:1440px) {
+@media (min-width:1440px) {
     .reserve-button {
         position: absolute;
         top: 41.6vw;
