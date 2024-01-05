@@ -1,12 +1,34 @@
+
 .shop-info-new {
     display: inline-flex;
     flex-direction: column;
-    width: 70vw;
-    margin: 1.5vw 0;
-    padding: 2vw 0;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
     background-color: #4169E1;
+}
+
+@media (min-width:768px) {
+    .shop-info-new {
+        width: 80vw;
+        margin: 8vw 0;
+        padding: 2vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-info-new {
+        width: 75vw;
+        margin: 5vw 0;
+        padding: 2vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-info-new {
+        width: 70vw;
+        margin: 1.5vw 0;
+        padding: 2vw 0;
+    }
 }
 
 .shop-create-title {
@@ -17,21 +39,61 @@
 }
 
 .shop-create-title-text {
-    font-size: 1.7vw;
     font-weight: bold;
     color: #fff;
     background-color: #4169E1;
 }
 
+@media (min-width:768px) {
+    .shop-create-title-text {
+        font-size: 2.8vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-create-title-text {
+        font-size: 2.1vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-create-title-text {
+        font-size: 1.7vw;
+    }
+}
+
 .shop-manager-button {
     position: absolute;
-    top: 1.3vw;
-    left: -4vw;
-    height: 2vw;
     border: none;
-    font-size: 1.7vw;
     border-radius: 5px;
     background-color: #E0FFFF;
+}
+
+@media (min-width:768px) {
+    .shop-manager-button {
+        top: 2.1vw;
+        left: -6vw;
+        height: 3.3vw;
+        font-size: 2.8vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manager-button {
+        top: 1.6vw;
+        left: -5vw;
+        height: 2.5vw;
+        font-size: 2.1vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manager-button {
+        top: 1.3vw;
+        left: -4vw;
+        height: 2vw;
+        font-size: 1.7vw;
+    }
 }
 
 .shop-manager-home-link {
@@ -45,7 +107,24 @@
 
 .create-table-td {
     position: relative;
-    height: 5vw;
+}
+
+@media (min-width:768px) {
+    .create-table-td {
+        height: 10vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .create-table-td {
+        height: 8vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .create-table-td {
+        height: 6vw;
+    }
 }
 
 .create-form {
@@ -57,28 +136,118 @@
 
 .create-table-title {
     color: #fff;
-    width: 15vw;
-    font-size: 1.2vw;
+}
+
+@media (min-width:768px) {
+    .create-table-title {
+        width: 20vw;
+        font-size: 2.1vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .create-table-title {
+        width: 17vw;
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .create-table-title {
+        width: 15vw;
+        font-size: 1.2vw;
+    }
 }
 
 .shop-name, .shop-area, .shop-genre, .shop-image-url, .shop-detail {
     border: none;
     outline: none;
-    padding: 0.4vw 0.5vw;
-    margin-bottom: 1vw;
     border-radius: 5px;
 }
 
-.shop-name, .shop-image-url, .shop-detail {
-    width: 35vw;
+@media (min-width:768px) {
+    .shop-name,
+    .shop-area,
+    .shop-genre,
+    .shop-image-url,
+    .shop-detail {
+        padding: 0.8vw 1vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-name,
+    .shop-area,
+    .shop-genre,
+    .shop-image-url,
+    .shop-detail {
+        padding: 0.6vw 0.8vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-name,
+    .shop-area,
+    .shop-genre,
+    .shop-image-url,
+    .shop-detail {
+        padding: 0.4vw 0.5vw;
+    }
+}
+
+@media (min-width:768px) {
+    .shop-name,
+    .shop-image-url,
+    .shop-detail {
+        width: 45vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-name,
+    .shop-image-url,
+    .shop-detail {
+        width: 40vw;
+    }
+}
+
+@media (min-width:1440px) {
+
+    .shop-name,
+    .shop-image-url,
+    .shop-detail {
+        width: 35vw;
+    }
 }
 
 .shop-area,
 .shop-genre {
     position: relative;
     appearance: none;
-    font-size: 1vw;
-    width: 35vw;
+}
+
+@media (min-width:768px) {
+    .shop-area,
+    .shop-genre {
+        font-size: 1.8vw;
+        width: 45vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-area,
+    .shop-genre {
+        font-size: 1.3vw;
+        width: 40vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-area,
+    .shop-genre {
+        font-size: 1vw;
+        width: 35vw;
+    }
 }
 
 .shop-select-area, .shop-select-genre {
@@ -88,23 +257,69 @@
 .shop-select-area::after,
 .shop-select-genre::after {
     position: absolute;
-    left: 33vw;
     font-family: 'Font Awesome 5 Free';
-    font-size: 1.5vw;
     font-weight: 900;
     content: '\f107';
     color: #d4d3d3;
 }
 
+@media (min-width:768px) {
+    .shop-select-area::after,
+    .shop-select-genre::after {
+        font-size: 2.8vw;
+        left: 41.5vw;
+        top: 3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-select-area::after,
+    .shop-select-genre::after {
+        font-size: 2.2vw;
+        left: 37vw;
+        top: 2.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-select-area::after,
+    .shop-select-genre::after {
+        font-size: 1.5vw;
+        left: 33vw;
+        top: 2vw;
+    }
+}
+
 .information-create-button {
     border: none;
-    font-size: 1.2vw;
     border-radius: 5px;
-    padding: 0.5vw 1vw;
-    margin-top: 1vw;
     align-self: center;
     color: #fff;
     background-color: #0000ff;
+}
+
+@media (min-width:768px) {
+    .information-create-button {
+        font-size: 1.9vw;
+        padding: 1vw 2vw;
+        margin-top: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .information-create-button {
+        font-size: 1.5vw;
+        padding: 0.7vw 1.4vw;
+        margin-top: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .information-create-button {
+        font-size: 1.2vw;
+        padding: 0.5vw 1vw;
+        margin-top: 1vw;
+    }
 }
 
 .form-error-shop-name,
@@ -115,34 +330,145 @@
     position: absolute;
     z-index: 1;
     width: fit-content;
-    font-size: 1vw;
     color: #f00;
     background-color: #FFFACD;
-    padding: 0 0.5vw;
     border-radius: 5px;
 }
 
-.form-error-shop-name {
-    top: 3vw;
-    left: 10vw;
+@media (min-width:768px) {
+    .form-error-shop-name,
+    .form-error-prefecture,
+    .form-error-genre,
+    .form-error-shop-detail,
+    .form-error-image-url {
+        font-size: 1.6vw;
+        padding: 0 1vw;
+    }
 }
 
-.form-error-prefecture {
-    top: 3vw;
-    left: 7vw;
+@media (min-width:1024px) {
+    .form-error-shop-name,
+    .form-error-prefecture,
+    .form-error-genre,
+    .form-error-shop-detail,
+    .form-error-image-url {
+        font-size: 1.3vw;
+        padding: 0 0.7vw;
+    }
 }
 
-.form-error-genre {
-    top: 3vw;
-    left: 8.5vw;
+@media (min-width:1440px) {
+    .form-error-shop-name,
+    .form-error-prefecture,
+    .form-error-genre,
+    .form-error-shop-detail,
+    .form-error-image-url {
+        font-size: 1vw;
+        padding: 0 0.5vw;
+    }
 }
 
-.form-error-shop-detail {
-    top: 9.7vw;
-    left: 9vw;
+@media (min-width:768px) {
+    .form-error-shop-name {
+        top: 6.5vw;
+        left: -20vw;
+    }
 }
 
-.form-error-image-url {
-    top: 3vw;
-    left: 7.5vw;
+@media (min-width:1024px) {
+    .form-error-shop-name {
+        top: 5.5vw;
+        left: -17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-shop-name {
+        top: 4vw;
+        left: -15vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-prefecture {
+        top: 7.5vw;
+        left: -20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-prefecture {
+        top: 6vw;
+        left: -17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-prefecture {
+        top: 4vw;
+        left: -15vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-genre {
+        top: 7.5vw;
+        left: -20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-genre {
+        top: 6vw;
+        left: -17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-genre {
+        top: 4vw;
+        left: -15vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-shop-detail {
+        top: 12vw;
+        left: -20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-shop-detail {
+        top: 9vw;
+        left: -17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-shop-detail {
+        top: 7vw;
+        left: -15vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-image-url {
+        top: 7.5vw;
+        left: -20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-image-url {
+        top: 6vw;
+        left: -17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-image-url {
+        top: 4vw;
+        left: -15vw;
+    }
 }

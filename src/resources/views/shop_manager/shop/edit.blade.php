@@ -93,23 +93,23 @@
             <p class="shop-before-title">変更前</p>
             <table class="shop-confirm-table">
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Shop name</td>
+                    <td class="confirm-table-title">Shop name</td>
                     <td class="confirm-table-td">{{$manage_shop->shop_name}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Prefecture</td>
+                    <td class="confirm-table-title">Prefecture</td>
                     <td class="confirm-table-td">{{$manage_shop->prefecture->pref_name}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Genre</td>
+                    <td class="confirm-table-title">Genre</td>
                     <td class="confirm-table-td">{{$manage_shop->genre->genre_name}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Shop Introduction</td>
+                    <td class="confirm-table-title">Shop Introduction</td>
                     <td class="confirm-table-td">{{$manage_shop->shop_detail}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Shop Image URL</td>
+                    <td class="confirm-table-title">Shop Image URL</td>
                     <td class="confirm-table-td">{{$manage_shop->image_url}}</td>
                 </tr>
             </table>
@@ -119,23 +119,23 @@
             <p class="shop-after-title">変更後</p>
             <table class="shop-confirm-table">
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Shop name</td>
+                    <td class="confirm-table-title">Shop name</td>
                     <td class="confirm-table-td" id="shop_name_confirm"></td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Prefecture</td>
+                    <td class="confirm-table-title">Prefecture</td>
                     <td class="confirm-table-td" id="prefecture_id_confirm"></td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Genre</td>
+                    <td class="confirm-table-title">Genre</td>
                     <td class="confirm-table-td" id="genre_id_confirm"></td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Shop Introduction</td>
+                    <td class="confirm-table-title">Shop Introduction</td>
                     <td class="confirm-table-td" id="shop_detail_confirm"></td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Shop Image URL</td>
+                    <td class="confirm-table-title">Shop Image URL</td>
                     <td class="confirm-table-td" id="image_url_confirm"></td>
                 </tr>
             </table>

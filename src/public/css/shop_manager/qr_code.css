@@ -1,11 +1,30 @@
 .qr-code-reader {
     display: inline-flex;
     flex-direction: column;
-    width: 60vw;
-    margin: 1vw 0;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
     background-color: #4169E1;
+}
+
+@media (min-width:768px) {
+    .qr-code-reader {
+        width: 75vw;
+        margin: 3vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .qr-code-reader {
+        width: 70vw;
+        margin: 2vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .qr-code-reader {
+        width: 60vw;
+        margin: 1vw 0;
+    }
 }
 
 .qr-code-reader-title {
@@ -16,22 +35,64 @@
 }
 
 .qr-code-reader-title-text {
-    font-size: 1.5vw;
     font-weight: bold;
     color: #fff;
     background-color: #4169E1;
 }
 
+@media (min-width:768px) {
+    .qr-code-reader-title-text {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .qr-code-reader-title-text {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .qr-code-reader-title-text {
+        font-size: 1.5vw;
+    }
+}
+
 .shop-manager-home-button {
     border: none;
     position: absolute;
-    top: 1.3vw;
-    left: -2.5vw;
-    width: 1.5vw;
-    height: 1.5vw;
-    font-size: 1.2vw;
     border-radius: 5px;
     background-color: #E0FFFF;
+}
+
+@media (min-width:768px) {
+    .shop-manager-home-button {
+        top: 2vw;
+        left: -4.7vw;
+        width: 3vw;
+        height: 3vw;
+        font-size: 2.4vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manager-home-button {
+        top: 1.6vw;
+        left: -3.8vw;
+        width: 2.4vw;
+        height: 2.4vw;
+        font-size: 1.8vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manager-home-button {
+        top: 1.2vw;
+        left: -2.9vw;
+        width: 1.8vw;
+        height: 1.8vw;
+        font-size: 1.3vw;
+    }
 }
 
 .shop-manager-home-link {
@@ -42,6 +103,23 @@
 .qr-code-text {
     background-color: #4169E1;
     color: #fff;
-    font-size: 1vw;
     margin-top: 0;
+}
+
+@media (min-width:768px) {
+    .qr-code-text {
+        font-size: 1.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .qr-code-text {
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .qr-code-text {
+        font-size: 1vw;
+    }
 }

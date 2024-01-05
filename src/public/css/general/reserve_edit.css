@@ -1,3 +1,4 @@
+
 .reserve-edit {
     display: flex;
     padding: 2vw 10vw;
@@ -5,12 +6,55 @@
     text-align: left;
 }
 
+@media (min-width:768px) {
+    .reserve-edit {
+        
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-edit {
+        display: flex;
+        padding: 2vw 10vw;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-edit {
+        display: flex;
+        padding: 2vw 10vw;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
 .reserve-edit-contents {
-    width: 40vw;
     background-color: #4169E1;
     border-radius: 10px;
-    padding: 2vw 3vw;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+@media (min-width:768px) {
+    .reserve-edit-contents {
+        width: 40vw;
+        padding: 2vw 3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-edit-contents {
+        width: 40vw;
+        padding: 2vw 3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-edit-contents {
+        width: 40vw;
+        padding: 2vw 3vw;
+    }
 }
 
 .reserve-edit-title {

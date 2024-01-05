@@ -1,24 +1,80 @@
+
 .confirm-payment {
     display: inline-flex;
     flex-direction: column;
     background-color: #4169E1;
     color: #fff;
-    padding: 1.5vw 5vw;
-    margin-top: 5vw;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
+@media (min-width:768px) {
+    .confirm-payment {
+        padding: 3vw 5vw;
+        margin-top: 7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .confirm-payment {
+        padding: 2.2vw 8vw;
+        margin-top: 6vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .confirm-payment {
+        padding: 1.5vw 5vw;
+        margin-top: 5vw;
+    }
+}
+
 .confirm-title {
-    font-size: 1.5vw;
     font-weight: bold;
     background-color: #4169E1;
 }
 
+@media (min-width:768px) {
+    .confirm-title {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .confirm-title {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .confirm-title {
+        font-size: 1.5vw;
+    }
+}
+
 .confirm-text {
-    font-size: 1vw;
-    padding-top: 1vw;
     background-color: #4169E1;
+}
+
+@media (min-width:768px) {
+    .confirm-text {
+        font-size: 1.9vw;
+        padding-top: 1.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .confirm-text {
+        font-size: 1.4vw;
+        padding-top: 1.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .confirm-text {
+        font-size: 1vw;
+        padding-top: 1vw;
+    }
 }
 
 .reserve-confirm,
@@ -26,25 +82,103 @@
 .confirm-table-tr,
 .confirm-table-td {
     border: none;
-    font-size: 1.1vw;
     color: #fff;
     background-color: #5287e9;
 }
 
+@media (min-width:768px) {
+    .reserve-confirm,
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-td {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-confirm,
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-td {
+        font-size: 1.6vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-confirm,
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-td {
+        font-size: 1.2vw;
+    }
+}
+
 .reserve-confirm {
     border-radius: 5px;
-    padding: 1vw;
-    margin: 2vw 0;
     width: fit-content;
     align-self: center;
 }
 
-.confirm-table-td {
-    padding: 0.5vw 1vw;
-    width: 13vw;
+@media (min-width:768px) {
+    .reserve-confirm {
+        padding: 2vw;
+        margin: 4vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-confirm {
+        padding: 1.5vw;
+        margin: 3vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-confirm {
+        padding: 1vw;
+        margin: 2vw 0;
+    }
+}
+
+@media (min-width:768px) {
+    .confirm-table-td {
+        padding: 1vw 1.5vw;
+        width: 25vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .confirm-table-td {
+        padding: 0.7vw 1.2vw;
+        width: 18vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .confirm-table-td {
+        padding: 0.5vw 1vw;
+        width: 13vw;
+    }
 }
 
 .stripe-form {
-    margin: 1vw;
     background-color: #4169E1;
+}
+
+@media (min-width:768px) {
+    .stripe-form {
+        margin: 1.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .stripe-form {
+        margin: 1.2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .stripe-form {
+        margin: 1vw;
+    }
 }

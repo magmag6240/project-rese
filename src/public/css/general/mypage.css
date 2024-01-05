@@ -322,9 +322,8 @@
 
 @media (min-width:768px) {
     .like-shop{
-        position: relative;
-        left: 7vw;
         width: 90vw;
+        position: relative;
         height: 90vw;
     }
 }

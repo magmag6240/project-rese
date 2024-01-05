@@ -151,32 +151,51 @@
     margin-top: 1.5vw;
 }
 
-.logout-button, .menu-link {
+.logout-button, .menu-link, .user, .admin, .shop-manager {
     background-color: #fff;
     color: #4169E1;
     cursor: pointer;
 }
 
-.menu-link {
+.menu-link, .user, .admin, .shop-manager {
     text-decoration: none;
 }
 
 @media (min-width:768px) {
-    .menu-link {
+    .menu-link, .user, .admin, .shop-manager {
         font-size: 4.5vw;
     }
 }
 
 @media (min-width:1024px) {
-    .menu-link {
+    .menu-link, .user, .admin, .shop-manager {
         font-size: 3.8vw;
     }
 }
 
 @media (min-width:1440px) {
-    .menu-link {
+    .menu-link, .user, .admin, .shop-manager {
         font-size: 3vw;
     }
+}
+
+.admin, .shop-manager {
+    background-image: linear-gradient(#4169E1, #4169E1);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 2px 70%;
+}
+
+.user {
+    padding-right: 1.3vw;
+}
+
+.admin {
+    padding: 0 1.6vw;
+}
+
+.shop-manager {
+    padding-left: 1.3vw;
 }
 
 .logout-button {

@@ -31,9 +31,9 @@
                     </li>
                     <li class="menu-list-contents">
                         <span class="menu-link">Login</span><br>
-                        <a class="menu-link" href="/login">user</a>
-                        <a class="menu-link" href="/admin/login">admin</a>
-                        <a class="menu-link" href="/shop_manager/login">shop-manager</a>
+                        <a class="user" href="/login">user</a>
+                        <a class="admin" href="/admin/login">admin</a>
+                        <a class="shop-manager" href="/shop_manager/login">shop-manager</a>
                     </li>
                     @endif
                     @if (Auth::guard('admin')->check() || Auth::guard('web')->check() || Auth::guard('shop_manager')->check())

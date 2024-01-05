@@ -1,16 +1,27 @@
+
 .register-content {
     display: inline-flex;
     flex-direction: column;
-    margin-top: 8vw;
-    width: 30vw;
 }
 
-@media screen and (max-width:768px) {
+@media (min-width:768px) {
     .register-content {
-        display: inline-flex;
-        flex-direction: column;
         margin-top: 15vw;
         width: 50vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .register-content {
+        margin-top: 12vw;
+        width: 40vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .register-content {
+        margin-top: 8vw;
+        width: 30vw;
     }
 }
 
@@ -25,19 +36,26 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     color: #fff;
-    font-size: 1.5vw;
-    padding: 1.4vw 2vw;
 }
 
-@media screen and (max-width:768px) {
+@media (min-width:768px) {
     .register-title {
-        background-color: #4169E1;
-        text-align: left;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        color: #fff;
         font-size: 2.5vw;
         padding: 2vw 3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .register-title {
+        font-size: 2vw;
+        padding: 1.6vw 2.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .register-title {
+        font-size: 1.5vw;
+        padding: 1.4vw 2vw;
     }
 }
 
@@ -63,27 +81,45 @@
 
 .register-error {
     width: fit-content;
-    font-size: 0.8vw;
-    margin-left: 6vw;
     color: #f00;
 }
 
-@media screen and (max-width:768px) {
+@media (min-width:768px) {
     .register-error {
-        width: fit-content;
-        font-size: 2vw;
-        margin-left: 6vw;
-        color: #f00;
+        font-size: 1.6vw;
+        margin-left: 8vw;
     }
 }
 
-.form-name {
-    margin-top: 2vw;
+@media (min-width:1024px) {
+    .register-error {
+        font-size: 1.3vw;
+        margin-left: 6vw;
+    }
 }
 
-@media screen and (max-width:768px) {
+@media (min-width:1440px) {
+    .register-error {
+        font-size: 1vw;
+        margin-left: 4vw;
+    }
+}
+
+@media (min-width:768px) {
     .form-name {
-        margin-top: 3.5vw;
+        margin-top: 4vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-name {
+        margin-top: 2.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-name {
+        margin-top: 2vw;
     }
 }
 
@@ -91,19 +127,27 @@
     border: none;
     outline: none;
     border-bottom: solid #696969;
-    font-size: 1.3vw;
-    margin: 1vw 2vw 1vw 0.5vw;
     width: 80%;
 }
 
-@media screen and (max-width:768px) {
+@media (min-width:768px) {
     .form-input {
-        border: none;
-        outline: none;
-        border-bottom: solid #696969;
         font-size: 2.3vw;
         margin: 1.5vw 2.5vw 1.5vw 1vw;
-        width: 80%;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-input {
+        font-size: 1.8vw;
+        margin: 1.2vw 2.2vw 1.2vw 0.8vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-input {
+        font-size: 1.3vw;
+        margin: 1vw 2vw 1vw 0.5vw;
     }
 }
 
@@ -112,16 +156,29 @@
 .password-icon::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    font-size: 1.5vw;
 }
 
-@media screen and (max-width:768px) {
+@media (min-width:768px) {
     .name-icon::before,
     .mail-icon::before,
     .password-icon::before {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
         font-size: 2.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .name-icon::before,
+    .mail-icon::before,
+    .password-icon::before {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .name-icon::before,
+    .mail-icon::before,
+    .password-icon::before {
+        font-size: 1.5vw;
     }
 }
 
@@ -138,14 +195,24 @@
 }
 
 .form-button {
-    margin: 1vw 3vw;
     text-align: right;
 }
 
-@media screen and (max-width:768px) {
+@media (min-width:768px) {
     .form-button {
         margin: 1.5vw 3.5vw;
-        text-align: right;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-button {
+        margin: 1.2vw 3.2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-button {
+        margin: 1vw 3vw;
     }
 }
 
@@ -154,19 +221,26 @@
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 0.5vw 1vw;
-    font-size: 1.2vw;
     cursor: pointer;
 }
 
-@media screen and (max-width:768px) {
+@media (min-width:768px) {
     .form-button-submit {
-        background-color: #4169E1;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
         padding: 1vw 2vw;
-        font-size: 2vw;
-        cursor: pointer;
+        font-size: 1.9vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-button-submit {
+        padding: 0.7vw 1.5vw;
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-button-submit {
+        padding: 0.5vw 1vw;
+        font-size: 1.2vw;
     }
 }

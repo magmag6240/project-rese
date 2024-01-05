@@ -1,19 +1,57 @@
 .shop-evaluate-new {
     display: inline-flex;
     flex-direction: column;
-    width: 70vw;
-    margin: 4vw 0;
-    padding: 2vw 0;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
     background-color: #4169E1;
 }
 
+@media (min-width:768px) {
+    .shop-evaluate-new {
+        width: 85vw;
+        margin: 4vw 0;
+        padding: 5vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-evaluate-new {
+        width: 75vw;
+        margin: 5vw 0;
+        padding: 3vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-evaluate-new {
+        width: 70vw;
+        margin: 4vw 0;
+        padding: 2vw 0;
+    }
+}
+
 .shop-evaluate-new-title {
-    font-size: 1.7vw;
     font-weight: bold;
     color: #fff;
     background-color: #4169E1;
+}
+
+@media (min-width:768px) {
+    .shop-evaluate-new-title {
+        font-size: 2.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-evaluate-new-title {
+        font-size: 2.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-evaluate-new-title {
+        font-size: 1.7vw;
+    }
 }
 
 .create-form,
@@ -24,7 +62,24 @@
 
 .create-table-td {
     position: relative;
-    height: 5vw;
+}
+
+@media (min-width:768px) {
+    .create-table-td {
+        height: 12vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .create-table-td {
+        height: 9vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .create-table-td {
+        height: 7vw;
+    }
 }
 
 .create-form {
@@ -36,7 +91,27 @@
 
 .create-table-title {
     color: #fff;
-    width: 15vw;
+}
+
+@media (min-width:768px) {
+    .create-table-title {
+        font-size: 2.2vw;
+        width: 20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .create-table-title {
+        font-size: 1.7vw;
+        width: 17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .create-table-title {
+        font-size: 1.2vw;
+        width: 15vw;
+    }
 }
 
 .evaluate-star,
@@ -44,20 +119,57 @@
 .comments {
     border: none;
     outline: none;
-    padding: 0.4vw 0.5vw;
-    margin-bottom: 1vw;
     border-radius: 5px;
 }
 
-.evaluate-star,.evaluate-shop,
-.comments {
-    width: 25vw;
+@media (min-width:768px) {
+    .evaluate-star,
+    .evaluate-shop,
+    .comments {
+        width: 45vw;
+        padding: 0.8vw 1vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .evaluate-star,
+    .evaluate-shop,
+    .comments {
+        width: 35vw;
+        padding: 0.6vw 0.8vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .evaluate-star,
+    .evaluate-shop,
+    .comments {
+        width: 25vw;
+        padding: 0.4vw 0.5vw;
+    }
 }
 
 .evaluate-star, .evaluate-shop {
     position: relative;
     appearance: none;
-    font-size: 1vw;
+}
+
+@media (min-width:768px) {
+    .evaluate-star, .evaluate-shop {
+        font-size: 1.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .evaluate-star, .evaluate-shop {
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .evaluate-star, .evaluate-shop {
+        font-size: 1vw;
+    }
 }
 
 .select-star, .select-shop {
@@ -66,23 +178,66 @@
 
 .select-star::after, .select-shop::after {
     position: absolute;
-    left: 23vw;
     font-family: 'Font Awesome 5 Free';
-    font-size: 1.5vw;
     font-weight: 900;
     content: '\f107';
     color: #d4d3d3;
 }
 
+@media (min-width:768px) {
+    .select-star::after,
+    .select-shop::after {
+        left: 42vw;
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .select-star::after,
+    .select-shop::after {
+        left: 32vw;
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .select-star::after,
+    .select-shop::after {
+        left: 23vw;
+        font-size: 1.5vw;
+    }
+}
+
 .information-create-button {
     border: none;
-    font-size: 1.2vw;
     border-radius: 5px;
-    padding: 0.5vw 1vw;
-    margin-top: 1vw;
     align-self: center;
     color: #fff;
     background-color: #0000ff;
+}
+
+@media (min-width:768px) {
+    .information-create-button {
+        font-size: 2vw;
+        padding: 0.8vw 1.8vw;
+        margin-top: 3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .information-create-button {
+        font-size: 1.5vw;
+        padding: 0.7vw 1.2vw;
+        margin-top: 1.2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .information-create-button {
+        font-size: 1.2vw;
+        padding: 0.5vw 1vw;
+        margin-top: 1vw;
+    }
 }
 
 .form-error-stars,
@@ -90,25 +245,96 @@
 .form-error-comments {
     position: absolute;
     z-index: 1;
+    padding: 0 0.5vw;
     width: fit-content;
-    font-size: 1vw;
     color: #f00;
     background-color: #FFFACD;
-    padding: 0 0.5vw;
     border-radius: 5px;
 }
 
-.form-error-stars {
-    top: 3.2vw;
-    left: 5vw;
+@media (min-width:768px) {
+    .form-error-stars,
+    .form-error-shop,
+    .form-error-comments {
+        font-size: 1.8vw;
+    }
 }
 
-.form-error-shop {
-    top: 3.2vw;
-    left: 6vw;
+@media (min-width:1024px) {
+    .form-error-stars,
+    .form-error-shop,
+    .form-error-comments {
+        font-size: 1.4vw;
+    }
 }
 
-.form-error-comments {
-    top: 9.7vw;
-    left: 5vw;
+@media (min-width:1440px) {
+    .form-error-stars,
+    .form-error-shop,
+    .form-error-comments {
+        font-size: 1vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-stars {
+        top: 8.5vw;
+        left: -20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-stars {
+        top: 6vw;
+        left: -17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-stars {
+        top: 4.5vw;
+        left: -15vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-shop {
+        top: 8vw;
+        left: -20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-shop {
+        top: 6vw;
+        left: -17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-shop {
+        top: 4.5vw;
+        left: -15vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-comments {
+        top: 12vw;
+        left: -20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-comments {
+        top: 9vw;
+        left: -17vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-comments {
+        top: 6vw;
+        left: -15vw;
+    }
 }

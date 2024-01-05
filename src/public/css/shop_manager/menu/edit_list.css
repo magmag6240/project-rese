@@ -1,11 +1,30 @@
 .shop-manager-menu-list {
     display: inline-flex;
     flex-direction: column;
-    width: 90vw;
-    padding: 1.2vw 0;
-    margin: 3vw 0;
     border-radius: 10px;
+    width: 90vw;
     background-color: #fff;
+}
+
+@media (min-width:768px) {
+    .shop-manager-menu-list {
+        padding: 1.2vw 0;
+        margin: 3vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manager-menu-list {
+        padding: 1.2vw 0;
+        margin: 3vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manager-menu-list {
+        padding: 1.2vw 0;
+        margin: 3vw 0;
+    }
 }
 
 .menu-list-title {
@@ -21,6 +40,12 @@
     color: #fff;
 }
 
+@media (min-width:768px) {}
+
+@media (min-width:1024px) {}
+
+@media (min-width:1440px) {}
+
 .menu-list-table {
     align-self: center;
     border-bottom-style: hidden;
@@ -28,11 +53,23 @@
     margin-bottom: 1vw;
 }
 
+@media (min-width:768px) {}
+
+@media (min-width:1024px) {}
+
+@media (min-width:1440px) {}
+
 .menu-list-th {
     padding: 1vw 0;
     font-size: 1.2vw;
     background-color: #fff;
 }
+
+@media (min-width:768px) {}
+
+@media (min-width:1024px) {}
+
+@media (min-width:1440px) {}
 
 .menu-list-tr {
     border: 0.15vw solid #c0c0c0;
@@ -40,11 +77,23 @@
     border-left-style: hidden;
 }
 
+@media (min-width:768px) {}
+
+@media (min-width:1024px) {}
+
+@media (min-width:1440px) {}
+
 .menu-list-td {
     background-color: #fff;
     padding: 1vw 2.5vw;
     font-size: 1vw;
 }
+
+@media (min-width:768px) {}
+
+@media (min-width:1024px) {}
+
+@media (min-width:1440px) {}
 
 .menu-edit-link {
     text-decoration: none;
@@ -61,6 +110,12 @@
     border-radius: 5px;
     background-color: #4169E1;
 }
+
+@media (min-width:768px) {}
+
+@media (min-width:1024px) {}
+
+@media (min-width:1440px) {}
 
 .shop-list-link {
     text-decoration: none;

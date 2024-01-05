@@ -1,12 +1,47 @@
+
 .shop-manager-home {
     display: flex;
     flex-direction: column;
-    padding: 3vw;
+}
+
+@media (min-width:768px) {
+    .shop-manager-home {
+        padding: 5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manager-home {
+        padding: 4vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manager-home {
+        padding: 3vw;
+    }
 }
 
 .user-name {
-    font-size: 1.7vw;
     font-weight: bold;
+}
+
+@media (min-width:768px) {
+    .user-name {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .user-name {
+        font-size: 2.2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .user-name {
+        font-size: 1.7vw;
+    }
 }
 
 .shop-manage-page-list {
@@ -14,13 +49,50 @@
     align-self: center;
 }
 
+@media (min-width:768px) {
+    .shop-manage-page-list {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manage-page-list {
+        flex-direction: row;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manage-page-list {
+        flex-direction: row;
+    }
+}
+
 .page-group {
-    width: 40vw;
-    margin: 2vw;
-    padding: 3vw 1.5vw;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+@media (min-width:768px) {
+    .page-group {
+        width: 75vw;
+        margin: 2vw;
+        padding: 4vw 3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .page-group{
+        margin: 1.5vw 1vw;
+        padding: 3.5vw 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .page-group{
+        margin: 2vw;
+        padding: 3vw 1.5vw;
+    }
 }
 
 .page-group-button {
@@ -28,17 +100,70 @@
     border: none;
     border-radius: 5px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
-    padding: 0.5vw 1vw;
-    margin-bottom: 2vw;
+}
+
+@media (min-width:768px) {
+    .page-group-button {
+        padding: 1vw 1.5vw;
+        margin-bottom: 3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .page-group-button{
+        padding: 0.7vw 1.3vw;
+        margin-bottom: 2.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .page-group-button {
+        padding: 0.5vw 1vw;
+        margin-bottom: 2vw;
+    }
 }
 
 .shop-manage-link {
     text-decoration: none;
     color: #fff;
-    font-size: 1.3vw;
+}
+
+@media (min-width:768px) {
+    .shop-manage-link {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manage-link {
+        font-size: 1.6vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manage-link {
+        font-size: 1.3vw;
+    }
 }
 
 .shop-manage-text {
     border: 1px solid #4169E1;
-    font-size: 1.2vw;
+}
+
+@media (min-width:768px) {
+    .shop-manage-text {
+        font-size: 1.9vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manage-text {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manage-text {
+        font-size: 1.2vw;
+    }
 }

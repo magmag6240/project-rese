@@ -286,18 +286,27 @@
 
 @media (min-width:768px) {
     .evaluate-contents {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         font-size: 1.9vw;
     }
 }
 
 @media (min-width:1024px) {
     .evaluate-contents {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         font-size: 1.5vw;
     }
 }
 
 @media (min-width:1440px) {
     .evaluate-contents {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         font-size: 1.2vw;
     }
 }

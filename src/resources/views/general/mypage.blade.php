@@ -103,6 +103,7 @@
                         </table>
                         @endforeach
                     </div>
+                    {{$reserve_shops_history->links()}}
                 </div>
             </div>
         </div>
