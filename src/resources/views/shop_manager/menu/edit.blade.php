@@ -15,10 +15,10 @@
         <form class="menu-edit-form" action="{{ route('shop_manager.menu.update', ['menu_id' => $menu->id]) }}" method="post">
             @method('patch')
             @csrf
-            <table class="edit-form-table">
-                <tr class="edit-form-table-tr">
-                    <td class="edit-form-table-title">Menu name</td>
-                    <td class="edit-form-table-td">
+            <table class="edit-table">
+                <tr class="edit-table-tr">
+                    <td class="edit-table-title">Menu name</td>
+                    <td class="edit-table-td">
                         <input class="menu-name" type="text" name="menu_name" id="menu_name">
                         <div class="form-error-menu-name">
                             @error('menu_name')
@@ -27,20 +27,20 @@
                         </div>
                     </td>
                 </tr>
-                <tr class="edit-form-table-tr">
-                    <td class="edit-form-table-title">Price</td>
-                    <td class="edit-form-table-td">
+                <tr class="edit-table-tr">
+                    <td class="edit-table-title">Price</td>
+                    <td class="edit-table-td">
                         <input class="menu-price" type="text" name="price" id="price">
-                        <div class="form-error-price">
+                        <div class="form-error-menu-price">
                             @error('price')
                             {{ $message }}
                             @enderror
                         </div>
                     </td>
                 </tr>
-                <tr class="edit-form-table-tr">
-                    <td class="edit-form-table-title">Menu Introduction</td>
-                    <td class="edit-form-table-td">
+                <tr class="edit-table-tr">
+                    <td class="edit-table-title">Menu detail</td>
+                    <td class="edit-table-td">
                         <textarea class="menu-detail" name="menu_detail" id="menu_detail" cols="30" rows="10"></textarea>
                         <div class="form-error-menu-detail">
                             @error('menu_detail')
@@ -66,7 +66,7 @@
                     <td class="confirm-table-td">{{$menu->price}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-title">Menu Introduction</td>
+                    <td class="confirm-table-title">Menu detail</td>
                     <td class="confirm-table-td">{{$menu->menu_detail}}</td>
                 </tr>
             </table>
@@ -84,7 +84,7 @@
                     <td class="confirm-table-td" id="price_confirm"></td>
                 </tr>
                 <div class="confirm-table-tr">
-                    <td class="confirm-table-title">Menu Introduction</td>
+                    <td class="confirm-table-title">Menu detail</td>
                     <td class="confirm-table-td" id="menu_detail_confirm"></td>
                 </div>
             </table>

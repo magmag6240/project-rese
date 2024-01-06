@@ -6,6 +6,8 @@
 
 <img width="743" alt="home" src="https://github.com/magmag6240/project-rese/assets/139316621/a1b39103-a7da-495b-aac1-79a6c5fc3b76">
 
+
+
 ## 作成した目的
 
 【背景と目的】 外部の飲食店予約サービスは手数料を取られるので自社で予約サービスを持ちたい
