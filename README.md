@@ -89,10 +89,24 @@
 git cloneしてきたプロジェクトに入っている`.env.example`ファイルを基に以下のコマンド実行で`.env`ファイルを作成します。
 
 `$ cp .env.example .env`
+`$ exit`
 
 作成後、`.env`ファイルの内容を以下のように修正します。
 
+// 前略
 
+DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
++ DB_HOST=mysql
+DB_PORT=3306
+- DB_DATABASE=laravel
+- DB_USERNAME=root
+- DB_PASSWORD=
++ DB_DATABASE=laravel_db
++ DB_USERNAME=laravel_user
++ DB_PASSWORD=laravel_pass
+
+// 後略
 
 ## アプリケーションキーを初期化する
 以下のコマンドで初期化を行います。
