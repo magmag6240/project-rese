@@ -70,19 +70,19 @@
             <p class="reserve-before-title">変更前</p>
             <table class="reserve-confirm-table">
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Shop</td>
+                    <td class="confirm-table-title">Shop</td>
                     <td class="confirm-table-td">{{$reserve->shop->shop_name}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Date</td>
+                    <td class="confirm-table-title">Date</td>
                     <td class="confirm-table-td">{{$reserve->reserve_date}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Time</td>
+                    <td class="confirm-table-title">Time</td>
                     <td class="confirm-table-td">{{$reserve->start_time}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Number</td>
+                    <td class="confirm-table-title">Number</td>
                     <td class="confirm-table-td">{{$reserve->number}}人</td>
                 </tr>
             </table>
@@ -92,19 +92,19 @@
             <p class="reserve-after-title">変更後</p>
             <table class="reserve-confirm-table">
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Shop</td>
+                    <td class="confirm-table-title">Shop</td>
                     <td class="confirm-table-td">{{$reserve->shop->shop_name}}</td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Date</td>
+                    <td class="confirm-table-title">Date</td>
                     <td class="confirm-table-td" id="reserve_date_confirm"></td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Time</td>
+                    <td class="confirm-table-title">Time</td>
                     <td class="confirm-table-td" id="start_time_confirm"></td>
                 </tr>
                 <tr class="confirm-table-tr">
-                    <td class="confirm-table-td">Number</td>
+                    <td class="confirm-table-title">Number</td>
                     <td class="confirm-table-td" id="number_confirm"></td>
                 </tr>
             </table>

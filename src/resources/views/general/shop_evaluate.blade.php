@@ -26,13 +26,14 @@
         <p class="evaluate-title">評価</p>
         @foreach($evaluate as $data)
         <div class="evaluate-list">
-            <span class="evaluate-contents">ユーザー: {{$data->user->name}}様</span>
-            <span class="evaluate-contents">点数: {{$data->star_id}}/5</span>
-            <span class="evaluate-contents">感想: {{$data->comments}}</span>
+            <p class="evaluate-user">ユーザー: {{$data->user->name}}様</p>
+            <p class="evaluate-star">点数: {{$data->star_id}}/5</p>
+            <p class="evaluate-comment">感想: {{$data->comments}}</p>
         </div>
         @endforeach
         <div class="evaluate-paginate">
-            {{$evaluate->links('vendor.pagination.evaluate_paginate')}}
+            {{ $evaluate->links('vendor.pagination.evaluate_paginate') }}
+            {{ $evaluate->total() }}件中{{ $evaluate->firstItem() }},{{ $evaluate->lastItem() }} 件を表示
         </div>
     </div>
 </div>

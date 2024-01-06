@@ -1,59 +1,58 @@
 
 .reserve-edit {
     display: flex;
-    padding: 2vw 10vw;
-    justify-content: space-between;
     text-align: left;
 }
 
 @media (min-width:768px) {
     .reserve-edit {
-        
+        flex-direction: column;
+        padding: 4vw 10vw;
     }
 }
 
 @media (min-width:1024px) {
     .reserve-edit {
-        display: flex;
-        padding: 2vw 10vw;
+        flex-direction: row;
         justify-content: space-between;
-        text-align: left;
+        padding: 3vw 4vw;
     }
 }
 
 @media (min-width:1440px) {
     .reserve-edit {
-        display: flex;
-        padding: 2vw 10vw;
+        flex-direction: row;
         justify-content: space-between;
-        text-align: left;
+        padding: 2vw 6vw;
     }
 }
 
 .reserve-edit-contents {
-    background-color: #4169E1;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+    background-color: #4169E1;
 }
 
 @media (min-width:768px) {
     .reserve-edit-contents {
-        width: 40vw;
-        padding: 2vw 3vw;
+        height: 50vw;
+        padding: 2vw 5vw;
     }
 }
 
 @media (min-width:1024px) {
     .reserve-edit-contents {
-        width: 40vw;
-        padding: 2vw 3vw;
+        height: 45vw;
+        width: 44vw;
+        padding: 1.2vw 2vw;
     }
 }
 
 @media (min-width:1440px) {
     .reserve-edit-contents {
-        width: 40vw;
-        padding: 2vw 3vw;
+        height: 35vw;
+        width: 41vw;
+        padding: 1vw 3vw;
     }
 }
 
@@ -64,38 +63,71 @@
     background-color: #4169E1;
 }
 
+.reserve-edit-title-text {
+    font-weight: bold;
+    position: relative;
+    color: #fff;
+    background-color: #4169E1;
+}
+
+@media (min-width:768px) {
+    .reserve-edit-title-text {
+        font-size: 2.6vw;
+        left: 3.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-edit-title-text {
+        font-size: 2vw;
+        left: 5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-edit-title-text {
+        font-size: 1.7vw;
+        left: 2.3vw;
+    }
+}
+
 .mypage-button {
-    border: none;
     position: absolute;
-    top: 1.2vw;
-    left: -1vw;
-    width: 2vw;
-    height: 2vw;
-    font-size: 1.7vw;
+    border: none;
     border-radius: 5px;
     background-color: #E0FFFF;
+}
+
+@media (min-width:768px) {
+    .mypage-button {
+        top: 2vw;
+        left: -1.8vw;
+        height: 3vw;
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .mypage-button {
+        top: 1.4vw;
+        left: 1vw;
+        height: 2.5vw;
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .mypage-button {
+        top: 1.3vw;
+        left: -1vw;
+        height: 1.9vw;
+        font-size: 1.5vw;
+    }
 }
 
 .mypage-link {
     text-decoration: none;
     color: #000000;
-}
-
-.reserve-edit-title-text {
-    font-size: 1.7vw;
-    font-weight: bold;
-    position: relative;
-    left: 2.3vw;
-    color: #fff;
-    background-color: #4169E1;
-}
-
-.edit-form {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 2vw;
-    background-color: #4169E1;
 }
 
 .reserve-date-title,
@@ -105,28 +137,72 @@
     color: #fff;
 }
 
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #4169E1;
+}
+
+@media (min-width:768px) {
+    .edit-form {
+        padding: 1vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .edit-form {
+        padding: 1vw 3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .edit-form {
+        padding: 1vw;
+    }
+}
+
 .reserve-date,
 .reserve-time,
 .reserve-number {
-    height: 2vw;
     border: none;
-    margin-bottom: 2vw;
-    padding: 0 1vw;
-}
-
-.reserve-date {
-    border-radius: 5px;
-    font-size: 1vw;
-    width: 10vw;
-}
-
-.reserve-time,
-.reserve-number {
-    position: relative;
+    outline: none;
     appearance: none;
     border-radius: 5px;
-    font-size: 1vw;
-    width: 15vw;
+    position: relative;
+}
+
+@media (min-width:768px) {
+    .reserve-date,
+    .reserve-time,
+    .reserve-number {
+        font-size: 1.8vw;
+        width: 45vw;
+        padding: 0.8vw 1vw;
+        margin-bottom: 1.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-date,
+    .reserve-time,
+    .reserve-number {
+        font-size: 1.3vw;
+        width: 28vw;
+        padding: 0.6vw 0.8vw;
+        margin-bottom: 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-date,
+    .reserve-time,
+    .reserve-number {
+        font-size: 1vw;
+        width: 22vw;
+        padding: 0.4vw 0.5vw;
+        margin-bottom: 2.3vw;
+    }
 }
 
 .reserve-select-number,
@@ -137,12 +213,49 @@
 .reserve-select-time::after,
 .reserve-select-number::after {
     position: absolute;
-    left: 15vw;
     font-family: 'Font Awesome 5 Free';
-    font-size: 1.5vw;
     font-weight: 900;
     content: '\f107';
     color: #d4d3d3;
+}
+
+@media (min-width:768px) {
+    .reserve-select-time::after {
+        font-size: 3.5vw;
+        left: 42vw;
+        top: 11.9vw;
+    }
+    .reserve-select-number::after {
+        font-size: 3.5vw;
+        left: 42vw;
+        top: 20.2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-select-time::after {
+        font-size: 2.5vw;
+        left: 28vw;
+        top: 10.2vw;
+    }
+    .reserve-select-number::after {
+        font-size: 2.5vw;
+        left: 28vw;
+        top: 17.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-select-time::after {
+        font-size: 1.8vw;
+        left: 21vw;
+        top: 8.5vw;
+    }
+        .reserve-select-number::after {
+        font-size: 1.8vw;
+        left: 21vw;
+        top: 14.2vw;
+    }
 }
 
 .reserve-edit-alarm {
@@ -157,33 +270,168 @@
 .form-error-time,
 .form-error-number {
     position: absolute;
+    z-index: 1;
     width: fit-content;
-    font-size: 1vw;
     color: #f00;
     background-color: #FFFACD;
-    padding: 0 0.5vw;
     border-radius: 5px;
 }
 
-.form-error-date {
-    top: 3.8vw;
-    left: 13vw;
+@media (min-width:768px) {
+    .form-error-date,
+    .form-error-time,
+    .form-error-number {
+        font-size: 1.6vw;
+        padding: 0 1vw;
+    }
 }
 
-.form-error-time {
-    top: 9.4vw;
-    left: 18.5vw;
+@media (min-width:1024px) {
+    .form-error-date,
+    .form-error-time,
+    .form-error-number {
+        font-size: 1.3vw;
+        padding: 0 0.7vw;
+    }
 }
 
-.form-error-number {
-    top: 15vw;
-    left: 18vw;
+@media (min-width:1440px) {
+    .form-error-date,
+    .form-error-time,
+    .form-error-number {
+        font-size: 1vw;
+        padding: 0 0.5vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-date {
+        top: 5vw;
+        left: 47vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-date {
+        top: 6.7vw;
+        left: 14vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-date {
+        top: 5vw;
+        left: 9vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-time {
+        top: 13.2vw;
+        left: 47vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-time {
+        top: 13.4vw;
+        left: 14vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-time {
+        top: 11vw;
+        left: 8vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-number {
+        top: 21.5vw;
+        left: 47vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-number {
+        top: 20.6vw;
+        left: 15vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-number {
+        top: 16.8vw;
+        left: 9.5vw;
+    }
+}
+
+.information-update-button {
+    position: absolute;
+    color: #fff;
+    background-color: #0000FF;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .information-update-button {
+        left: -5vw;
+        top: 33.5vw;
+        width: 80vw;
+        padding: 2vw;
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .information-update-button {
+        left: -1.95vw;
+        top: 33.4vw;
+        width: 44vw;
+        padding: 1.3vw;
+        font-size: 1.4vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .information-update-button {
+        left: -3vw;
+        top: 25.3vw;
+        width: 41vw;
+        padding: 1vw;
+        font-size: 1.2vw;
+    }
 }
 
 .reserve-confirm {
     display: flex;
     flex-direction: column;
-    width: 35vw;
+    align-self: center;
+}
+
+@media (min-width:768px) {
+    .reserve-confirm {
+        margin: 2vw 0;
+        width: 75vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-confirm {
+        margin: 0;
+        width: 45vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-confirm {
+        margin: 0;
+        width: 43vw;
+    }
 }
 
 .reserve-change {
@@ -192,56 +440,181 @@
 
 .reserve-change::before {
     font-family: 'Font Awesome 5 Free';
-    font-size: 3vw;
     font-weight: 900;
     content: '\f103';
     color: #0000CD;
 }
 
-.reserve-before, .reserve-after, .reserve-before-title, .reserve-after-title {
+@media (min-width:768px) {
+    .reserve-change::before {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-change::before {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-change::before {
+        font-size: 3vw;
+    }
+}
+
+.reserve-before,
+.reserve-after,
+.reserve-before-title,
+.reserve-after-title {
     background-color: #5287e9;
 }
 
-.reserve-before, .reserve-after {
+.reserve-before,
+.reserve-after {
     border-radius: 10px;
-    padding: 1vw 2.5vw;
 }
 
-.reserve-before-title, .reserve-after-title {
+@media (min-width:768px) {
+    .reserve-before,
+    .reserve-after {
+        padding: 2.2vw 3.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-before,
+    .reserve-after {
+        padding: 1.6vw 3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-before,
+    .reserve-after {
+        padding: 1vw 2.5vw;
+    }
+}
+
+.reserve-before-title,
+.reserve-after-title {
     color: #fff;
     font-weight: bold;
-    font-size: 1.3vw;
 }
 
-.reserve-confirm-table {
-    margin: 1vw 0;
+@media (min-width:768px) {
+    .reserve-before-title,
+    .reserve-after-title {
+        font-size: 2.2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-before-title,
+    .reserve-after-title {
+        font-size: 1.6vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-before-title,
+    .reserve-after-title {
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width:768px) {
+    .reserve-confirm-table {
+        margin: 2vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-confirm-table {
+        margin: 1.5vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-confirm-table {
+        margin: 1vw 0;
+    }
 }
 
 .reserve-confirm-table,
 .confirm-table-tr,
+.confirm-table-title,
 .confirm-table-td {
     border: none;
-    font-size: 1.1vw;
     color: #fff;
     background-color: #5287e9;
 }
 
-.confirm-table-td {
-    padding: 0.5vw 1vw;
-    width: 10vw;
+@media (min-width:768px) {
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-title,
+    .confirm-table-td {
+        font-size: 2vw;
+    }
 }
 
-.information-update-button{
-    position: absolute;
-    color: #fff;
-    background-color: #0000FF;
-    border: none;
-    left: -3vw;
-    top: 30.1vw;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 40vw;
-    padding: 1vw;
-    font-size: 1.2vw;
-    cursor: pointer;
+@media (min-width:1024px) {
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-title,
+    .confirm-table-td {
+        font-size: 1.4vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-title,
+    .confirm-table-td {
+        font-size: 1.1vw;
+    }
+}
+
+@media (min-width:768px) {
+    .confirm-table-title {
+        padding: 0.5vw 1vw;
+        width: 22vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .confirm-table-title {
+        padding: 0.5vw 1vw;
+        width: 12vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .confirm-table-title {
+        padding: 0.5vw 1vw;
+        width: 12.5vw;
+    }
+}
+
+@media (min-width:768px) {
+    .confirm-table-td {
+        padding: 0.5vw 1vw;
+        width: 46vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .confirm-table-td {
+        padding: 0.5vw 1vw;
+        width: 28vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .confirm-table-td {
+        padding: 0.5vw 1vw;
+        width: 25vw;
+    }
 }

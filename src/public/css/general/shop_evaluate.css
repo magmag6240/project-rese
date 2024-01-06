@@ -8,7 +8,7 @@
     .shop-detail {
         display: flex;
         justify-content: space-between;
-        padding: 4vw 6vw 0 6vw;
+        padding: 4vw 5vw 0 5vw;
     }
 }
 
@@ -34,7 +34,7 @@
 
 @media (min-width:1024px) {
     .shop-detail-contents {
-        width: 45vw;
+        width: 44vw;
     }
 }
 
@@ -196,8 +196,9 @@
 
 .shop-evaluate {
     text-align: left;
+    height: fit-content;
     border-radius: 5px;
-    padding: 0.3vw 2.5vw;
+    margin-bottom: 5vw;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
     background-color: #4169E1;
 }
@@ -205,26 +206,21 @@
 @media (min-width:768px) {
     .shop-evaluate {
         width: 78vw;
-        height: 30vw;
-        margin: 1vw 1vw 5vw 0;
+        padding: 0.3vw 4vw;
     }
 }
 
 @media (min-width:1024px) {
     .shop-evaluate {
-        position: absolute;
-        left: 55vw;
-        width: 38vw;
-        height: 40vw;
+        width: 42.5vw;
+        padding: 0 2.5vw;
     }
 }
 
 @media (min-width:1440px) {
     .shop-evaluate {
-        position: absolute;
-        left: 53vw;
         width: 40vw;
-        height: 35vw;
+        padding: 0 2vw;
     }
 }
 
@@ -236,7 +232,7 @@
 
 @media (min-width:768px) {
     .evaluate-title {
-        font-size: 2.7vw;
+        font-size: 3vw;
     }
 }
 
@@ -248,7 +244,7 @@
 
 @media (min-width:1440px) {
     .evaluate-title {
-        font-size: 2vw;
+        font-size: 1.9vw;
     }
 }
 
@@ -260,61 +256,113 @@
 
 @media (min-width:768px) {
     .evaluate-list {
-        margin: 4vw 1vw 1vw 1vw;
-        padding: 1.7vw;
+        margin: 1vw 0 2vw 0;
+        padding: 1vw 3vw;
     }
 }
 
 @media (min-width:1024px) {
     .evaluate-list {
-        margin: 7vw 1vw 1vw 1vw;
-        padding: 1vw;
+        margin: 1vw 0 2vw 0;
+        padding: 0.7vw 2.5vw;
     }
 }
 
 @media (min-width:1440px) {
     .evaluate-list {
-        margin: 6vw 1vw 1vw 1vw;
-        padding: 1vw 0.5vw;
+        margin: 1.5vw 0 2.5vw 0;
+        padding: 0.5vw 2vw;
     }
 }
 
-.evaluate-contents {
+.evaluate-user, .evaluate-star, .evaluate-comment {
     background-color: #1E90FF;
     color: #fff;
 }
 
+.evaluate-comment {
+    width: 90%;
+}
+
 @media (min-width:768px) {
-    .evaluate-contents {
+    .evaluate-user,
+    .evaluate-star,
+    .evaluate-comment {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        font-size: 1.9vw;
+        font-size: 1.8vw;
     }
 }
 
 @media (min-width:1024px) {
-    .evaluate-contents {
+    .evaluate-user,
+    .evaluate-star,
+    .evaluate-comment {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        font-size: 1.5vw;
+        font-size: 1.4vw;
     }
 }
 
 @media (min-width:1440px) {
-    .evaluate-contents {
+    .evaluate-user,
+    .evaluate-star,
+    .evaluate-comment {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        font-size: 1.2vw;
+        font-size: 1.1vw;
     }
 }
 
-.pagination {
+.evaluate-paginate {
+    color: #fff;
+}
+
+.evaluate-paginate, .pagination {
     text-align: center;
     background-color: #4169E1;
-    padding: 2vw;
+}
+
+@media (min-width:768px) {
+    .evaluate-paginate {
+        font-size: 2vw;
+        margin-bottom: 2.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .evaluate-paginate {
+        font-size: 1.5vw;
+        margin-bottom: 2.4vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .evaluate-paginate {
+        font-size: 1.2vw;
+        margin-bottom: 2vw;
+    }
+}
+
+@media (min-width:768px) {
+    .pagination {
+        padding: 2.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .pagination {
+        padding: 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .pagination {
+        padding: 1.8vw;
+    }
 }
 
 .current-paginate-page,
@@ -323,12 +371,43 @@
 .page-link-prev,
 .page-link-next {
     text-decoration: none;
-    font-size: 1vw;
-    padding: 0.4vw 0.8vw;
     cursor: pointer;
     color: #fff;
     border: 0.5px solid #00BFFF;
     background-color: #00BFFF;
+}
+
+@media (min-width:768px) {
+    .current-paginate-page,
+    .another-paginate-page,
+    .another-paginate,
+    .page-link-prev,
+    .page-link-next {
+        font-size: 1.8vw;
+        padding: 0.6vw 1.2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .current-paginate-page,
+    .another-paginate-page,
+    .another-paginate,
+    .page-link-prev,
+    .page-link-next {
+        font-size: 1.3vw;
+        padding: 0.4vw 1vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .current-paginate-page,
+    .another-paginate-page,
+    .another-paginate,
+    .page-link-prev,
+    .page-link-next {
+        font-size: 1vw;
+        padding: 0.4vw 0.8vw;
+    }
 }
 
 .another-paginate-page {
