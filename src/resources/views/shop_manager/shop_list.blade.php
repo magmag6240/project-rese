@@ -29,16 +29,16 @@
             <td class="shop-list-td">
                 {{$shop->genre->genre_name}}
             </td>
-            <td class="shop-edit-link">
+            <td class="shop-edit-link-td">
                 <a class="shop-edit-link" href="{{route('shop_manager.edit',['shop_id' => $shop->id])}}">店舗情報変更</a>
             </td>
-            <td class="shop-menu-new-link">
+            <td class="shop-menu-new-link-td">
                 <a class="shop-menu-new-link" href="{{route('shop_manager.menu.new',['shop_id' => $shop->id])}}">コースメニュー新規作成</a>
             </td>
-            <td class="shop-menu-list-link">
+            <td class="shop-menu-list-link-td">
                 <a class="shop-menu-list-link" href="{{route('shop_manager.menu.list',['shop_id' => $shop->id])}}">コースメニュー変更・更新</a>
             </td>
-            <td class="shop-reserve-list-link">
+            <td class="shop-reserve-list-link-td">
                 <a class="shop-reserve-list-link" href="{{route('shop_manager.reserve_list',['shop_id' => $shop->id])}}">予約情報</a>
             </td>
         </tr>

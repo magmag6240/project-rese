@@ -10,7 +10,7 @@
     <p class="thanks-text">会員登録ありがとうございます</p>
     <form class="logout-form" action="/logout" method="post">
         @csrf
-            <button class="logout-button" type="submit">ログインする</button>
+        <button class="logout-button" type="submit">ログインする</button>
     </form>
 </div>
 

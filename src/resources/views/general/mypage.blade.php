@@ -17,8 +17,9 @@
                     <p class="js-tab inactive_tab">履歴</p>
                 </div>
                 <div class="js-panel active_content">
-                    @foreach($reserve_shops_from_now_on as $item)
+                    @if(!$reserve_shops_from_now_on->isEmpty())
                     <div class="reserve-detail">
+                        @foreach($reserve_shops_from_now_on as $item)
                         <form class="reserve-delete" action="{{route('reserve.destroy', ['reserve_id' => $item->id ])}}" method="post">
                             @method('DELETE')
                             @csrf
@@ -62,12 +63,22 @@
                         @if(is_null($item->menu_id))
                         <button class="reserve-edit-button"><a class="reserve-edit-link" href="{{route('reserve.edit', ['reserve_id' => $item->id ])}}">予約内容変更</a></button>
                         @endif
+                        @endforeach
                     </div>
-                    @endforeach
+                    <div class="reserve-paginate">
+                        {{ $reserve_shops_from_now_on->links() }}
+                        全{{ $reserve_shops_from_now_on->total() }}件中{{ $reserve_shops_from_now_on->currentPage() }}件目
+                    </div>
+                    @else
+                    <div class="reserve-null">
+                        <p class="reserve-null-text">予約予定はありません</p>
+                    </div>
+                    @endif
                 </div>
                 <div class="js-panel inactive_content">
-                    @foreach($reserve_shops_history as $item)
+                    @if(!$reserve_shops_history->isEmpty())
                     <div class="reserve-detail">
+                        @foreach($reserve_shops_history as $item)
                         <div class="reserve-detail-title">
                             <p class="reserve-number">予約{{$item->id}}</p>
                         </div>
@@ -101,10 +112,18 @@
                                 <td class="reserve-table-td">{{QrCode::generate($item->id)}}</td>
                             </tr>
                         </table>
-                        @endforeach
                     </div>
-                    {{$reserve_shops_history->links()}}
+                    @endforeach
+                    <div class="reserve-history-paginate">
+                        {{ $reserve_shops_history->links() }}
+                        全{{ $reserve_shops_history->total() }}件中{{ $reserve_shops_history->currentPage() }}件目
+                    </div>
                 </div>
+                @else
+                <div class="reserve-history-null">
+                    <p class="reserve-history-null-text">予約履歴はありません</p>
+                </div>
+                @endif
             </div>
         </div>
         <div class="like-shop">

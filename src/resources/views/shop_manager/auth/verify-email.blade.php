@@ -16,7 +16,7 @@
     </form>
     <form method="post" action="/logout">
         @csrf
-        <button class="verify-email-logout" type="submit">ログイン画面に戻る</button>
+        <button class="verify-email-logout" type="submit">ホームに戻る</button>
     </form>
 </div>
 @endsection

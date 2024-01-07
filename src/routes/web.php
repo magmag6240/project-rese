@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\MyPageController;
 use App\Http\Controllers\LikeController;
-use App\Http\Controllers\ThanksController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ShopManager\ShopManagerController;
 use App\Http\Controllers\ShopManager\ShopManagerLoginController;
@@ -52,6 +53,7 @@ Route::prefix('shop_manager')->group(function () {
         Route::get('register', [ShopManagerRegisterController::class, 'create'])->name('shop_manager.register');
         Route::post('register', [ShopManagerRegisterController::class, 'store']);
 
+    Route::middleware('auth:shop_manager')->group(function () {
         Route::get('/', [ShopManagerController::class, 'index']);
         Route::get('/new', [ShopManagerController::class, 'new'])->name('shop_manager.new');
         Route::post('/store', [ShopManagerController::class, 'store'])->name('shop_manager.store');
@@ -67,20 +69,32 @@ Route::prefix('shop_manager')->group(function () {
         Route::get('/qr_code', [ShopManagerController::class, 'qr_code'])->name('shop_manager.qr_code');
         Route::get('/mail', [ShopManagerMailController::class, 'index'])->name('shop_manager.mail.index');
         Route::post('/mail/send', [ShopManagerMailController::class, 'send'])->name('shop_manager.mail.send');
-    }
-);
+    });
+});
 
 Route::middleware('verified')->group(function () {
-    Route::get('/thanks', [ThanksController::class, 'index']);
     Route::get('/mypage', [MyPageController::class, 'index']);
     Route::get('/like/{shop_id}', [LikeController::class, 'like'])->name('like');
     Route::get('/unlike/{shop_id}', [LikeController::class, 'unlike'])->name('unlike');
     Route::post('/reserve/{shop_id}', [ReservationController::class, 'store'])->name('reserve.store');
     Route::get('/reserve/edit/{reserve_id}', [ReservationController::class, 'edit'])->name('reserve.edit');
     Route::patch('/reserve/update/{reserve_id}', [ReservationController::class, 'update'])->name('reserve.update');
-    Route::delete('/reserve_destroy/{reserve_id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
+    Route::delete('/reserve/destroy/{reserve_id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
     Route::post('/stripe/store', [StripePaymentController::class, 'store'])->name('stripe.store');
     Route::get('/evaluate', [EvaluationController::class, 'index'])->name('evaluate.index');
     Route::post('/evaluate/post', [EvaluationController::class, 'create'])->name('evaluate.create');
-    Route::get('/done', [ShopController::class, 'show']);
 });
+
+Route::get('/email/verify', function () {
+    return view('auth/verify-email');
+})->middleware('auth')->name('verification.notice');
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return view('general/thanks');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');

@@ -1,24 +1,67 @@
+
 .shop-manager-reserve-list {
     display: inline-flex;
     flex-direction: column;
-    width: 65vw;
-    padding: 1.2vw 0;
-    margin: 3vw 0;
     border-radius: 10px;
     background-color: #fff;
+}
+
+@media (min-width:768px) {
+    .shop-manager-reserve-list {
+        width: 85vw;
+        padding: 1.2vw 0;
+        margin: 7vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manager-reserve-list {
+        width: 80vw;
+        padding: 1.2vw 0;
+        margin: 5vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manager-reserve-list {
+        width: 70vw;
+        padding: 1.2vw 0;
+        margin: 3vw 0;
+    }
 }
 
 .reserve-list-title {
     position: relative;
     top: -2.5vw;
-    font-size: 1.7vw;
     font-weight: bold;
-    padding: 1.5vw 0;
-    width: 65vw;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background-color: #4169E1;
     color: #fff;
+}
+
+@media (min-width:768px) {
+    .reserve-list-title {
+        width: 85vw;
+        font-size: 2.5vw;
+        padding: 2vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-list-title {
+        width: 80vw;
+        font-size: 2vw;
+        padding: 1.7vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-list-title {
+        width: 70vw;
+        font-size: 1.8vw;
+        padding: 1.5vw 0;
+    }
 }
 
 .reserve-list-table {
@@ -28,10 +71,29 @@
     margin-bottom: 1vw;
 }
 
-.reserve-list-th {
-    padding: 1vw 0;
-    font-size: 1.2vw;
+.reserve-list-th, .reserve-list-td {
     background-color: #fff;
+}
+
+@media (min-width:768px) {
+    .reserve-list-th {
+        padding: 2vw 1vw;
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-list-th {
+        padding: 1.3vw 0;
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-list-th {
+        padding: 1vw 0;
+        font-size: 1.2vw;
+    }
 }
 
 .reserve-list-tr {
@@ -40,21 +102,56 @@
     border-left-style: hidden;
 }
 
-.reserve-list-td {
-    background-color: #fff;
-    padding: 1vw 3vw;
-    font-size: 1vw;
+@media (min-width:768px) {
+    .reserve-list-td {
+        padding: 1.5vw 3vw;
+        font-size: 1.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-list-td {
+        padding: 1.3vw 3vw;
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-list-td {
+        padding: 1vw 3vw;
+        font-size: 1vw;
+    }
 }
 
 .shop-list-button {
     align-self: center;
     border: none;
-    padding: 0.5vw 0;
-    width: 5vw;
-    font-size: 1vw;
-    margin-top: 2.5vw;
     border-radius: 5px;
     background-color: #4169E1;
+}
+
+@media (min-width:768px) {
+    .shop-list-button {
+        padding: 0.8vw 2vw;
+        margin: 1.5vw;
+        font-size: 1.6vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-list-button {
+        padding: 0.6vw 1.6vw;
+        margin: 1.3vw;
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-list-button {
+        padding: 0.5vw 1.2vw;
+        margin: 1vw;
+        font-size: 1vw;
+    }
 }
 
 .shop-list-link {
