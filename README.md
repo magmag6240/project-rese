@@ -18,7 +18,7 @@
 【Amazon Web Services】https://www.aws-intro-mai.com
 
 ※AWSのインフラは以下の図のように構成したが、ブラウザへの表示が間に合わず環境の切り分けには至らなかった。
-![Alt text](AWS.png)
+![Alt text](AWS-1.png)
 
 ## 機能一覧
 
