@@ -137,7 +137,7 @@ DB_PASSWORD=laravel_pass
 
 | id | name | email | password |
 | ---- | ---- | ---- | ---- |
-| 1000 | 一般ユーザー | user@user.user | password |
+| 1 | 一般ユーザー | user@user.user | password |
 
 
 ### 店舗代表者
