@@ -262,8 +262,28 @@
     position: absolute;
     color: #FFFF00;
     background-color: #4169E1;
-    top: 25vw;
     word-break: keep-all;
+}
+
+@media (min-width:768px) {
+    .reserve-edit-alarm {
+        font-size: 2vw;
+        top: 27vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .reserve-edit-alarm {
+        font-size: 1.5vw;
+        top: 25vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .reserve-edit-alarm {
+        font-size: 1.1vw;
+        top: 18.5vw;
+    }
 }
 
 .form-error-date,

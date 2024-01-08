@@ -8,7 +8,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        padding: 0 10vw 1vw 10vw;
+        padding: 0 6vw 5vw 6vw;
     }
 }
 
@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-        padding: 0 6vw 1vw 6vw;
+        padding: 0 6vw 5vw 6vw;
     }
 }
 
@@ -26,7 +26,7 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-        padding: 0 7vw 1vw 7vw;
+        padding: 0 6vw 5vw 6vw;
     }
 }
 
@@ -57,6 +57,7 @@
 
 @media (min-width:768px) {
     .reserve-list {
+        position: absolute;
         width: 70vw;
     }
 }
@@ -65,7 +66,6 @@
     .reserve-list {
         position: absolute;
         top: 0;
-        width: 30vw;
     }
 }
 
@@ -73,7 +73,6 @@
     .reserve-list {
         position: absolute;
         top: 0;
-        width: 32vw;
     }
 }
 
@@ -214,9 +213,6 @@
     border: none;
 }
 
-.reserve-table {
-    margin-left: 2vw;
-}
 
 @media (min-width:768px) {
     .reserve-table {
@@ -336,7 +332,7 @@
 
 @media (min-width:1440px) {
     .reserve-null, .reserve-history-null {
-        margin: 1.5vw 3vw;
+        margin: 1.5vw;
     }
 }
 
@@ -363,7 +359,6 @@
         width: 80vw;
         position: absolute;
         top: 80vw;
-        left: 10vw;
     }
 }
 
@@ -372,7 +367,7 @@
         width: 56vw;
         position: absolute;
         top: 0;
-        left: 47vw;
+        left: 45vw;
     }
 }
 

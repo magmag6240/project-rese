@@ -13,6 +13,13 @@
 【背景と目的】 外部の飲食店予約サービスは手数料を取られるので自社で予約サービスを持ちたい
 
 
+## アプリケーションURL
+
+【Amazon Web Services】https://www.aws-intro-mai.com
+
+※AWSのインフラは以下の図のように構成したが、ブラウザへの表示が間に合わず環境の切り分けには至らなかった。
+![Alt text](AWS.png)
+
 ## 機能一覧
 
 | 項目 | 項目 (店舗代表者) | 項目 (管理者) |
@@ -98,15 +105,11 @@ git cloneしてきたプロジェクトに入っている`.env.example`ファイ
 // 前略
 
 DB_CONNECTION=mysql
-- DB_HOST=127.0.0.1
-+ DB_HOST=mysql
+DB_HOST=mysql
 DB_PORT=3306
-- DB_DATABASE=laravel
-- DB_USERNAME=root
-- DB_PASSWORD=
-+ DB_DATABASE=laravel_db
-+ DB_USERNAME=laravel_user
-+ DB_PASSWORD=laravel_pass
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=laravel_pass
 
 // 後略
 

@@ -690,8 +690,28 @@
     position: absolute;
     color: #FFFF00;
     background-color: #4169E1;
-    top: 33.5vw;
     word-break: keep-all;
+}
+
+@media (min-width:768px) {
+    .shop-reserve-alarm {
+        font-size: 2vw;
+        top: 63vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-reserve-alarm {
+        font-size: 1.3vw;
+        top: 42.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-reserve-alarm {
+        font-size: 1.1vw;
+        top: 33.5vw;
+    }
 }
 
 .reserve-button {
