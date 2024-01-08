@@ -216,27 +216,3 @@
     background-color: #fff;
     padding: 1vw;
 }
-
-.current-paginate-page,
-.another-paginate-page,
-.another-paginate,
-.page-link-prev,
-.page-link-next {
-    text-decoration: none;
-    font-size: 1vw;
-    padding: 0.4vw 0.8vw;
-    cursor: pointer;
-    color: #fff;
-    border: 0.5px solid #00BFFF;
-    background-color: #00BFFF;
-}
-
-.another-paginate-page {
-    color: #fff;
-}
-
-.current-paginate-page {
-    color: #fff;
-    background-color: #00008B;
-    border: 0.5px solid #00008B;
-}
