@@ -3,6 +3,8 @@
     "/js/menu.js": "/js/menu.js",
     "/js/shop_edit.js": "/js/shop_edit.js",
     "/js/tab.js": "/js/tab.js",
+    "/js/star.js": "/js/star.js",
+    "/js/count.js": "/js/count.js",
     "/js/shop_menu_edit.js": "/js/shop_menu_edit.js",
     "/js/reserve_confirm.js": "/js/reserve_confirm.js"
 }

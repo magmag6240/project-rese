@@ -24,6 +24,7 @@
                     <span class="shop-genre">#{{$shop_detail->genre->genre_name}}</span>
                 </div>
                 <p class="shop-text">{{$shop_detail->shop_detail}}</p>
+                <a class="shop-evaluate-link" href="{{ route('evaluate.index', ['shop_id' => $shop_detail->id]) }}">口コミを投稿する</a>
             </div>
             <div class="js-panel inactive_content">
                 @foreach($menu_detail as $menu)

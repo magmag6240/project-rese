@@ -31,7 +31,6 @@ use App\Http\Controllers\StripePaymentController;
 
 Route::get('/', [ShopController::class, 'index'])->name('shop.index');
 Route::get('/detail/{shop_id}', [ReservationController::class, 'index'])->name('reserve.index');
-Route::get('/shop_evaluate/{shop_id}', [ShopController::class, 'evaluate'])->name('evaluate');
 
 Route::prefix('admin')->group(function () {
     Route::get('login', [AdminLoginController::class, 'create'])->name('admin.login');
@@ -81,8 +80,8 @@ Route::middleware('verified')->group(function () {
     Route::patch('/reserve/update/{reserve_id}', [ReservationController::class, 'update'])->name('reserve.update');
     Route::delete('/reserve/destroy/{reserve_id}', [ReservationController::class, 'destroy'])->name('reserve.destroy');
     Route::post('/stripe/store', [StripePaymentController::class, 'store'])->name('stripe.store');
-    Route::get('/evaluate', [EvaluationController::class, 'index'])->name('evaluate.index');
-    Route::post('/evaluate/post', [EvaluationController::class, 'create'])->name('evaluate.create');
+    Route::get('/evaluate/{shop_id}', [EvaluationController::class, 'index'])->name('evaluate.index');
+    Route::post('/evaluate/{shop_id}', [EvaluationController::class, 'create'])->name('evaluate.create');
 });
 
 Route::get('/email/verify', function () {

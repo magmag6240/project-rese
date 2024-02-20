@@ -473,24 +473,29 @@
 
 .shop-button {
     background-color: #fff;
-    position: relative;
     display: flex;
+    justify-content: space-between;
 }
 
 @media (min-width:320px) {
     .shop-button {
-        flex-direction: column;
-        margin: 0.5vw 1vw;
+        margin: 0.5vw 3vw;
     }
 }
 
 @media (min-width:768px) {
     .shop-button {
-        flex-direction: row;
+        margin: 0.5vw 2vw;
     }
 }
 
-.shop-detail-button, .evaluate-button {
+@media (min-width:1440px) {
+    .shop-button {
+        margin: 0.5vw 1.5vw;
+    }
+}
+
+.shop-detail-button {
     background-color: #4169E1;
     border :none;
     border-radius: 5px;
@@ -498,27 +503,27 @@
 }
 
 @media (min-width:320px) {
-    .shop-detail-button, .evaluate-button {
+    .shop-detail-button {
         font-size: 3.5vw;
-        padding: 1vw 0;
+        padding: 2vw 3vw;
         margin: 1vw 0;
     }
 }
 
 @media (min-width:375px) {
-    .shop-detail-button, .evaluate-button {
+    .shop-detail-button {
         font-size: 3vw;
     }
 }
 
 @media (min-width:425px) {
-    .shop-detail-button, .evaluate-button {
+    .shop-detail-button {
         font-size: 2.7vw;
     }
 }
 
 @media (min-width:768px) {
-    .shop-detail-button, .evaluate-button {
+    .shop-detail-button {
         font-size: 1.5vw;
         padding: 1vw 1.3vw;
         margin-right: 1vw;
@@ -526,21 +531,21 @@
 }
 
 @media (min-width:1024px) {
-    .shop-detail-button, .evaluate-button {
+    .shop-detail-button {
         font-size: 1.2vw;
         padding: 1vw;
     }
 }
 
 @media (min-width:1440px) {
-    .shop-detail-button, .evaluate-button {
+    .shop-detail-button {
         font-size: 1vw;
         padding: 0.5vw 1vw;
         margin-right: 1vw;
     }
 }
 
-.shop-detail-link, .shop-evaluate-link {
+.shop-detail-link {
     text-decoration: none;
     color: #fff;
 }
@@ -551,43 +556,21 @@
 
 @media (min-width:320px) {
     .like-link, .unlike-link {
-        position: absolute;
-        top: -9vw;
-        left: 34vw;
-    }
-}
-
-@media (min-width:375px) {
-    .like-link, .unlike-link {
-        left: 35vw;
-    }
-}
-
-@media (min-width:425px) {
-    .like-link, .unlike-link {
-        top: -8.5vw;
+        position: relative;
+        top: 1vw;
+        left: -2vw;
     }
 }
 
 @media (min-width:768px) {
     .like-link, .unlike-link {
-        position: relative;
-        top: 1vw;
-        left: 0.5vw;
-    }
-}
-
-@media (min-width:1024px) {
-    .like-link, .unlike-link {
-        top: 1vw;
-        left: 0.3vw;
+        left: 0;
     }
 }
 
 @media (min-width:1440px) {
     .like-link, .unlike-link {
         top: 0.7vw;
-        left: 0.5vw;
     }
 }
 
