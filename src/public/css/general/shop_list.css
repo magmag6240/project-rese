@@ -1,3 +1,4 @@
+
 .shop-list {
     display: flex;
     flex-direction: column;
@@ -15,24 +16,6 @@
     }
 }
 
-@media (min-width:768px) {
-    .shop-list {
-        padding: 2vw 0;
-    }
-}
-
-@media (min-width:1024px) {
-    .shop-list {
-        padding: 2.5vw 0;
-    }
-}
-
-@media (min-width:1440px) {
-    .shop-list {
-        padding: 3vw 0;
-    }
-}
-
 @media (min-width:320px) {
     .shop-list-search {
         padding: 0 4vw 3.5vw 4vw;
@@ -44,21 +27,21 @@
         position: absolute;
         z-index: 1;
         top: -6vw;
-        left: 34.5vw;
+        left: 31vw;
     }
 }
 
 @media (min-width:1024px) {
     .shop-list-search {
-        top: -4.5vw;
-        left: 43vw;
+        top: -5vw;
+        left: 40vw;
     }
 }
 
 @media (min-width:1440px) {
     .shop-list-search {
         top: -3.8vw;
-        left: 48vw;
+        left: 45vw;
     }
 }
 
@@ -477,7 +460,7 @@
 @media (min-width:1024px) {
     .shop-info {
         font-size: 1.2vw;
-        margin: 0.2vw 1.7vw;
+        margin: 0.2vw 1.5vw;
     }
 }
 
@@ -490,13 +473,14 @@
 
 .shop-button {
     background-color: #fff;
+    position: relative;
     display: flex;
-    margin: 1vw 1vw 1.5vw 1.5vw;
 }
 
 @media (min-width:320px) {
     .shop-button {
         flex-direction: column;
+        margin: 0.5vw 1vw;
     }
 }
 
@@ -516,27 +500,28 @@
 @media (min-width:320px) {
     .shop-detail-button, .evaluate-button {
         font-size: 3.5vw;
-        padding: 1vw;
+        padding: 1vw 0;
         margin: 1vw 0;
     }
 }
 
 @media (min-width:375px) {
     .shop-detail-button, .evaluate-button {
-        font-size: 3.2vw;
+        font-size: 3vw;
     }
 }
 
 @media (min-width:425px) {
     .shop-detail-button, .evaluate-button {
-        font-size: 3vw;
+        font-size: 2.7vw;
     }
 }
 
 @media (min-width:768px) {
     .shop-detail-button, .evaluate-button {
         font-size: 1.5vw;
-        margin-right: 1.5vw;
+        padding: 1vw 1.3vw;
+        margin-right: 1vw;
     }
 }
 
@@ -544,7 +529,6 @@
     .shop-detail-button, .evaluate-button {
         font-size: 1.2vw;
         padding: 1vw;
-        margin-right: 0.85vw;
     }
 }
 
@@ -565,6 +549,48 @@
     background-color: #fff;
 }
 
+@media (min-width:320px) {
+    .like-link, .unlike-link {
+        position: absolute;
+        top: -9vw;
+        left: 34vw;
+    }
+}
+
+@media (min-width:375px) {
+    .like-link, .unlike-link {
+        left: 35vw;
+    }
+}
+
+@media (min-width:425px) {
+    .like-link, .unlike-link {
+        top: -8.5vw;
+    }
+}
+
+@media (min-width:768px) {
+    .like-link, .unlike-link {
+        position: relative;
+        top: 1vw;
+        left: 0.5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .like-link, .unlike-link {
+        top: 1vw;
+        left: 0.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .like-link, .unlike-link {
+        top: 0.7vw;
+        left: 0.5vw;
+    }
+}
+
 .like-link::before, .unlike-link::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
@@ -573,7 +599,19 @@
 
 @media (min-width:320px) {
     .like-link::before, .unlike-link::before {
-        font-size: 4vw;
+        font-size: 6vw;
+    }
+}
+
+@media (min-width:375px) {
+    .like-link::before, .unlike-link::before {
+        font-size: 5.7vw;
+    }
+}
+
+@media (min-width:425px) {
+    .like-link::before, .unlike-link::before {
+        font-size: 5.5vw;
     }
 }
 
@@ -597,7 +635,6 @@
 
 .unlike-link, .like-link {
     text-decoration: none;
-    margin-right: 1.5vw;
 }
 
 .unlike-link::before {

@@ -7,6 +7,28 @@
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
+@media (min-width:320px) {
+    .thanks {
+        width: 83vw;
+        height: 60vw;
+        margin-top: 20vw;
+    }
+}
+
+@media (min-width:375px) {
+    .thanks {
+        width: 80vw;
+        height: 55vw;
+        margin-top: 18vw;
+    }
+}
+
+@media (min-width:425px) {
+    .thanks {
+        width: 75vw;
+    }
+}
+
 @media (min-width:768px) {
     .thanks {
         width: 60vw;
@@ -42,6 +64,26 @@
     background-color: #fff;
 }
 
+@media (min-width:320px) {
+    .thanks-text {
+        font-size: 5vw;
+        margin-top: 20vw;
+    }
+}
+
+@media (min-width:375px) {
+    .thanks-text {
+        font-size: 4.5vw;
+        margin-top: 18vw;
+    }
+}
+
+@media (min-width:425px) {
+    .thanks-text {
+        font-size: 4vw;
+    }
+}
+
 @media (min-width:768px) {
     .thanks-text {
         font-size: 3vw;
@@ -70,6 +112,26 @@
     margin-top: 2.5vw;
     background-color: #4169E1;
     color: #fff;
+}
+
+@media (min-width:320px) {
+    .logout-button {
+        font-size: 4vw;
+        padding: 2vw 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .logout-button {
+        font-size: 3.5vw;
+        padding: 1.7vw 3.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .logout-button {
+        font-size: 3vw;
+    }
 }
 
 @media (min-width:768px) {

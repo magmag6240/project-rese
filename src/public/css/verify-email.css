@@ -1,25 +1,129 @@
+
 .verify-email-title {
     font-weight: bold;
-    font-size: 2em;
-    height: 200px;
-    padding-top: 3em;
 }
 
-.verify-email-text {
-    margin: 1em 0;
+@media (min-width:320px) {
+    .verify-email-title {
+        font-size: 5vw;
+        height: 100px;
+        padding-top: 20vw;
+    }
+}
+
+@media (min-width:375px) {
+    .verify-email-title {
+        font-size: 4.5vw;
+        padding-top: 18vw;
+    }
+}
+
+@media (min-width:425px) {
+    .verify-email-title {
+        font-size: 4vw;
+        padding-top: 16vw;
+    }
+}
+
+@media (min-width:768px) {
+    .verify-email-title {
+        font-size: 3vw;
+        height: 150px;
+        padding-top: 10vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .verify-email-title {
+        font-size: 2.5vw;
+        padding-top: 8vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .verify-email-title {
+        font-size: 2vw;
+        padding-top: 5vw;
+    }
+}
+
+@media (min-width:320px) {
+    .verify-email-text, .verify-email-alarm, .verify-email-resent {
+        font-size: 3.5vw;
+        line-height: 10vw;
+        word-break: keep-all;
+    }
+}
+
+@media (min-width:375px) {
+    .verify-email-text, .verify-email-alarm, .verify-email-resent {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .verify-email-text, .verify-email-alarm, .verify-email-resent {
+        font-size: 2.7vw;
+    }
+}
+
+@media (min-width:768px) {
+    .verify-email-text, .verify-email-alarm, .verify-email-resent {
+        font-size: 2vw;
+        line-height: 6vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .verify-email-text, .verify-email-alarm, .verify-email-resent {
+        font-size: 1.6vw;
+        line-height: 4vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .verify-email-text, .verify-email-alarm, .verify-email-resent {
+        font-size: 1.3vw;
+    }
 }
 
 .verify-email-span {
     background-color: black;
     color: white;
-    padding: 0.5em;
-    margin: 0.3em;
     border-radius: 8px;
+}
+
+@media (min-width:320px) {
+    .verify-email-span {
+        padding: 2vw;
+        margin: 2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .verify-email-span {
+        padding: 1.5vw;
+        margin: 1.5vw;
+    }
+}
+
+@media (min-width:768px) {
+    .verify-email-span {
+        padding: 1vw;
+        margin: 1vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .verify-email-span {
+        padding: 0.7vw;
+        margin: 0.7vw;
+    }
 }
 
 .verify-email-alarm {
     color: red;
-    margin: 2em;
+    margin: 1vw;
 }
 
 .verify-email-resent {
@@ -32,7 +136,51 @@
     color: #fff;
     border-style: none;
     cursor: pointer;
-    margin-top: 2em;
-    padding: 1em 5em;
     border-radius: 5px;
+}
+
+@media (min-width:320px) {
+    .verify-email-logout {
+        margin-top: 10vw;
+        font-size: 3.5vw;
+        padding: 3vw 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .verify-email-logout {
+        margin-top: 8vw;
+        font-size: 3vw;
+        padding: 2.5vw 5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .verify-email-logout {
+        margin-top: 7vw;
+        font-size: 2.7vw;
+        padding: 2vw 5vw;
+    }
+}
+
+@media (min-width:768px) {
+    .verify-email-logout {
+        font-size: 2vw;
+        padding: 1.5vw 3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .verify-email-logout {
+        margin-top: 5vw;
+        font-size: 1.6vw;
+        padding: 1vw 2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .verify-email-logout {
+        margin-top: 3vw;
+        font-size: 1.2vw;
+    }
 }
