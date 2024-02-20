@@ -2,27 +2,27 @@
     background-color: #ededed;
 }
 
-@media (min-width:768px) {
-    * {
-        max-width: 768px;
-    }
-}
-
-@media (min-width:1024px) {
-    * {
-        max-width: 1024px;
-    }
-}
-
-@media (min-width:1440px) {
-    * {
-        max-width: 1440px;
-    }
-}
-
 .body.active {
     height: 100%;
     overflow: hidden;
+}
+
+@media (min-width:320px) {
+    .header {
+        padding: 8vw 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .header {
+        padding: 7.8vw 6vw;
+    }
+}
+
+@media (min-width:425px) {
+    .header {
+        padding: 7.5vw 6.3vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -46,6 +46,28 @@
 .app-logo {
     color: #4169E1;
     position: absolute;
+}
+
+@media (min-width:320px) {
+    .app-logo {
+        font-size: 7vw;
+        top: 3.6vw;
+        left: 18vw;
+    }
+}
+
+@media (min-width:375px) {
+    .app-logo {
+        font-size: 6.3vw;
+        top: 4vw;
+    }
+}
+
+@media (min-width:425px) {
+    .app-logo {
+        font-size: 5.8vw;
+        top: 4.2vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -85,21 +107,7 @@
     border-radius: 5px;
 }
 
-@media (min-width:768px) {
-    .menu-button {
-        width: 2vw;
-        height: 2vw;
-    }
-}
-
-@media (min-width:1024px) {
-    .menu-button {
-        width: 2vw;
-        height: 2vw;
-    }
-}
-
-@media (min-width:1440px) {
+@media (min-width:320px) {
     .menu-button {
         width: 2vw;
         height: 2vw;
@@ -124,6 +132,24 @@
 
 .menu-list {
     background-color: #fff;
+}
+
+@media (min-width:320px) {
+    .menu-list {
+        padding-top: 60vw;
+    }
+}
+
+@media (min-width:375px) {
+    .menu-list {
+        padding-top: 55vw;
+    }
+}
+
+@media (min-width:425px) {
+    .menu-list {
+        padding-top: 50vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -159,6 +185,24 @@
 
 .menu-link, .user, .admin, .shop-manager {
     text-decoration: none;
+}
+
+@media (min-width:320px) {
+    .menu-link, .user, .admin, .shop-manager {
+        font-size: 7vw;
+    }
+}
+
+@media (min-width:375px) {
+    .menu-link, .user, .admin, .shop-manager {
+        font-size: 6.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .menu-link, .user, .admin, .shop-manager {
+        font-size: 6vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -203,6 +247,24 @@
     margin-bottom: 0.5vw;
 }
 
+@media (min-width:320px) {
+    .logout-button {
+        font-size: 7.2vw;
+    }
+}
+
+@media (min-width:375px) {
+    .logout-button {
+        font-size: 6.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .logout-button {
+        font-size: 6.2vw;
+    }
+}
+
 @media (min-width:768px) {
     .logout-button {
         font-size: 4.7vw;
@@ -237,6 +299,25 @@
     content: '\f00d';
 }
 
+@media (min-width:320px) {
+    .menu-open::before {
+        font-size: 5vw;
+        padding: 1.2vw 3.4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .menu-open::before {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .menu-open::before {
+        font-size: 4vw;
+    }
+}
+
 @media (min-width:768px) {
     .menu-open::before {
         font-size: 2.5vw;
@@ -261,6 +342,25 @@
 .menu-close::before {
     padding: 1vw 1.5vw;
     content: '\f0c9';
+}
+
+@media (min-width:320px) {
+    .menu-close::before {
+        font-size: 5vw;
+        padding: 1.2vw 3vw;
+    }
+}
+
+@media (min-width:375px) {
+    .menu-close::before {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .menu-close::before {
+        font-size: 4vw;
+    }
 }
 
 @media (min-width:768px) {

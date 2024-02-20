@@ -4,6 +4,25 @@
     flex-direction: column;
 }
 
+@media (min-width:320px) {
+    .login-content {
+        margin-top: 40vw;
+        width: 70vw;
+    }
+}
+
+@media (min-width:375px) {
+    .login-content {
+        margin-top: 30vw;
+    }
+}
+
+@media (min-width:425px) {
+    .login-content {
+        margin-top: 25vw;
+    }
+}
+
 @media (min-width:768px) {
     .login-content {
         margin-top: 15vw;
@@ -35,6 +54,26 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     color: #fff;
+}
+
+@media (min-width:320px) {
+    .login-title {
+        font-size: 4.5vw;
+        padding: 3.5vw 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .login-title {
+        font-size: 4vw;
+        padding: 3vw 3.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .login-title {
+        font-size: 3.5vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -81,6 +120,25 @@
     color: #f00;
 }
 
+@media (min-width:320px) {
+    .login-error {
+        font-size: 3.2vw;
+        margin-left: 8vw;
+    }
+}
+
+@media (min-width:375px) {
+    .login-error {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .login-error {
+        font-size: 2.7vw;
+    }
+}
+
 @media (min-width:768px) {
     .login-error {
         font-size: 1.6vw;
@@ -123,8 +181,29 @@
 .form-input {
     border: none;
     outline: none;
-    border-bottom: solid #696969;
+    border-bottom: 0.2vw solid #696969;
     width: 80%;
+}
+
+@media (min-width:320px) {
+    .form-input {
+        font-size: 3.5vw;
+        margin: 7vw 3vw 2vw 1.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-input {
+        font-size: 3.2vw;
+        margin: 6.5vw 3vw 2vw 1vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-input {
+        font-size: 3vw;
+        margin: 6vw 3vw 2vw 1vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -152,6 +231,27 @@
 .password-icon::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
+}
+
+@media (min-width:320px) {
+    .mail-icon::before,
+    .password-icon::before {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .mail-icon::before,
+    .password-icon::before {
+        font-size: 3.8vw;
+    }
+}
+
+@media (min-width:425px) {
+    .mail-icon::before,
+    .password-icon::before {
+        font-size: 3.5vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -187,6 +287,24 @@
     text-align: right;
 }
 
+@media (min-width:320px) {
+    .form-button {
+        margin: 3vw 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-button {
+        margin: 2.5vw 4.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-button {
+        margin: 2vw 4vw;
+    }
+}
+
 @media (min-width:768px) {
     .form-button {
         margin: 1.5vw 3.5vw;
@@ -211,6 +329,25 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media (min-width:320px) {
+    .form-button-submit {
+        padding: 1.5vw 3vw;
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-button-submit {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-button-submit {
+        font-size: 2.8vw;
+    }
 }
 
 @media (min-width:768px) {
