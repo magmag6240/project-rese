@@ -78,7 +78,7 @@
                         <p class="form-image-text">クリックして写真を追加<br>
                             <span class="form-image-text-span">またはドラッグアンドドロップ</span>
                         </p>
-                        <div class="image_preview"></div>
+                        <div class="image-preview"></div>
                         <input class="input-files" type="file" id="image" name="image_url" value="{{ old('image_url') }}">
                     </div>
                     <div class="form-error-image">
@@ -94,5 +94,6 @@
 </div>
 
 <script src="{{ mix('js/count.js') }}"></script>
+<script src="{{ mix('js/image.js') }}"></script>
 
 @endsection

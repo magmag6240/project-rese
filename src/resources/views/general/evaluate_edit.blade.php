@@ -89,10 +89,11 @@
                 </div>
             </div>
         </div>
-        <button class="evaluate-create-button" type="submit">口コミを投稿</button>
+        <button class="evaluate-update-button" type="submit">口コミを投稿</button>
     </form>
 </div>
 
 <script src="{{ mix('js/count.js') }}"></script>
+<script src="{{ mix('js/image.js') }}"></script>
 
 @endsection

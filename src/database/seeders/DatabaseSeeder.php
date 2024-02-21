@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         StarSeeder::class,
         BusinessHourSeeder::class,
         ShopSeeder::class,
+        SortSeeder::class,
         BusinessHourShopSeeder::class,
         MenuSeeder::class
     ];

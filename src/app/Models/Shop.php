@@ -19,6 +19,8 @@ class Shop extends Model
         'image_url'
     ];
 
+    protected $appends = ['avg_score'];
+
     public function prefecture()
     {
         return $this->belongsTo(Prefecture::class);
@@ -73,6 +75,11 @@ class Shop extends Model
         } else {
             return false;
         }
+    }
+
+    public function getAvgStarAttribute()
+    {
+        return $this->evaluations->avg('star_id');
     }
 
 }

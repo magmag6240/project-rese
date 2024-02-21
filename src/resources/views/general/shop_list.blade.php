@@ -10,6 +10,14 @@
     <div class="shop-list-search">
         <form class="search-form" action="{{ route('shop.index') }}" method="get">
             @csrf
+            <label class="select-sort-label">
+                <select class="select-sort-select" id="sort" name="sort">
+                    <option value="">並び替え</option>
+                    @foreach($kind_of_sort as $sort)
+                    <option value="{{ $sort->id }}">{{ $sort->kind_of_sort }}</option>
+                    @endforeach
+                </select>
+            </label>
             <label class="select-area">
                 <select class="search-area" id="search_area" name="area">
                     <option value="">All area</option>
@@ -62,5 +70,7 @@
         @endforeach
     </div>
 </div>
+
+<script src="{{ mix('js/sort.js') }}"></script>
 
 @endsection
