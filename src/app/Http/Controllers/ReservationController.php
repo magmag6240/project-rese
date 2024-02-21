@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Models\Reservation;
 use App\Models\Shop;
 use App\Http\Requests\ReservationRequest;
+use App\Models\Evaluation;
 use App\Models\Menu;
 
 class ReservationController extends Controller
@@ -17,7 +18,9 @@ class ReservationController extends Controller
         $shop_detail = Shop::with('prefecture', 'genre')->find($id);
         $business_hour = $shop_detail->business_hours->pluck('business_hour');
         $menu_detail = Menu::where('shop_id', $id)->get();
-        return view('general/shop_detail', compact('business_hour', 'shop_detail', 'menu_detail'));
+        $evaluation = Evaluation::where('shop_id', $id)->get();
+        $evaluation_self = $evaluation->where('user_id', Auth::id())->first();
+        return view('general/shop_detail', compact('business_hour', 'shop_detail', 'menu_detail', 'evaluation', 'evaluation_self'));
     }
 
     public function store(ReservationRequest $request, $shop_id)

@@ -25,8 +25,8 @@ class EvaluateRequest extends FormRequest
     {
         return [
             'star_id' => ['required', 'numeric', 'max:5'],
-            'shop_id' => ['required', 'numeric'],
-            'comments' => ['required', 'string']
+            'comments' => ['required', 'string', 'max:400'],
+            'image_url' => ['required', 'mimes:jpeg,png']
         ];
     }
 
@@ -34,12 +34,13 @@ class EvaluateRequest extends FormRequest
     {
         return [
             'star_id.required' => '評価点数は必須項目です',
-            'star_id.numeric' => '評価点数はidで入力してください',
-            'star_id.max' => '評価点数は決められたidで入力してください',
-            'shop_id.required' => '店舗は必須項目です',
-            'shop_id.numeric' => '店舗はidで入力してください',
-            'comments.required' => '感想は必須項目です',
-            'comments.string' => '感想は文字列で入力してください'
+            'star_id.numeric' => '評価点数は数値で入力してください',
+            'star_id.max' => '評価点数は決められた数値で入力してください',
+            'comments.required' => 'コメントは必須項目です',
+            'comments.string' => 'コメントは文字列で入力してください',
+            'comments.max' => 'コメントは400字以内で入力してください',
+            'image_url.required' => '画像は必須項目です',
+            'image_url.mimes' => '画像はjpeg、png形式で入力してください',
         ];
     }
 }

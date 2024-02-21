@@ -1,31 +1,74 @@
 
-.shop-evaluate-new {
+.create-form {
     display: flex;
+    flex-direction: column;
 }
 
 @media (min-width:320px) {
-    .shop-evaluate-new {
-        flex-direction: column;
+    .create-form {
         padding: 5vw 12vw;
     }
 }
 
 @media (min-width:768px) {
-    .shop-evaluate-new {
-        flex-direction: row;
+    .create-form {
         padding: 3vw 6vw;
     }
 }
 
 @media (min-width:1024px) {
-    .shop-evaluate-new {
+    .create-form {
         padding: 3vw 5vw;
     }
 }
 
 @media (min-width:1440px) {
-    .shop-evaluate-new {
-        padding: 3vw 9vw;
+    .create-form {
+        padding: 1vw 4vw;
+    }
+}
+
+.create-form-content {
+    display: flex;
+}
+
+@media (min-width:320px) {
+    .create-form-content {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:1024px) {
+    .create-form-content {
+        flex-direction: row;
+    }
+}
+
+@media (min-width:320px) {
+    .shop-detail {
+        border-bottom: 3px solid #808080;
+        align-self: center;
+        margin-bottom: 5vw;
+        padding-bottom: 10vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-detail {
+        width: 40vw;
+        border-right: 3px solid #808080;
+        border-bottom: none;
+        align-self: center;
+        padding: 0 4vw;
+        margin-right: 5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-detail {
+        width: 37vw;
+        padding: 0 5vw;
+        margin-right: 4.5vw;
     }
 }
 
@@ -50,7 +93,19 @@
 
 @media (min-width:768px) {
     .shop-detail-title {
-        font-size: 4vw;
+        font-size: 3.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-detail-title {
+        font-size: 3.2vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-detail-title {
+        font-size: 2.5vw;
     }
 }
 
@@ -72,22 +127,21 @@
 
 @media (min-width:768px) {
     .shop {
-        width: 27vw;
+        width: 40vw;
         margin: 1vw;
     }
 }
 
 @media (min-width:1024px) {
     .shop {
-        width: 22vw;
+        width: 23vw;
         margin: 0.7vw;
     }
 }
 
 @media (min-width:1440px) {
     .shop {
-        width: 20vw;
-        margin: 1vw;
+        width: 18vw;
     }
 }
 
@@ -355,17 +409,218 @@
     color: #808080;
 }
 
-.star {
-    font-size: 7vw;
-    color: #a09a9a;
+@media (min-width:1024px) {
+    .form-edit {
+        width: 55vw;
+    }
+}
+
+@media (min-width:320px) {
+    .form-star-title,
+    .form-comment-title,
+    .form-image-title {
+        font-size: 5vw;
+        text-align: start;
+    }
+}
+
+@media (min-width:425px) {
+    .form-star-title,
+    .form-comment-title,
+    .form-image-title {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-star-title,
+    .form-comment-title,
+    .form-image-title {
+        font-size: 2.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-star-title,
+    .form-comment-title,
+    .form-image-title {
+        text-align: start;
+        font-size: 1.7vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-star-title,
+    .form-comment-title,
+    .form-image-title {
+        font-size: 1.4vw;
+    }
+}
+
+.form-star, .form-comment, .form-image {
+    position: relative;
+}
+
+.form-star-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.star-input {
+    display: none;
+}
+
+.star-label {
+    position: relative;
+    padding: 0 5px;
+    color: #808080;
+    cursor: pointer;
+}
+
+.star-label:hover {
+    color: #4169E1;
+}
+
+.star-label:hover ~ .star-label {
+    color: #4169E1;
+}
+
+.star-input:checked ~ .star-label {
+    color: #4169E1;
+}
+
+@media (min-width:320px) {
+    .star-label {
+        font-size: 8vw;
+    }
+}
+
+@media (min-width:768px) {
+    .star-label {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .star-label {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .star-label {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:320px) {
+    .counter {
+        font-size: 3.5vw;
+        text-align: right;
+    }
+}
+
+@media (min-width:375px) {
+    .counter {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .counter {
+        font-size: 2.7vw;
+    }
+}
+
+@media (min-width:768px) {
+    .counter {
+        font-size: 1.8vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .counter {
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .counter {
+        font-size: 1vw;
+    }
+}
+
+@media (min-width:320px) {
+    .form-comment-textarea {
+        font-size: 4vw;
+        width: 100%;
+        padding: 3vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-comment-textarea {
+        font-size: 3.5vw;
+        padding: 2.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-comment-textarea {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-comment-textarea {
+        font-size: 2.3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-comment-textarea {
+        font-size: 1.6vw;
+        padding: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-comment-textarea {
+        font-size: 1.2vw;
+        padding: 1.2vw;
+    }
 }
 
 .form-image-content {
     margin: auto;
-    width: 85%;
-    height: 300px;
+    width: 100%;
     position: relative;
     background-color: #fff;
+}
+
+@media (min-width:320px) {
+    .form-image-content {
+        height: 150px;
+    }
+}
+
+@media (min-width:375px) {
+    .form-image-content {
+        height: 170px;
+    }
+}
+
+@media (min-width:425px) {
+    .form-image-content {
+        height: 180px;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-image-content {
+        height: 150px;
+    }
 }
 
 .form-image-text {
@@ -373,6 +628,72 @@
     position: absolute;
     opacity: .8;
     background-color: #fff;
+}
+
+@media (min-width:320px) {
+    .form-image-text {
+        font-size: 4vw;
+        margin-top: 17vw;
+    }
+
+    .form-image-text-span {
+        font-size: 3.5vw;
+        background-color: #fff;
+    }
+}
+
+@media (min-width:375px) {
+    .form-image-text {
+        font-size: 3.5vw;
+        margin-top: 16vw;
+    }
+
+    .form-image-text-span {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-image-text {
+        font-size: 3vw;
+    }
+
+    .form-image-text-span {
+        font-size: 2.7vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-image-text {
+        font-size: 2.3vw;
+        margin-top: 9vw;
+    }
+
+    .form-image-text-span {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-image-text {
+        font-size: 1.6vw;
+        margin-top: 5.5vw;
+    }
+
+    .form-image-text-span {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-image-text {
+        font-size: 1.2vw;
+        margin-top: 3.5vw;
+    }
+
+    .form-image-text-span {
+        font-size: 1.1vw;
+    }
 }
 
 .input-files {
@@ -384,7 +705,7 @@
     height: 100%;
 }
 
-.information-create-button {
+.evaluate-create-button {
     border: none;
     border-radius: 20px;
     align-self: center;
@@ -393,41 +714,56 @@
 }
 
 @media (min-width:320px) {
-    .information-create-button {
-        font-size: 2vw;
-        padding: 0.8vw 0;
+    .evaluate-create-button {
+        font-size: 4.5vw;
+        padding: 3vw 0;
         width: 100%;
-        margin-top: 3vw;
+        margin-top: 6vw;
+    }
+}
+
+@media (min-width:375px) {
+    .evaluate-create-button {
+        font-size: 4vw;
+        padding: 2.5vw 0;
+    }
+}
+
+@media (min-width:425px) {
+    .evaluate-create-button {
+        font-size: 3.5vw;
+        padding: 2vw 0;
     }
 }
 
 @media (min-width:768px) {
-    .information-create-button {
-        font-size: 2vw;
-        padding: 0.8vw 0;
-        width: 60vw;
-        margin-top: 3vw;
+    .evaluate-create-button {
+        font-size: 2.3vw;
+        padding: 1.5vw 0;
+        margin-top: 5vw;
     }
 }
 
 @media (min-width:1024px) {
-    .information-create-button {
+    .evaluate-create-button {
+        width: 55%;
         font-size: 1.5vw;
-        padding: 0.7vw 1.2vw;
-        margin-top: 1.2vw;
+        padding: 1vw 0;
+        margin-top: 3vw;
     }
 }
 
 @media (min-width:1440px) {
-    .information-create-button {
+    .evaluate-create-button {
+        width: 50%;
         font-size: 1.2vw;
-        padding: 0.5vw 1vw;
-        margin-top: 1vw;
+        padding: 0.7vw 0;
+        margin-top: 2vw;
     }
 }
 
 .form-error-stars,
-.form-error-shop,
+.form-error-image,
 .form-error-comments {
     position: absolute;
     z-index: 1;
@@ -438,9 +774,33 @@
     border-radius: 5px;
 }
 
+@media (min-width:320px) {
+    .form-error-stars,
+    .form-error-image,
+    .form-error-comments {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-error-stars,
+    .form-error-image,
+    .form-error-comments {
+        font-size: 3.7vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-error-stars,
+    .form-error-image,
+    .form-error-comments {
+        font-size: 3.3vw;
+    }
+}
+
 @media (min-width:768px) {
     .form-error-stars,
-    .form-error-shop,
+    .form-error-image,
     .form-error-comments {
         font-size: 1.8vw;
     }
@@ -448,7 +808,7 @@
 
 @media (min-width:1024px) {
     .form-error-stars,
-    .form-error-shop,
+    .form-error-image,
     .form-error-comments {
         font-size: 1.4vw;
     }
@@ -456,71 +816,85 @@
 
 @media (min-width:1440px) {
     .form-error-stars,
-    .form-error-shop,
+    .form-error-image,
     .form-error-comments {
-        font-size: 1vw;
+        font-size: 1.1vw;
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .form-error-stars {
-        top: 8.5vw;
-        left: -20vw;
+        top: 7vw;
     }
 }
 
-@media (min-width:1024px) {
+@media (min-width:375px) {
     .form-error-stars {
-        top: 6vw;
-        left: -17vw;
-    }
-}
-
-@media (min-width:1440px) {
-    .form-error-stars {
-        top: 4.5vw;
-        left: -15vw;
-    }
-}
-
-@media (min-width:768px) {
-    .form-error-shop {
         top: 8vw;
-        left: -20vw;
     }
 }
 
-@media (min-width:1024px) {
-    .form-error-shop {
+@media (min-width:425px) {
+    .form-error-stars {
         top: 6vw;
-        left: -17vw;
-    }
-}
-
-@media (min-width:1440px) {
-    .form-error-shop {
-        top: 4.5vw;
-        left: -15vw;
     }
 }
 
 @media (min-width:768px) {
-    .form-error-comments {
-        top: 12vw;
-        left: -20vw;
+    .form-error-stars {
+        top: 0.7vw;
+        left: 31vw;
     }
 }
 
 @media (min-width:1024px) {
-    .form-error-comments {
-        top: 9vw;
-        left: -17vw;
+    .form-error-stars {
+        top: 0.2vw;
+        left: 20vw;
     }
 }
 
 @media (min-width:1440px) {
-    .form-error-comments {
-        top: 6vw;
-        left: -15vw;
+    .form-error-stars {
+        top: 0.1vw;
+        left: 17vw;
+    }
+}
+
+@media (min-width:320px) {
+    .form-error-comments, .form-error-image {
+        top: 0.5vw;
+        left: 31vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-error-comments, .form-error-image {
+        top: 0.9vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-error-comments, .form-error-image {
+        left: 27vw;
+    }
+}
+
+@media (min-width:768px) {
+    .form-error-comments, .form-error-image {
+        left: 20vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .form-error-comments, .form-error-image {
+        top: 0.3vw;
+        left: 13vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .form-error-comments, .form-error-image {
+        left: 10vw;
     }
 }

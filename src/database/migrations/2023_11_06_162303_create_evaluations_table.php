@@ -19,6 +19,7 @@ class CreateEvaluationsTable extends Migration
             $table->unsignedBigInteger('shop_id');
             $table->unsignedBigInteger('star_id');
             $table->text('comments');
+            $table->string('image_url')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

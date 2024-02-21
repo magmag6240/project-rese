@@ -15,7 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/menu.js', 'public/js')
     .js('resources/js/shop_edit.js', 'public/js')
     .js('resources/js/tab.js', 'public/js')
-    .js('resources/js/star.js', 'public/js')
     .js('resources/js/count.js', 'public/js')
     .js('resources/js/shop_menu_edit.js', 'public/js')
     .js('resources/js/reserve_confirm.js', 'public/js');

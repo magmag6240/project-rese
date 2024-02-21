@@ -1,5 +1,6 @@
 <?php
 
+use App\Console\Commands\Evaluation;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
@@ -82,6 +83,9 @@ Route::middleware('verified')->group(function () {
     Route::post('/stripe/store', [StripePaymentController::class, 'store'])->name('stripe.store');
     Route::get('/evaluate/{shop_id}', [EvaluationController::class, 'index'])->name('evaluate.index');
     Route::post('/evaluate/{shop_id}', [EvaluationController::class, 'create'])->name('evaluate.create');
+    Route::get('/evaluate/{evaluation_id}', [EvaluationController::class, 'edit'])->name('evaluate.edit');
+    Route::patch('/evaluate/{evaluation_id}', [EvaluationController::class, 'update'])->name('evaluate.update');
+    Route::delete('/evaluate/{evaluation_id}', [EvaluationController::class, 'destroy'])->name('evaluate.destroy');
 });
 
 Route::get('/email/verify', function () {
