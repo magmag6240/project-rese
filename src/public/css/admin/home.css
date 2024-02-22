@@ -4,6 +4,24 @@
     flex-direction: column;
 }
 
+@media (min-width:320px) {
+    .admin-home {
+        padding: 15vw 7vw;
+    }
+}
+
+@media (min-width:375px) {
+    .admin-home {
+        padding: 12vw 7vw;
+    }
+}
+
+@media (min-width:425px) {
+    .admin-home {
+        padding: 9vw 5vw;
+    }
+}
+
 @media (min-width:768px) {
     .admin-home {
         padding: 5vw;
@@ -24,6 +42,24 @@
 
 .user-name {
     font-weight: bold;
+}
+
+@media (min-width:320px) {
+    .user-name {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .user-name {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .user-name {
+        font-size: 4vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -49,7 +85,7 @@
     align-self: center;
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .admin-page-list {
         flex-direction: column;
     }
@@ -61,16 +97,25 @@
     }
 }
 
-@media (min-width:1440px) {
-    .admin-page-list {
-        flex-direction: row;
-    }
-}
-
 .page-group {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+}
+
+@media (min-width:320px) {
+    .page-group {
+        width: 80vw;
+        margin: 6vw 3vw;
+        padding: 7vw 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .page-group {
+        width: 75vw;
+        margin: 5vw 3vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -83,6 +128,7 @@
 
 @media (min-width:1024px) {
     .page-group {
+        width: 28vw;
         margin: 1.7vw;
         padding: 3.5vw 2vw;
     }
@@ -102,10 +148,22 @@
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
+@media (min-width:320px) {
+    .page-group-button {
+        padding: 2.5vw 4vw;
+        margin-bottom: 3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .page-group-button {
+        padding: 2vw 3vw;
+    }
+}
+
 @media (min-width:768px) {
     .page-group-button {
-        padding: 1vw 1.5vw;
-        margin-bottom: 3vw;
+        padding: 1vw 2vw;
     }
 }
 
@@ -128,6 +186,30 @@
 .mail-link {
     text-decoration: none;
     color: #fff;
+}
+
+@media (min-width:320px) {
+    .new-link,
+    .shop-manager-list-link,
+    .mail-link {
+        font-size: 4.3vw;
+    }
+}
+
+@media (min-width:375px) {
+    .new-link,
+    .shop-manager-list-link,
+    .mail-link {
+        font-size: 3.7vw;
+    }
+}
+
+@media (min-width:425px) {
+    .new-link,
+    .shop-manager-list-link,
+    .mail-link {
+        font-size: 3.4vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -156,6 +238,24 @@
 
 .admin-text {
     border: 1px solid #4169E1;
+}
+
+@media (min-width:320px) {
+    .admin-text {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .admin-text {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .admin-text {
+        font-size: 3.2vw;
+    }
 }
 
 @media (min-width:768px) {

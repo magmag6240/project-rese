@@ -7,6 +7,27 @@
     background-color: #4169E1;
 }
 
+@media (min-width:320px) {
+    .admin-mail-form {
+        width: 80vw;
+        margin: 20vw 0;
+        padding: 10vw 7vw;
+    }
+}
+
+@media (min-width:375px) {
+    .admin-mail-form {
+        width: 75vw;
+        margin: 18vw 0;
+    }
+}
+
+@media (min-width:425px) {
+    .admin-mail-form {
+        width: 72vw;
+    }
+}
+
 @media (min-width:768px){
     .admin-mail-form {
         width: 80vw;
@@ -44,6 +65,27 @@
     background-color: #4169E1;
 }
 
+@media (min-width:320px) {
+    .admin-mail-form-title-text {
+        margin-bottom: 4vw;
+        font-size: 4.5vw;
+        position: relative;
+        left: 3vw;
+    }
+}
+
+@media (min-width:375px) {
+    .admin-mail-form-title-text {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:425px) {
+    .admin-mail-form-title-text {
+        font-size: 3.8vw;
+    }
+}
+
 @media (min-width:768px) {
     .admin-mail-form-title-text {
         font-size: 2.7vw;
@@ -70,6 +112,34 @@
     position: absolute;
     border-radius: 5px;
     background-color: #E0FFFF;
+}
+
+@media (min-width:320px) {
+    .admin-home-button {
+        top: 2.6vw;
+        left: -5.5vw;
+        width: 6.4vw;
+        height: 6.4vw;
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .admin-home-button {
+        top: 2.1vw;
+        width: 6vw;
+        height: 6vw;
+        font-size: 4.3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .admin-home-button {
+        top: 2.1vw;
+        width: 5.5vw;
+        height: 5.5vw;
+        font-size: 3.8vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -108,9 +178,8 @@
 }
 
 .form,
-.form-table,
-.form-table-title,
-.form-table-td {
+.form-content,
+.form-title {
     background-color: #4169E1;
 }
 
@@ -121,26 +190,44 @@
     text-align: left;
 }
 
-.form-table-title {
+.form-title {
     color: #fff;
 }
 
+@media (min-width:320px) {
+    .form-title {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-title {
+        font-size: 3.7vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-title {
+        font-size: 3.3vw;
+    }
+}
+
 @media (min-width:768px) {
-    .form-table-title{
+    .form-title{
         font-size: 2vw;
         width: 13vw;
     }
 }
 
 @media (min-width:1024px) {
-    .form-table-title {
+    .form-title {
         font-size: 1.4vw;
         width: 12vw;
     }
 }
 
 @media (min-width:1440px) {
-    .form-table-title {
+    .form-title {
         font-size: 1vw;
         width: 10vw;
     }
@@ -149,6 +236,13 @@
 .form-textarea {
     border-radius: 5px;
     outline: none;
+}
+
+@media (min-width:320px) {
+    .form-textarea {
+        font-size: 4vw;
+        width: 60vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -178,6 +272,27 @@
     align-self: center;
     color: #fff;
     background-color: #0000ff;
+}
+
+@media (min-width:320px) {
+    .form-button-submit {
+        font-size: 3.7vw;
+        padding: 1.6vw 5vw;
+        top: 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-button-submit {
+        font-size: 3.5vw;
+        padding: 1.3vw 4vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-button-submit {
+        font-size: 3vw;
+    }
 }
 
 @media (min-width:768px) {

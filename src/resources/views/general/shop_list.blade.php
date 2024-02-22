@@ -10,11 +10,11 @@
     <div class="shop-list-search">
         <form class="search-form" action="{{ route('shop.index') }}" method="get">
             @csrf
-            <label class="select-sort-label">
-                <select class="select-sort-select" id="sort" name="sort">
-                    <option value="">並び替え</option>
+            <label class="select-sort">
+                <select class="search-sort" id="sort" name="sort">
+                    <option class="option-default" value="">並び替え：評価高/低</option>
                     @foreach($kind_of_sort as $sort)
-                    <option value="{{ $sort->id }}">{{ $sort->kind_of_sort }}</option>
+                    <option class="option-sort" value="{{ $sort->id }}">{{ $sort->kind_of_sort }}</option>
                     @endforeach
                 </select>
             </label>

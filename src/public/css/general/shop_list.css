@@ -26,8 +26,8 @@
     .shop-list-search {
         position: absolute;
         z-index: 1;
-        top: -6vw;
-        left: 31vw;
+        top: -3.9vw;
+        left: 33vw;
     }
 }
 
@@ -48,6 +48,16 @@
 .search-form {
     display: flex;
     position: relative;
+    border-radius: 5px;
+    box-shadow: 0.2vw 0.2vw 1vw 0 #808080;
+}
+
+.search-sort {
+    position: absolute;
+    appearance: none;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
     border-radius: 5px;
     box-shadow: 0.2vw 0.2vw 1vw 0 #808080;
 }
@@ -87,8 +97,7 @@
 }
 
 @media (min-width:1024px) {
-    .search-area,
-    .search-genre {
+    .search-area, .search-genre {
         height: 4.8vw;
         font-size: 1.3vw;
         background-size: 1px 65%;
@@ -96,12 +105,70 @@
 }
 
 @media (min-width:1440px) {
-    .search-area,
-    .search-genre {
+    .search-area, .search-genre {
         height: 4.5vw;
         font-size: 1vw;
         background-size: 1px 60%;
     }
+}
+
+@media (min-width:320px) {
+    .search-sort {
+        padding: 3vw;
+        top: -14vw;
+        left: 47vw;
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .search-sort {
+        padding: 2.6vw;
+        top: -13vw;
+        font-size: 3.3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .search-sort {
+        padding: 2.5vw;
+        top: -12vw;
+        font-size: 2.8vw;
+    }
+}
+
+@media (min-width:768px) {
+    .search-sort {
+        padding: 1.3vw;
+        top: -5.5vw;
+        left: 0;
+        font-size: 1.7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .search-sort {
+        padding: 1.2vw;
+        top: 0;
+        left: -17vw;
+        font-size: 1.4vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .search-sort {
+        padding: 1.1vw;
+        left: -14vw;
+        font-size: 1.1vw;
+    }
+}
+
+.option-default {
+    display: none;
+}
+
+.option-sort:hover {
+    background-color: #4169E1;
 }
 
 .search-area {
@@ -244,7 +311,7 @@
 @media (min-width:768px) {
     .search-keyword {
         font-size: 1.7vw;
-        width: 30vw;
+        width: 28vw;
     }
 }
 
