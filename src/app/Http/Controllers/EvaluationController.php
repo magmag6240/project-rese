@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EvaluateRequest;
+use App\Models\Average;
 use App\Models\Evaluation;
 use App\Models\Shop;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +34,11 @@ class EvaluationController extends Controller
             'comments' => $request->input('comments'),
             'image_url' => $file_name_store
         ]);
+
+        $shop_evaluate_past = Evaluation::where('shop_id', $shop_id)->get();
+        $star_average = $shop_evaluate_past->avg('star_id');
+        Shop::where('id', $shop_id)->update(['star_score' => $star_average]);
+
         return view('general/evaluate_done');
     }
 
@@ -46,7 +52,11 @@ class EvaluationController extends Controller
     public function update(EvaluateRequest $request, $evaluation_id)
     {
         $evaluate_edit = $request->only(['star_id', 'comments', 'image_url']);
-        Evaluation::find($evaluation_id)->update($evaluate_edit);
+        $evaluate = Evaluation::find($evaluation_id)->update($evaluate_edit);
+
+        $shop_evaluate_past = Evaluation::where('shop_id', $evaluate->shop_id)->get();
+        $star_average = $shop_evaluate_past->avg('star_id');
+        Shop::where('id', $evaluate->shop_id)->update(['star_score' => $star_average]);
         return view('general/evaluate_done');
     }
 
@@ -54,6 +64,10 @@ class EvaluationController extends Controller
     {
         $evaluation = Evaluation::where('id', $evaluation_id)->first();
         $evaluation->delete();
+
+        $shop_evaluate_past = Evaluation::where('shop_id', $evaluation->shop_id)->get();
+        $star_average = $shop_evaluate_past->avg('star_id');
+        Shop::where('id', $evaluation->shop_id)->update(['star_score' => $star_average]);
 
         return redirect()->back();
     }

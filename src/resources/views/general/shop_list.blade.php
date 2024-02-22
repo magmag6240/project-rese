@@ -43,7 +43,7 @@
         <div class="shop">
             <img class="shop-img" src="{{ $item->image_url }}">
             <span class="shop-name">{{ $item->shop_name }}</span>
-            <span class="shop-evaluate"></span>
+            <span class="shop-evaluate">{{ $item->star_score }}</span>
             <div class="shop-info">
                 <span class="shop-pref">
                     #{{ $item->prefecture->pref_name }}

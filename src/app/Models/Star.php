@@ -13,7 +13,7 @@ class Star extends Model
         'stars'
     ];
 
-    public function evaluates()
+    public function evaluations()
     {
         return $this->hasMany(Evaluation::class);
     }

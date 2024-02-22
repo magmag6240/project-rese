@@ -16,10 +16,9 @@ class Shop extends Model
         'prefecture_id',
         'genre_id',
         'shop_detail',
-        'image_url'
+        'image_url',
+        'star_score'
     ];
-
-    protected $appends = ['avg_score'];
 
     public function prefecture()
     {
@@ -75,11 +74,6 @@ class Shop extends Model
         } else {
             return false;
         }
-    }
-
-    public function getAvgStarAttribute()
-    {
-        return $this->evaluations->avg('star_id');
     }
 
 }

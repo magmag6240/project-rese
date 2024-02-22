@@ -21,6 +21,7 @@ class CreateShopsTable extends Migration
             $table->unsignedBigInteger('genre_id');
             $table->text('shop_detail');
             $table->string('image_url');
+            $table->float('star_score')->nullable();
             $table->timestamps();
 
             $table->foreign('shop_manager_id')->references('id')->on('shop_managers')->onDelete('cascade');
