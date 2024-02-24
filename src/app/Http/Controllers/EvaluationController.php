@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EvaluateRequest;
-use App\Models\Average;
 use App\Models\Evaluation;
 use App\Models\Shop;
 use Illuminate\Support\Facades\Auth;
@@ -44,19 +43,30 @@ class EvaluationController extends Controller
 
     public function edit($evaluation_id)
     {
-        $evaluation_past = Evaluation::where('id', $evaluation_id)->first();
-        $shop_detail = Shop::where('id', $evaluation_past->shop_id)->first();
-        return view('general/evaluate_edit', compact('evaluation_past', 'shop_detail'));
+        $evaluation_past = Evaluation::with('shop')->where('id', $evaluation_id)->first();
+        return view('general/evaluate_edit', compact('evaluation_past'));
     }
 
     public function update(EvaluateRequest $request, $evaluation_id)
     {
-        $evaluate_edit = $request->only(['star_id', 'comments', 'image_url']);
-        $evaluate = Evaluation::find($evaluation_id)->update($evaluate_edit);
+        $evaluate_edit = $request->only(['star_id', 'comments']);
+        Evaluation::where('id', $evaluation_id)->update($evaluate_edit);
 
-        $shop_evaluate_past = Evaluation::where('shop_id', $evaluate->shop_id)->get();
+            $image_file = $request->image_url;
+            $file_name = uniqid(rand() . '_');
+            $extension = $image_file->extension();
+            $resized_image = Image::make($image_file)->resize(300, 300)->encode();
+            $file_name_store = $file_name . '.' . $extension;
+            Storage::put('public/evaluations/' . $file_name_store, $resized_image);
+
+            Evaluation::find($evaluation_id)->update([
+                'image_url' => $file_name_store
+            ]);
+
+        $evaluate_latest = Evaluation::find($evaluation_id)->first();
+        $shop_evaluate_past = Evaluation::where('shop_id', $evaluate_latest->shop_id)->get();
         $star_average = $shop_evaluate_past->avg('star_id');
-        Shop::where('id', $evaluate->shop_id)->update(['star_score' => $star_average]);
+        Shop::where('id', $evaluate_latest->shop_id)->update(['star_score' => $star_average]);
         return view('general/evaluate_done');
     }
 

@@ -13,7 +13,8 @@ class Evaluation extends Model
         'user_id',
         'shop_id',
         'star_id',
-        'comments'
+        'comments',
+        'image_url'
     ];
 
     public function user()

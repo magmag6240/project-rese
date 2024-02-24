@@ -7,6 +7,8 @@ function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 var image = document.getElementById("image");
+var text = document.getElementById("text");
+var image_past = document.getElementById("image_past");
 var image_preview = document.querySelector(".image-preview");
 image.addEventListener("change", updateImageDisplay);
 function updateImageDisplay() {
@@ -15,25 +17,29 @@ function updateImageDisplay() {
   }
   var curFiles = image.files;
   if (curFiles.length === 0) {
-    var para = document.createElement("p");
-    para.textContent = "クリックして写真を追加<br>またはドラッグアンドドロップ";
-    image_preview.appendChild(para);
+    text.style.display = 'block';
+    image_past.style.display = 'none';
   } else {
     var _iterator = _createForOfIteratorHelper(curFiles),
       _step;
     try {
       for (_iterator.s(); !(_step = _iterator.n()).done;) {
         var file = _step.value;
+        image_past.style.display = 'none';
+        text.style.display = 'none';
         var div = document.createElement("div");
+        div.className = 'preview-image-div';
         image_preview.appendChild(div);
-        var _para = document.createElement("p");
-        _para.textContent = "\u30D5\u30A1\u30A4\u30EB\u540D: ".concat(file.name);
+        var para = document.createElement("p");
+        para.textContent = "\u30D5\u30A1\u30A4\u30EB\u540D: ".concat(file.name);
+        para.className = 'preview-image-p';
         var _image = document.createElement("img");
         _image.width = 100;
         _image.height = 100;
         _image.src = URL.createObjectURL(file);
+        _image.className = 'preview-image-img';
         div.appendChild(_image);
-        div.appendChild(_para);
+        div.appendChild(para);
         div.appendChild(div);
       }
     } catch (err) {

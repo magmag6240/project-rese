@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Evaluation;
 use Illuminate\Http\Request;
 use App\Models\Genre;
 use App\Models\Prefecture;
 use App\Models\Shop;
 use App\Models\Sort;
-use Illuminate\Support\Facades\DB;
 
 class ShopController extends Controller
 {

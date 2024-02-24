@@ -75,7 +75,7 @@
                 <div class="form-image">
                     <p class="form-image-title">画像の追加</p>
                     <div class="form-image-content">
-                        <p class="form-image-text">クリックして写真を追加<br>
+                        <p class="form-image-text" id="text">クリックして写真を追加<br>
                             <span class="form-image-text-span">またはドラッグアンドドロップ</span>
                         </p>
                         <div class="image-preview"></div>

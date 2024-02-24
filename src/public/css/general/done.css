@@ -7,6 +7,28 @@
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
+@media (min-width:320px) {
+    .done {
+        width: 83vw;
+        height: 60vw;
+        margin-top: 20vw;
+    }
+}
+
+@media (min-width:375px) {
+    .done {
+        width: 80vw;
+        height: 55vw;
+        margin-top: 18vw;
+    }
+}
+
+@media (min-width:425px) {
+    .done {
+        width: 75vw;
+    }
+}
+
 @media (min-width:768px) {
     .done {
         width: 60vw;
@@ -34,6 +56,26 @@
 .done-text {
     font-weight: bold;
     background-color: #fff;
+}
+
+@media (min-width:320px) {
+    .done-text {
+        font-size: 5vw;
+        margin-top: 20vw;
+    }
+}
+
+@media (min-width:375px) {
+    .done-text {
+        font-size: 4.5vw;
+        margin-top: 18vw;
+    }
+}
+
+@media (min-width:425px) {
+    .done-text {
+        font-size: 4vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -65,24 +107,44 @@
     background-color: #4169E1;
 }
 
+@media (min-width:320px) {
+    .shop-list-button {
+        font-size: 4vw;
+        padding: 2vw 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-list-button {
+        font-size: 3.5vw;
+        padding: 1.7vw 3.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-list-button {
+        font-size: 3vw;
+    }
+}
+
 @media (min-width:768px) {
     .shop-list-button {
-        padding: 1vw 0;
-        width: 16vw;
+        font-size: 1.9vw;
+        padding: 1vw 2vw;
     }
 }
 
 @media (min-width:1024px) {
     .shop-list-button {
-        padding: 0.8vw 0;
-        width: 13vw;
+        font-size: 1.4vw;
+        padding: 0.8vw 1.7vw;
     }
 }
 
 @media (min-width:1440px) {
     .shop-list-button {
-        padding: 0.5vw 0;
-        width: 10vw;
+        font-size: 1.1vw;
+        padding: 0.5vw 1vw;
     }
 }
 
