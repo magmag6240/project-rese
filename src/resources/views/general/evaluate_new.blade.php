@@ -94,6 +94,6 @@
 </div>
 
 <script src="{{ mix('js/count.js') }}"></script>
-<script src="{{ mix('js/image.js') }}"></script>
+<script src="{{ mix('js/image_create.js') }}"></script>
 
 @endsection

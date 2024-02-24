@@ -20,6 +20,39 @@
                 <span class="menu-open"></span>
             </div>
             <h1 class="app-logo">Rese</h1>
+            @if(Route::is('shop.index'))
+            <div class="shop-list-search">
+                <form class="search-form" action="{{ route('shop.index') }}" method="get">
+                    @csrf
+                    <label class="select-sort">
+                        <select class="search-sort" id="sort" name="sort">
+                            <option class="option-default" value="">並び替え：評価高/低</option>
+                            @foreach($kind_of_sort as $sort)
+                            <option class="option-sort" value="{{ $sort->id }}">{{ $sort->kind_of_sort }}</option>
+                            @endforeach
+                        </select>
+                    </label>
+                    <label class="select-area">
+                        <select class="search-area" id="search_area" name="area">
+                            <option value="">All area</option>
+                            @foreach($prefectures as $pref)
+                            <option value="{{ $pref->id }}">{{ $pref->pref_name }}</option>
+                            @endforeach
+                        </select>
+                    </label>
+                    <label class="select-genre">
+                        <select class="search-genre" id="search_genre" name="genre">
+                            <option value="">All genre</option>
+                            @foreach($genres as $genre)
+                            <option value="{{ $genre->id }}">{{ $genre->genre_name }}</option>
+                            @endforeach
+                        </select>
+                    </label>
+                    <button class="search-button"></button>
+                    <input class="search-keyword" name="keyword" type="search" placeholder="Search ...">
+                </form>
+            </div>
+            @endif
             <nav class="menu-nav">
                 <ul class="menu-list">
                     <li class="menu-list-contents">

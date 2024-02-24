@@ -24,30 +24,46 @@
                     <span class="shop-genre">#{{$shop_detail->genre->genre_name}}</span>
                 </div>
                 <p class="shop-text">{{$shop_detail->shop_detail}}</p>
-                @if(empty($evaluation_self))
-                <a class="shop-evaluate-link" href="{{ route('evaluate.index', ['shop_id' => $shop_detail->id]) }}">口コミを投稿する</a>
-                @else
-                <div>
-                    <p>全ての口コミ情報</p>
+                <div class="shop-evaluate-content">
+                    @if(empty($evaluation_self))
+                    <a class="shop-evaluate-link" href="{{ route('evaluate.index', ['shop_id' => $shop_detail->id]) }}">口コミを投稿する</a>
+                    <p class="shop-evaluate-title">全ての口コミ情報</p>
                     @foreach($evaluation as $evaluate)
-                    <div>
-                        <form action="{{ route('evaluate.destroy', ['evaluation_id' => $evaluation_self->id] )}}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            @if($evaluate->id === $evaluation_self->id)
-                            <a href="{{ route('evaluate.edit', ['evaluation_id' => $evaluation_self->id] )}}">口コミを編集</a>
-                            <button type="submit">口コミを削除</button>
-                            @endif
-                        </form>
-                        <div>
-                            {{$evaluate->star_id}}
-                            {{$evaluate->comments}}
-                            {{$evaluate->image_url}}
+                    <div class="shop-evaluate-all">
+                        <div class="shop-evaluate-detail">
+                            <div class="shop-evaluate-star">
+                                <span class="star5_rating" data-rate="{{ $evaluate->star_id }}"></span>
+                            </div>
+                            <p class="shop-evaluate-comments">{{ $evaluate->comments }}</p>
                         </div>
                     </div>
                     @endforeach
+                    @else
+                    <p class="shop-evaluate-title">全ての口コミ情報</p>
+                    @foreach($evaluation as $evaluate)
+                    <div class="shop-evaluate-all">
+                        @if($evaluate->id === $evaluation_self->id)
+                        <div class="shop-evaluate-edit">
+                            <a class="shop-evaluate-edit-link" href="{{ route('evaluate.edit', ['evaluation_id' => $evaluation_self->id] )}}">
+                                口コミを編集
+                            </a>
+                            <form class="shop-evaluate-delete-form" action="{{ route('evaluate.destroy', ['evaluation_id' => $evaluation_self->id] )}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="shop-evaluate-delete" type="submit"><a class="shop-evaluate-delete-link">口コミを削除</a></button>
+                            </form>
+                        </div>
+                        @endif
+                        <div class="shop-evaluate-detail">
+                            <div class="shop-evaluate-star">
+                                <span class="star5_rating" data-rate="{{ $evaluate->star_id }}"></span>
+                            </div>
+                            <p class="shop-evaluate-comments">{{ $evaluate->comments }}</p>
+                        </div>
+                    </div>
+                    @endforeach
+                    @endif
                 </div>
-                @endif
             </div>
             <div class="js-panel inactive_content">
                 @foreach($menu_detail as $menu)

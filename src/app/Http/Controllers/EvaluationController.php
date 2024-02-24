@@ -52,16 +52,16 @@ class EvaluationController extends Controller
         $evaluate_edit = $request->only(['star_id', 'comments']);
         Evaluation::where('id', $evaluation_id)->update($evaluate_edit);
 
-            $image_file = $request->image_url;
-            $file_name = uniqid(rand() . '_');
-            $extension = $image_file->extension();
-            $resized_image = Image::make($image_file)->resize(300, 300)->encode();
-            $file_name_store = $file_name . '.' . $extension;
-            Storage::put('public/evaluations/' . $file_name_store, $resized_image);
+        $image_file = $request->image_url;
+        $file_name = uniqid(rand() . '_');
+        $extension = $image_file->extension();
+        $resized_image = Image::make($image_file)->resize(300, 300)->encode();
+        $file_name_store = $file_name . '.' . $extension;
+        Storage::put('public/evaluations/' . $file_name_store, $resized_image);
 
-            Evaluation::find($evaluation_id)->update([
-                'image_url' => $file_name_store
-            ]);
+        Evaluation::find($evaluation_id)->update([
+            'image_url' => $file_name_store
+        ]);
 
         $evaluate_latest = Evaluation::find($evaluation_id)->first();
         $shop_evaluate_past = Evaluation::where('shop_id', $evaluate_latest->shop_id)->get();
