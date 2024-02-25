@@ -11,8 +11,8 @@
     <table class="shop-list-table">
         <tr class="shop-list-tr">
             <th class="shop-list-th">id</th>
-            <th class="shop-list-th">Shop name</th>
-            <th class="shop-list-th">Prefecture</th>
+            <th class="shop-list-th">Name</th>
+            <th class="shop-list-th">Area</th>
             <th class="shop-list-th">Genre</th>
         </tr>
         @foreach($shops as $shop)
@@ -29,17 +29,37 @@
             <td class="shop-list-td">
                 {{$shop->genre->genre_name}}
             </td>
-            <td class="shop-edit-link-td">
-                <a class="shop-edit-link" href="{{route('shop_manager.edit',['shop_id' => $shop->id])}}">店舗情報変更</a>
-            </td>
-            <td class="shop-menu-new-link-td">
-                <a class="shop-menu-new-link" href="{{route('shop_manager.menu.new',['shop_id' => $shop->id])}}">コースメニュー新規作成</a>
-            </td>
-            <td class="shop-menu-list-link-td">
-                <a class="shop-menu-list-link" href="{{route('shop_manager.menu.list',['shop_id' => $shop->id])}}">コースメニュー変更・更新</a>
-            </td>
-            <td class="shop-reserve-list-link-td">
-                <a class="shop-reserve-list-link" href="{{route('shop_manager.reserve_list',['shop_id' => $shop->id])}}">予約情報</a>
+            <td class="shop-list-td">
+                <table class="shop-link-table">
+                    <tr class="shop-link-table-tr">
+                        <td class="shop-edit-link-td">
+                            <a class="shop-edit-link" href="{{route('shop_manager.edit',['shop_id' => $shop->id])}}">
+                                店舗情報変更
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="shop-link-table-tr">
+                        <td class="shop-menu-new-link-td">
+                            <a class="shop-menu-new-link" href="{{route('shop_manager.menu.new',['shop_id' => $shop->id])}}">
+                                コースメニュー新規作成
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="shop-link-table-tr">
+                        <td class="shop-menu-list-link-td">
+                            <a class="shop-menu-list-link" href="{{route('shop_manager.menu.list',['shop_id' => $shop->id])}}">
+                                コースメニュー変更・更新
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="shop-link-table-tr">
+                        <td class="shop-reserve-list-link-td">
+                            <a class="shop-reserve-list-link" href="{{route('shop_manager.reserve_list',['shop_id' => $shop->id])}}">
+                                予約情報
+                            </a>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
         @endforeach

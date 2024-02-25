@@ -1,31 +1,50 @@
+
 .qr-code-reader {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
     background-color: #4169E1;
 }
 
+@media (min-width:320px) {
+    .qr-code-reader {
+        margin: 7vw 5vw;
+        padding: 0 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .qr-code-reader {
+        margin: 6vw;
+    }
+}
+
+@media (min-width:425px) {
+    .qr-code-reader {
+        margin: 6vw 7vw;
+        padding: 0 5vw;
+    }
+}
+
 @media (min-width:768px) {
     .qr-code-reader {
-        width: 75vw;
-        margin: 3vw 0;
+        margin: 6vw 10vw;
     }
 }
 
 @media (min-width:1024px) {
     .qr-code-reader {
-        width: 70vw;
-        margin: 2vw 0;
+        margin: 6vw 15vw;
     }
 }
 
 @media (min-width:1440px) {
     .qr-code-reader {
-        width: 60vw;
-        margin: 1vw 0;
+        margin: 6vw 20vw;
     }
 }
+
 
 .qr-code-reader-title {
     display: flex;
@@ -38,6 +57,24 @@
     font-weight: bold;
     color: #fff;
     background-color: #4169E1;
+}
+
+@media (min-width:320px) {
+    .qr-code-reader-title-text {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .qr-code-reader-title-text {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .qr-code-reader-title-text {
+        font-size: 4.2vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -63,6 +100,34 @@
     position: absolute;
     border-radius: 5px;
     background-color: #E0FFFF;
+}
+
+@media (min-width:320px) {
+    .shop-manager-home-button {
+        top: 3.8vw;
+        left: -9vw;
+        width: 6.3vw;
+        height: 6.3vw;
+        font-size: 4.8vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-manager-home-button {
+        top: 3.6vw;
+        width: 5.8vw;
+        height: 5.8vw;
+        font-size: 4.3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-manager-home-button {
+        left: -8vw;
+        width: 5vw;
+        height: 5vw;
+        font-size: 3.7vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -104,6 +169,24 @@
     background-color: #4169E1;
     color: #fff;
     margin-top: 0;
+}
+
+@media (min-width:320px) {
+    .qr-code-text {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .qr-code-text {
+        font-size: 3.2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .qr-code-text {
+        font-size: 3vw;
+    }
 }
 
 @media (min-width:768px) {

@@ -44,6 +44,7 @@ Route::prefix('admin')->group(function () {
         Route::post('/new_shop_manager/mail', [AdminMailController::class, 'new_shop_manager_mail'])->name('admin.new_shop_manager.mail');
         Route::get('/mail', [AdminMailController::class, 'index'])->name('admin.mail.index');
         Route::post('/mail/send', [AdminMailController::class, 'mail_all_users'])->name('admin.mail.send');
+        Route::delete('/evaluate/delete/{evaluation_id}', [EvaluationController::class, 'destroy'])->name('admin.evaluate.destroy');
     });
 });
 

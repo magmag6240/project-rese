@@ -45,7 +45,7 @@ class ShopManagerController extends Controller
     public function shop_list()
     {
         $shop_manager_id = Auth::guard('shop_manager')->id();
-        $shops = Shop::with('prefecture', 'genre')->where('shop_manager_id', $shop_manager_id)->paginate(5);
+        $shops = Shop::with('prefecture', 'genre')->where('shop_manager_id', $shop_manager_id)->paginate(3);
         return view('shop_manager/shop_list', compact('shops'));
     }
 

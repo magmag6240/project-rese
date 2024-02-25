@@ -25,43 +25,53 @@
                 </div>
                 <p class="shop-text">{{$shop_detail->shop_detail}}</p>
                 <div class="shop-evaluate-content">
-                    @if(empty($evaluation_self))
-                    <a class="shop-evaluate-link" href="{{ route('evaluate.index', ['shop_id' => $shop_detail->id]) }}">口コミを投稿する</a>
+                    @if(Auth::guard('web')->check())
+                        @if(empty($evaluation_self))
+                        <a class="shop-evaluate-link" href="{{ route('evaluate.index', ['shop_id' => $shop_detail->id]) }}">
+                            口コミを投稿する
+                        </a>
+                        @endif
+                    @endif
                     <p class="shop-evaluate-title">全ての口コミ情報</p>
-                    @foreach($evaluation as $evaluate)
-                    <div class="shop-evaluate-all">
-                        <div class="shop-evaluate-detail">
-                            <div class="shop-evaluate-star">
-                                <span class="star5_rating" data-rate="{{ $evaluate->star_id }}"></span>
-                            </div>
-                            <p class="shop-evaluate-comments">{{ $evaluate->comments }}</p>
-                        </div>
-                    </div>
-                    @endforeach
-                    @else
-                    <p class="shop-evaluate-title">全ての口コミ情報</p>
-                    @foreach($evaluation as $evaluate)
-                    <div class="shop-evaluate-all">
-                        @if($evaluate->id === $evaluation_self->id)
-                        <div class="shop-evaluate-edit">
-                            <a class="shop-evaluate-edit-link" href="{{ route('evaluate.edit', ['evaluation_id' => $evaluation_self->id] )}}">
+                    @if(!empty($evaluation))
+                        @foreach($evaluation as $evaluate)
+                        <div class="shop-evaluate-all">
+                            @if(Auth::guard('web')->check())
+                            @if($evaluate->id === optional($evaluation_self)->id)
+                            <div class="shop-evaluate-edit">
+                                <a class="shop-evaluate-edit-link" href="{{ route('evaluate.edit', ['evaluation_id' => $evaluation_self->id] )}}">
                                 口コミを編集
-                            </a>
-                            <form class="shop-evaluate-delete-form" action="{{ route('evaluate.destroy', ['evaluation_id' => $evaluation_self->id] )}}" method="post">
+                                </a>
+                                <form class="shop-evaluate-delete-form" action="{{ route('evaluate.destroy', ['evaluation_id' => $evaluation_self->id] )}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="shop-evaluate-delete" type="submit">
+                                        <a class="shop-evaluate-delete-link">口コミを削除</a>
+                                    </button>
+                                </form>
+                            </div>
+                            @endif
+                            @endif
+                            @if (Auth::guard('admin')->check())
+                            <form class="shop-evaluate-delete-form" action="{{ route('admin.evaluate.destroy', ['evaluation_id' => $evaluate->id] )}}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button class="shop-evaluate-delete" type="submit"><a class="shop-evaluate-delete-link">口コミを削除</a></button>
+                                <button class="shop-evaluate-delete" type="submit">
+                                    <a class="shop-evaluate-delete-link">口コミを削除</a>
+                                </button>
                             </form>
-                        </div>
-                        @endif
-                        <div class="shop-evaluate-detail">
-                            <div class="shop-evaluate-star">
-                                <span class="star5_rating" data-rate="{{ $evaluate->star_id }}"></span>
+                            @endif
+                            <div class="shop-evaluate-detail">
+                                <div class="shop-evaluate-star">
+                                    <span class="star5_rating" data-rate="{{ $evaluate->star_id }}"></span>
+                                </div>
+                                <p class="shop-evaluate-comments">{{ $evaluate->comments }}</p>
+                                @if(!empty($evaluate->image_url))
+                                <img class="shop-evaluate-img" src="/storage/evaluations/{{ $evaluate->image_url }}" alt="">
+                                @endif
                             </div>
-                            <p class="shop-evaluate-comments">{{ $evaluate->comments }}</p>
                         </div>
-                    </div>
-                    @endforeach
+                        @endforeach
                     @endif
                 </div>
             </div>

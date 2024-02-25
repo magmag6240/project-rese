@@ -13,14 +13,10 @@
     </div>
     <form class="form" method="post" action="{{ route('shop_manager.mail.send') }}">
         @csrf
-        <table class="form-table">
-            <tr class="form-table-tr">
-                <td class="form-table-title">メール内容</td>
-                <td class="form-table-td">
-                    <textarea class="form-textarea" name="contents" id="contents" cols="30" rows="20" placeholder="Message"></textarea>
-                </td>
-            </tr>
-        </table>
+        <div class="form-content">
+            <p class="form-title">メール内容</p>
+            <textarea class="form-textarea" name="contents" id="contents" cols="30" rows="15" placeholder="Message"></textarea>
+        </div>
         <button class="form-button-submit" type="submit">送信</button>
     </form>
 </div>

@@ -17,9 +17,9 @@
 
         function setup() {
             pixelDensity(1);
-            createCanvas(640, 550);
+            createCanvas(280, 240);
             capture = createCapture(VIDEO);
-            capture.size(640, 480);
+            capture.size(280, 200);
             capture.hide();
         }
 
