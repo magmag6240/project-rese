@@ -4,9 +4,15 @@
     text-align: left;
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .shop-info-edit {
         flex-direction: column;
+        padding: 1.9vw 3vw;
+    }
+}
+
+@media (min-width:768px) {
+    .shop-info-edit {
         padding: 4vw 10vw;
     }
 }
@@ -15,7 +21,7 @@
     .shop-info-edit {
         flex-direction: row;
         justify-content: space-between;
-        padding: 3vw 4vw;
+        padding: 3vw 7vw;
     }
 }
 
@@ -23,7 +29,7 @@
     .shop-info-edit {
         flex-direction: row;
         justify-content: space-between;
-        padding: 2vw 6vw;
+        padding: 2vw 8vw;
     }
 }
 
@@ -33,10 +39,30 @@
     background-color: #4169E1;
 }
 
+@media (min-width:320px) {
+    .shop-edit-contents {
+        height: 500px;
+        padding: 2vw 5vw;
+        margin-bottom: 10vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-edit-contents {
+        height: 540px;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-edit-contents {
+        height: 570px;
+    }
+}
+
 @media (min-width:768px) {
     .shop-edit-contents {
         height: 83vw;
-        padding: 2vw 5vw;
+        margin-bottom: 5vw;
     }
 }
 
@@ -44,12 +70,15 @@
     .shop-edit-contents {
         height: 61vw;
         padding: 1.2vw 1.8vw;
+        margin-right: 5vw;
+        margin-bottom: 0;
     }
 }
 
 @media (min-width:1440px) {
     .shop-edit-contents {
         height: 49vw;
+        margin-right: 4vw;
         padding: 1vw 3vw;
     }
 }
@@ -66,6 +95,19 @@
     position: relative;
     color: #fff;
     background-color: #4169E1;
+}
+
+@media (min-width:320px) {
+    .shop-edit-title-text {
+        font-size: 5vw;
+        left: 15vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-edit-title-text {
+        font-size: 4.5vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -94,6 +136,30 @@
     border: none;
     border-radius: 5px;
     background-color: #E0FFFF;
+}
+
+@media (min-width:320px) {
+    .shop-list-button {
+        top: 4vw;
+        height: 6.3vw;
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-list-button {
+        top: 3.8vw;
+        height: 6vw;
+        font-size: 4.3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-list-button {
+        top: 3.7vw;
+        height: 5.5vw;
+        font-size: 3.8vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -139,10 +205,16 @@
     border: none;
 }
 
+@media (min-width:320px) {
+    .edit-table-td {
+        height: 18vw;
+        padding: 0 1vw;
+    }
+}
+
 @media (min-width:768px) {
     .edit-table-td {
         height: 10vw;
-        padding: 0 1vw;
     }
 }
 
@@ -189,6 +261,26 @@
     color: #fff;
 }
 
+@media (min-width:320px) {
+    .edit-table-title {
+        width: 40vw;
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .edit-table-title {
+        width: 35vw;
+        font-size: 3.7vw;
+    }
+}
+
+@media (min-width:425px) {
+    .edit-table-title {
+        font-size: 3.2vw;
+    }
+}
+
 @media (min-width:768px) {
     .edit-table-title {
         font-size: 2vw;
@@ -215,6 +307,16 @@
     border: none;
     outline: none;
     border-radius: 5px;
+}
+
+@media (min-width:320px) {
+    .shop-name,
+    .shop-area,
+    .shop-genre,
+    .shop-image-url,
+    .shop-detail {
+        padding: 1vw 2vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -247,6 +349,22 @@
     }
 }
 
+@media (min-width:320px) {
+    .shop-name,
+    .shop-image-url,
+    .shop-detail {
+        width: 40vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-name,
+    .shop-image-url,
+    .shop-detail {
+        width: 47vw;
+    }
+}
+
 @media (min-width:768px) {
     .shop-name,
     .shop-image-url,
@@ -275,6 +393,29 @@
 .shop-genre {
     position: relative;
     appearance: none;
+}
+
+@media (min-width:320px) {
+    .shop-area,
+    .shop-genre {
+        font-size: 4vw;
+        width: 40vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-area,
+    .shop-genre {
+        font-size: 3.5vw;
+        width: 47vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-area,
+    .shop-genre {
+        font-size: 3.2vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -313,6 +454,31 @@
     font-weight: 900;
     content: '\f107';
     color: #d4d3d3;
+}
+
+@media (min-width:320px) {
+    .shop-select-area::after,
+    .shop-select-genre::after {
+        font-size: 6vw;
+        left: 34vw;
+        top: 5.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-select-area::after,
+    .shop-select-genre::after {
+        font-size: 5.6vw;
+        left: 41vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-select-area::after,
+    .shop-select-genre::after {
+        font-size: 5.3vw;
+        left: 42vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -355,6 +521,37 @@
     border-radius: 5px;
 }
 
+@media (min-width:320px) {
+    .form-error-shop-name,
+    .form-error-prefecture,
+    .form-error-genre,
+    .form-error-shop-detail,
+    .form-error-image-url {
+        font-size: 3.5vw;
+        padding: 0 1vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-error-shop-name,
+    .form-error-prefecture,
+    .form-error-genre,
+    .form-error-shop-detail,
+    .form-error-image-url {
+        font-size: 3.2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-error-shop-name,
+    .form-error-prefecture,
+    .form-error-genre,
+    .form-error-shop-detail,
+    .form-error-image-url {
+        font-size: 3vw;
+    }
+}
+
 @media (min-width:768px) {
     .form-error-shop-name,
     .form-error-prefecture,
@@ -388,108 +585,205 @@
     }
 }
 
+@media (min-width:320px) {
+    .form-error-shop-name {
+        top: 13vw;
+        left: -40vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-error-shop-name {
+        left: -36vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-error-shop-name {
+        left: -35vw;
+    }
+}
+
 @media (min-width:768px) {
     .form-error-shop-name {
         top: 6.5vw;
-        left: -20vw;
+        left: -21vw;
     }
 }
 
 @media (min-width:1024px) {
     .form-error-shop-name {
         top: 5.5vw;
-        left: -17vw;
+        left: -11vw;
     }
 }
 
 @media (min-width:1440px) {
     .form-error-shop-name {
         top: 4vw;
-        left: -15vw;
+        left: -11vw;
+    }
+}
+
+@media (min-width:320px) {
+    .form-error-prefecture {
+        top: 14vw;
+        left: -40vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-error-prefecture {
+        left: -36vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-error-prefecture {
+        left: -35vw;
     }
 }
 
 @media (min-width:768px) {
     .form-error-prefecture {
         top: 7.5vw;
-        left: -20vw;
+        left: -21vw;
     }
 }
 
 @media (min-width:1024px) {
     .form-error-prefecture {
         top: 6vw;
-        left: -17vw;
+        left: -11vw;
     }
 }
 
 @media (min-width:1440px) {
     .form-error-prefecture {
         top: 4vw;
-        left: -15vw;
+        left: -11vw;
+    }
+}
+
+@media (min-width:320px) {
+    .form-error-genre {
+        top: 13vw;
+        left: -40vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-error-genre {
+        left: -36vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-error-genre {
+        left: -35vw;
     }
 }
 
 @media (min-width:768px) {
     .form-error-genre {
         top: 7.5vw;
-        left: -20vw;
+        left: -21vw;
     }
 }
 
 @media (min-width:1024px) {
     .form-error-genre {
         top: 6vw;
-        left: -17vw;
+        left: -11vw;
     }
 }
 
 @media (min-width:1440px) {
     .form-error-genre {
         top: 4vw;
-        left: -15vw;
+        left: -11vw;
+    }
+}
+
+@media (min-width:320px) {
+    .form-error-shop-detail {
+        top: 30vw;
+        left: -40vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-error-shop-detail {
+        top: 26vw;
+        left: -36vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-error-shop-detail {
+        top: 23vw;
+        left: -35vw;
     }
 }
 
 @media (min-width:768px) {
     .form-error-shop-detail {
         top: 12vw;
-        left: -20vw;
+        left: -21vw;
     }
 }
 
 @media (min-width:1024px) {
     .form-error-shop-detail {
-        top: 9vw;
-        left: -17vw;
+        top: 11vw;
+        left: -11vw;
     }
 }
 
 @media (min-width:1440px) {
     .form-error-shop-detail {
         top: 7vw;
-        left: -15vw;
+        left: -11vw;
+    }
+}
+
+@media (min-width:320px) {
+    .form-error-image-url {
+        top: 13vw;
+        left: -40vw;
+    }
+}
+
+@media (min-width:375px) {
+    .form-error-image-url {
+        left: -36vw;
+    }
+}
+
+@media (min-width:425px) {
+    .form-error-image-url {
+        left: -35vw;
     }
 }
 
 @media (min-width:768px) {
     .form-error-image-url {
         top: 7.5vw;
-        left: -20vw;
+        left: -21vw;
     }
 }
 
 @media (min-width:1024px) {
     .form-error-image-url {
         top: 6vw;
-        left: -17vw;
+        left: -11vw;
     }
 }
 
 @media (min-width:1440px) {
     .form-error-image-url {
         top: 4vw;
-        left: -15vw;
+        left: -11vw;
     }
 }
 
@@ -503,11 +797,35 @@
     cursor: pointer;
 }
 
+@media (min-width:320px) {
+    .information-update-button {
+        font-size: 4vw;
+        left: -5vw;
+        top: 416px;
+        width: 94vw;
+        padding: 2vw;
+    }
+}
+
+@media (min-width:375px) {
+    .information-update-button {
+        font-size: 3.7vw;
+        top: 450px;
+    }
+}
+
+@media (min-width:425px) {
+    .information-update-button {
+        font-size: 3.3vw;
+        top: 470px;
+    }
+}
+
 @media (min-width:768px) {
     .information-update-button {
         left: -5vw;
         top: 66.4vw;
-        width: 80vw;
+        width: 80.1vw;
         padding: 2vw;
         font-size: 2vw;
     }
@@ -517,7 +835,7 @@
     .information-update-button {
         left: -1.7vw;
         top: 49.5vw;
-        width: 45vw;
+        width: 43.4vw;
         padding: 1.3vw;
         font-size: 1.4vw;
     }
@@ -527,7 +845,7 @@
     .information-update-button {
         left: -3vw;
         top: 39.3vw;
-        width: 41.7vw;
+        width: 43.3vw;
         padding: 1vw;
         font-size: 1.2vw;
     }
@@ -537,6 +855,13 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+}
+
+@media (min-width:320px) {
+    .shop-edit-confirm {
+        margin: 5vw 0;
+        width: 90vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -549,14 +874,7 @@
 @media (min-width:1024px) {
     .shop-edit-confirm {
         margin: 0;
-        width: 45vw;
-    }
-}
-
-@media (min-width:1440px) {
-    .shop-edit-confirm {
-        margin: 0;
-        width: 43vw;
+        width: 60vw;
     }
 }
 
@@ -569,6 +887,12 @@
     font-weight: 900;
     content: '\f103';
     color: #0000CD;
+}
+
+@media (min-width:320px) {
+    .shop-info-change::before {
+        font-size: 7vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -601,6 +925,13 @@
     border-radius: 10px;
 }
 
+@media (min-width:320px) {
+    .shop-info-before,
+    .shop-info-after {
+        padding: 2.2vw 3.5vw;
+    }
+}
+
 @media (min-width:768px) {
     .shop-info-before, .shop-info-after {
         padding: 2.2vw 3.5vw;
@@ -625,6 +956,20 @@
     font-weight: bold;
 }
 
+@media (min-width:320px) {
+    .shop-before-title,
+    .shop-after-title {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-before-title,
+    .shop-after-title {
+        font-size: 4.2vw;
+    }
+}
+
 @media (min-width:768px) {
     .shop-before-title,
     .shop-after-title {
@@ -646,7 +991,7 @@
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .shop-confirm-table {
         margin: 2vw 0;
     }
@@ -671,6 +1016,15 @@
     border: none;
     color: #fff;
     background-color: #5287e9;
+}
+
+@media (min-width:320px) {
+    .shop-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-title,
+    .confirm-table-td {
+        font-size: 3.5vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -700,28 +1054,32 @@
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .confirm-table-title {
         padding: 0.5vw 1vw;
+        width: 40vw;
+    }
+}
+
+@media (min-width:768px) {
+    .confirm-table-title {
         width: 22vw;
     }
 }
 
 @media (min-width:1024px) {
     .confirm-table-title {
-        padding: 0.5vw 1vw;
-        width: 12vw;
+        width: 15vw;
     }
 }
 
 @media (min-width:1440px) {
     .confirm-table-title {
-        padding: 0.5vw 1vw;
         width: 12.5vw;
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .confirm-table-td {
         padding: 0.5vw 1vw;
         width: 46vw;

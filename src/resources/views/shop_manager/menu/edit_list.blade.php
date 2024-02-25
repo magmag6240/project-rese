@@ -11,9 +11,9 @@
     <table class="menu-list-table">
         <tr class="menu-list-tr">
             <th class="menu-list-th">id</th>
-            <th class="menu-list-th">Menu name</th>
+            <th class="menu-list-th">Name</th>
             <th class="menu-list-th">Price</th>
-            <th class="menu-list-th">Menu Introduction</th>
+            <th class="menu-list-th">Detail</th>
         </tr>
         @foreach($menu as $menu)
         <tr class="menu-list-tr">
@@ -26,11 +26,11 @@
             <td class="menu-list-td">
                 {{$menu->price}}
             </td>
-            <td class="menu-list-td">
+            <td class="menu-list-td-detail">
                 {{$menu->menu_detail}}
             </td>
             <td class="menu-list-td">
-                <a class="menu-edit-link" href="{{route('shop_manager.menu.edit', ['menu_id' => $menu->id])}}">コースプラン内容変更</a>
+                <a class="menu-edit-link" href="{{route('shop_manager.menu.edit', ['menu_id' => $menu->id])}}">内容変更</a>
             </td>
         </tr>
         @endforeach

@@ -1,27 +1,47 @@
+
 .shop-manager-menu-list {
     display: inline-flex;
     flex-direction: column;
     border-radius: 10px;
-    width: 90vw;
     background-color: #fff;
+}
+
+@media (min-width:320px) {
+    .shop-manager-menu-list {
+        width: 95vw;
+        padding: 1.9vw 0;
+        margin: 17vw 0;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-manager-menu-list {
+        width: 90vw;
+        padding: 1.9vw 0;
+        margin: 16vw 0;
+    }
 }
 
 @media (min-width:768px) {
     .shop-manager-menu-list {
-        padding: 1.2vw 0;
-        margin: 3vw 0;
+        width: 80vw;
+        padding: 1.9vw 0;
+        margin: 5vw 0;
     }
 }
 
 @media (min-width:1024px) {
     .shop-manager-menu-list {
-        padding: 1.2vw 0;
-        margin: 3vw 0;
+        width: 70vw;
+        padding: 1.5vw 0;
+        margin: 4vw 0;
     }
 }
 
+
 @media (min-width:1440px) {
     .shop-manager-menu-list {
+        width: 60vw;
         padding: 1.2vw 0;
         margin: 3vw 0;
     }
@@ -29,93 +49,258 @@
 
 .menu-list-title {
     position: relative;
-    top: -2.5vw;
-    font-size: 1.7vw;
     font-weight: bold;
-    padding: 1.5vw 0;
-    width: 90vw;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background-color: #4169E1;
     color: #fff;
 }
 
-@media (min-width:768px) {}
+@media (min-width:320px) {
+    .menu-list-title {
+        top: -4.8vw;
+        font-size: 5vw;
+        padding: 2vw 0;
+        width: 95vw;
+    }
+}
 
-@media (min-width:1024px) {}
+@media (min-width:375px) {
+    .menu-list-title {
+        top: -5vw;
+        font-size: 4.5vw;
+        padding: 2vw 0;
+        width: 90vw;
+    }
+}
 
-@media (min-width:1440px) {}
+@media (min-width:768px) {
+    .menu-list-title {
+        top: -3.6vw;
+        font-size: 2.7vw;
+        padding: 2vw 0;
+        width: 80vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-list-title {
+        top: -2.8vw;
+        font-size: 2vw;
+        padding: 1.7vw 0;
+        width: 70vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-list-title {
+        top: -2.5vw;
+        font-size: 1.7vw;
+        padding: 1.5vw 0;
+        width: 60vw;
+    }
+}
 
 .menu-list-table {
     align-self: center;
     border-bottom-style: hidden;
-    background-color: #fff;
-    margin-bottom: 1vw;
-}
-
-@media (min-width:768px) {}
-
-@media (min-width:1024px) {}
-
-@media (min-width:1440px) {}
-
-.menu-list-th {
-    padding: 1vw 0;
-    font-size: 1.2vw;
-    background-color: #fff;
-}
-
-@media (min-width:768px) {}
-
-@media (min-width:1024px) {}
-
-@media (min-width:1440px) {}
-
-.menu-list-tr {
-    border: 0.15vw solid #c0c0c0;
     border-right-style: hidden;
     border-left-style: hidden;
-}
-
-@media (min-width:768px) {}
-
-@media (min-width:1024px) {}
-
-@media (min-width:1440px) {}
-
-.menu-list-td {
     background-color: #fff;
-    padding: 1vw 2.5vw;
-    font-size: 1vw;
 }
 
-@media (min-width:768px) {}
+@media (min-width:320px) {
+    .menu-list-table {
+        margin: 0 2vw 3vw 2vw;
+    }
+}
 
-@media (min-width:1024px) {}
+@media (min-width:768px) {
+    .menu-list-table {
+        margin-bottom: 2vw;
+    }
+}
 
-@media (min-width:1440px) {}
+@media (min-width:1024px) {
+    .menu-list-table {
+        margin-bottom: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-list-table {
+        margin-bottom: 1vw;
+    }
+}
+
+.menu-list-th,
+.menu-list-tr,
+.menu-list-td,
+.menu-list-td-detail {
+    border-right-style: hidden;
+    border-left-style: hidden;
+    background-color: #fff;
+}
+
+@media (min-width:320px) {
+    .menu-list-th {
+        padding: 2vw 0;
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:320px) {
+    .menu-list-th {
+        font-size: 3.3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .menu-list-th {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:768px) {
+    .menu-list-th {
+        padding: 2vw 0;
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-list-th {
+        padding: 1.5vw 0;
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-list-th {
+        padding: 1vw 0;
+        font-size: 1.2vw;
+    }
+}
+
+@media (min-width:320px) {
+    .menu-list-tr {
+        border: 0.3vw solid #c0c0c0;
+    }
+}
+
+@media (min-width:768px) {
+    .menu-list-tr {
+        border: 0.25vw solid #c0c0c0;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-list-tr {
+        border: 0.2vw solid #c0c0c0;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-list-tr {
+        border: 0.15vw solid #c0c0c0;
+    }
+}
 
 .menu-edit-link {
+    background-color: #fff;
     text-decoration: none;
-    color: #0000FF;
+}
+
+
+@media (min-width:320px) {
+    .menu-list-td {
+        padding: 1.5vw 0;
+        width: 15vw;
+        font-size: 3.4vw;
+    }
+
+    .menu-list-td-detail {
+        word-break: keep-all;
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .menu-list-td, .menu-list-td-detail {
+        font-size: 3.2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .menu-list-td, .menu-list-td-detail {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:768px) {
+    .menu-list-td, .menu-list-td-detail {
+        font-size: 1.9vw;
+    }
+
+    .menu-list-td {
+        width: 16vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .menu-list-td, .menu-list-td-detail {
+        font-size: 1.4vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .menu-list-td, .menu-list-td-detail {
+        font-size: 1vw;
+    }
 }
 
 .shop-list-button {
     align-self: center;
     border: none;
-    padding: 0.5vw 0;
-    margin: 1vw;
-    font-size: 1vw;
-    width: 5vw;
     border-radius: 5px;
     background-color: #4169E1;
 }
 
-@media (min-width:768px) {}
+@media (min-width:320px) {
+    .shop-list-button {
+        padding: 1.5vw 0;
+        width: 13vw;
+        font-size: 3vw;
+        margin-top: 3vw;
+    }
+}
 
-@media (min-width:1024px) {}
+@media (min-width:768px) {
+    .shop-list-button {
+        padding: 0.8vw 0;
+        width: 8vw;
+        font-size: 1.9vw;
+        margin-top: 2vw;
+    }
+}
 
-@media (min-width:1440px) {}
+@media (min-width:1024px) {
+    .shop-list-button {
+        padding: 0.6vw 0;
+        width: 6.5vw;
+        font-size: 1.3vw;
+        margin-top: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-list-button {
+        padding: 0.5vw 0;
+        width: 5vw;
+        font-size: 1vw;
+        margin-top: 1vw;
+    }
+}
 
 .shop-list-link {
     text-decoration: none;

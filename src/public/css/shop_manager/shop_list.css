@@ -148,7 +148,7 @@
     }
 }
 
-@media (min-width:320px) {
+@media (min-width:375px) {
     .shop-list-th {
         font-size: 3.3vw;
     }
@@ -236,7 +236,7 @@
     }
 }
 
-@media (min-width:320px) {
+@media (min-width:375px) {
     .shop-list-td {
         font-size: 3.2vw;
     }

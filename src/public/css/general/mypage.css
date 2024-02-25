@@ -1,9 +1,10 @@
+
 .mypage {
     display: flex;
     flex-direction: column;
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .mypage-contents {
         display: flex;
         flex-direction: column;
@@ -14,24 +15,35 @@
 
 @media (min-width:1024px) {
     .mypage-contents {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         position: relative;
-        padding: 0 6vw 5vw 6vw;
-    }
-}
-
-@media (min-width:1440px) {
-    .mypage-contents {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        padding: 0 6vw 5vw 6vw;
     }
 }
 
 .user-name {
     font-weight: bold;
+}
+
+@media (min-width:320px) {
+    .user-name {
+        font-size: 5vw;
+        margin: 7vw 0;
+    }
+}
+
+@media (min-width:375px) {
+    .user-name {
+        font-size: 4.5vw;
+        margin: 6vw 0;
+    }
+}
+
+@media (min-width:425px) {
+    .user-name {
+        font-size: 4.2vw;
+        margin: 5vw 0;
+    }
 }
 
 @media (min-width:768px) {
@@ -55,10 +67,22 @@
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .reserve-list {
         position: absolute;
-        width: 70vw;
+        width: 85vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-list {
+        width: 82vw;
+    }
+}
+
+@media (min-width:425px) {
+    .reserve-list {
+        width: 77vw;
     }
 }
 
@@ -79,6 +103,28 @@
 .reserve-list-title, .like-shop-title {
     font-weight: bold;
     text-align: left;
+}
+
+@media (min-width:320px) {
+    .reserve-list-title,
+    .like-shop-title {
+        font-size: 4.5vw;
+        margin-bottom: 1vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-list-title,
+    .like-shop-title {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:425px) {
+    .reserve-list-title,
+    .like-shop-title {
+        font-size: 3.5vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -108,8 +154,10 @@
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
-@media (min-width:768px) {
-    .reserve-detail, .reserve-null,.reserve-history-null {
+@media (min-width:320px) {
+    .reserve-detail,
+    .reserve-null,
+    .reserve-history-null {
         padding: 1vw 3vw;
     }
 }
@@ -139,6 +187,24 @@
     background-color: #4169E1;
 }
 
+@media (min-width:320px) {
+    .reserve-number {
+        font-size: 4.3vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-number {
+        font-size: 3.8vw;
+    }
+}
+
+@media (min-width:425px) {
+    .reserve-number {
+        font-size: 3.5vw;
+    }
+}
+
 @media (min-width:768px) {
     .reserve-number {
         font-size: 2vw;
@@ -164,6 +230,27 @@
     color: #fff;
 }
 
+@media (min-width:320px) {
+    .reserve-delete-button::before,
+    .reserve-number::before {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-delete-button::before,
+    .reserve-number::before {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:425px) {
+    .reserve-delete-button::before,
+    .reserve-number::before {
+        font-size: 3.5vw;
+    }
+}
+
 @media (min-width:768px) {
     .reserve-delete-button::before, .reserve-number::before {
         font-size: 2.5vw;
@@ -186,7 +273,7 @@
     content: '\f017';
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .reserve-number::before {
         margin-right: 2.5vw;
     }
@@ -213,8 +300,7 @@
     border: none;
 }
 
-
-@media (min-width:768px) {
+@media (min-width:320px) {
     .reserve-table {
         margin-left: 2.5vw;
     }
@@ -238,9 +324,33 @@
     text-align: left;
 }
 
+@media (min-width:320px) {
+    .reserve-table,
+    .reserve-table-tr,
+    .reserve-table-td {
+        padding: 0.5vw 0;
+        font-size: 3.6vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-table,
+    .reserve-table-tr,
+    .reserve-table-td {
+        font-size: 3.3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .reserve-table,
+    .reserve-table-tr,
+    .reserve-table-td {
+        font-size: 3vw;
+    }
+}
+
 @media (min-width:768px) {
     .reserve-table, .reserve-table-tr, .reserve-table-td {
-        padding: 0.5vw 0;
         font-size: 2.2vw;
     }
 }
@@ -259,9 +369,15 @@
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .reserve-table-td {
-        width: 25vw;
+        width: 30vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-table-td {
+        width: 27vw;
     }
 }
 
@@ -288,6 +404,21 @@
     padding: 0.5vw 0;
     font-weight: bold;
     background-color: #fff;
+}
+
+@media (min-width:320px) {
+    .reserve-edit-button {
+        margin: 2vw 0;
+        width: 30vw;
+        font-size: 3.6vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-edit-button {
+        width: 30vw;
+        font-size: 3.2vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -318,6 +449,13 @@
     text-decoration: none;
 }
 
+@media (min-width:320px) {
+    .reserve-null,
+    .reserve-history-null {
+        margin: 3vw 6vw;
+    }
+}
+
 @media (min-width:768px) {
     .reserve-null, .reserve-history-null {
         margin: 3vw 6vw;
@@ -336,6 +474,13 @@
     }
 }
 
+@media (min-width:320px) {
+    .reserve-null-text,
+    .reserve-history-null-text {
+        font-size: 4.3vw;
+    }
+}
+
 @media (min-width:768px) {
     .reserve-null-text, .reserve-history-null-text {
         font-size: 2.5vw;
@@ -351,6 +496,14 @@
 @media (min-width:1440px) {
     .reserve-null-text, .reserve-history-null-text {
         font-size: 1.5vw;
+    }
+}
+
+@media (min-width:320px) {
+    .like-shop {
+        width: 80vw;
+        position: absolute;
+        top: 400px;
     }
 }
 
