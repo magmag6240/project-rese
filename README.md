@@ -163,13 +163,15 @@ DB_PASSWORD=laravel_pass
 
 | id | name | email | password |
 | ---- | ---- | ---- | ---- |
-| 1 | 管理者 | admin@admin.admin | password |
-
+| 1 | 管理者 | admin@admin.admin | password |  
+  
 
 ## 店舗新規登録時のCSVファイル記載について（店舗代表者のみ）
 
-店舗代表者は店舗情報の新規登録の際、フォームの入力と、CSVファイルからのデータ抽出のいずれかで新規登録を行うことができます。
+店舗代表者は店舗情報の新規登録の際、  
+フォームの入力と、CSVファイルからのデータ抽出のいずれかで新規登録を行うことができます。
 
-CSVファイルの記載方法は以下の図を参考とし、正しく記載してください。（正しく記載がなされていない場合、データを抽出することができないため注意して下さい）
+CSVファイルの記載方法は以下の図を参考とし、正しく記載してください。  
+（正しく記載がなされていない場合、データを抽出することができないため注意して下さい）
 
-<img width="743" alt="home" src="/Users/mai/coachtech/laravel/project-rese/Rese CSV.png">
+<img width="743" alt="home" src="Rese CSV.png">
