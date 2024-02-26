@@ -28,10 +28,12 @@
 | 飲食店お気に入り追加 | 店舗代表者登録（管理者からの招待メールからのみ可能） | 店舗代表者登録用メール作成 |
 | 飲食店お気に入り削除 | 会員へのメール送信（以前店舗に予約があった一般会員のみ） | 店舗代表者一覧取得 |
 | 飲食店予約情報追加 | 店舗ページの新規作成 | 一般会員へのメール送信 |
-| 飲食店予約情報削除 | 店舗ページの編集 |  |
+| 飲食店予約情報削除 | 店舗ページの編集 | 全利用者の口コミの削除機能 |
 | エリアで検索する | 店舗の予約情報確認 |  |
 | ジャンルで検索する | 来店時予約照会（QRコードの読み取り） |  |
 | 店名で検索する |  |  |
+| 店舗の並び替え機能 |  |  |
+| 飲食店の口コミ登録・編集・削除（自身の口コミのみ） |  |  |
 
 
 ## 使用技術
@@ -46,16 +48,17 @@
 
 ## テーブル設計
 
-![table user admin](https://github.com/magmag6240/project-rese/assets/139316621/6aad6d20-51de-4a50-8730-a1f80191eaee)
-![table shop_manager shop](https://github.com/magmag6240/project-rese/assets/139316621/338f2334-2fbb-4b47-80cf-022066cd5d25)
-![table reservation menu business_hour business_hour_shop](https://github.com/magmag6240/project-rese/assets/139316621/187c1960-9c98-4e10-a075-9c3cdedbf3a2)
-![table prefecture genre](https://github.com/magmag6240/project-rese/assets/139316621/a68303a1-0e1a-4246-a606-4bbea596ad4f)
-![table evaluation star like](https://github.com/magmag6240/project-rese/assets/139316621/bf6ff5b4-b738-440b-8f6c-cb5ace08eb37)
+<img width="650" alt="table project-rese" src="rese table user admin.png">
+<img width="650" alt="table project-rese" src="rese table genre.png">
+<img width="650" alt="table project-rese" src="rese table like star evaluations business_hour_shop.png">
+<img width="650" alt="table project-rese" src="rese table reservations menus business_hour.png">
+<img width="650" alt="table project-rese" src="rese table shop_manager shop.png">
+<img width="650" alt="table project-rese" src="rese table sort.png">
 
 
 ## ER図
 
-<img width="650" alt="er project-rese" src="https://github.com/magmag6240/project-rese/assets/139316621/c708a90d-cc9d-4595-a846-f7f3a9c18a64">
+<img width="650" alt="er project-rese" src="Rese ER.png">
 
 
 
