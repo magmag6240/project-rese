@@ -145,9 +145,6 @@
                         <button class="shop-detail-button">
                             <a class="shop-detail-link" href="{{route('reserve.index', ['shop_id' => $item->shop->id])}}">詳しく見る</a>
                         </button>
-                        <button class="evaluate-button">
-                            <a class="shop-evaluate-link" href="{{route('evaluate', ['shop_id' => $item->id])}}">評価詳細</a>
-                        </button>
                         <div class="like">
                             @if($item->is_liked())
                             <a class="unlike-link" href="{{ route('unlike', ['shop_id' => $item->shop->id]) }}"></a>

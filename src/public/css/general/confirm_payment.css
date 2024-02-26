@@ -8,9 +8,15 @@
     box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .confirm-payment {
         padding: 3vw 5vw;
+        margin: 7vw 2vw;
+    }
+}
+
+@media (min-width:768px) {
+    .confirm-payment {
         margin-top: 7vw;
     }
 }
@@ -32,6 +38,24 @@
 .confirm-title {
     font-weight: bold;
     background-color: #4169E1;
+}
+
+@media (min-width:320px) {
+    .confirm-title {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .confirm-title {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .confirm-title {
+        font-size: 4vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -56,10 +80,29 @@
     background-color: #4169E1;
 }
 
+@media (min-width:320px) {
+    .confirm-text {
+        word-break: keep-all;
+        font-size: 3.7vw;
+        padding-top: 1.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .confirm-text {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .confirm-text {
+        font-size: 3vw;
+    }
+}
+
 @media (min-width:768px) {
     .confirm-text {
         font-size: 1.9vw;
-        padding-top: 1.5vw;
     }
 }
 
@@ -84,6 +127,33 @@
     border: none;
     color: #fff;
     background-color: #5287e9;
+}
+
+@media (min-width:320px) {
+    .reserve-confirm,
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-td {
+        font-size: 3.7vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-confirm,
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-td {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .reserve-confirm,
+    .reserve-confirm-table,
+    .confirm-table-tr,
+    .confirm-table-td {
+        font-size: 3vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -119,10 +189,16 @@
     align-self: center;
 }
 
+@media (min-width:320px) {
+    .reserve-confirm {
+        padding: 2vw 5vw;
+        margin: 4vw 0;
+    }
+}
+
 @media (min-width:768px) {
     .reserve-confirm {
         padding: 2vw;
-        margin: 4vw 0;
     }
 }
 
@@ -140,9 +216,15 @@
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .confirm-table-td {
         padding: 1vw 1.5vw;
+        width: 40vw;
+    }
+}
+
+@media (min-width:768px) {
+    .confirm-table-td {
         width: 25vw;
     }
 }
@@ -165,7 +247,7 @@
     background-color: #4169E1;
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .stripe-form {
         margin: 1.5vw;
     }

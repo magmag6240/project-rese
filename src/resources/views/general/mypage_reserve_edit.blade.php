@@ -15,48 +15,61 @@
         <form class="edit-form" action="{{route('reserve.update', ['reserve_id' => $reserve->id])}}" method="post">
             @method('patch')
             @csrf
-            <span class="reserve-date-title">Date</span>
-            <input class="reserve-date" type="date" name="reserve_date" id="reserve_date">
-            <div class="form-error-date">
-                @error('reserve_date')
-                {{ $message }}
-                @enderror
-            </div>
-            <span class="reserve-time-title">Time</span>
-            <label class="reserve-select-time">
-                <select class="reserve-time" name="start_time" id="start_time">
-                    <option value="">選択してください</option>
-                    @foreach($business_hour as $time)
-                    <option value="{{$time}}">{{$time}}</option>
-                    @endforeach
-                </select>
-            </label>
-            <div class="form-error-time">
-                @error('start_time')
-                {{ $message }}
-                @enderror
-            </div>
-            <span class="reserve-number-title">Number</span>
-            <label class="reserve-select-number">
-                <select class="reserve-number" name="number" id="number">
-                    <option value="">選択してください</option>
-                    <option value="1">1人</option>
-                    <option value="2">2人</option>
-                    <option value="3">3人</option>
-                    <option value="4">4人</option>
-                    <option value="5">5人</option>
-                    <option value="6">6人</option>
-                    <option value="7">7人</option>
-                    <option value="8">8人</option>
-                    <option value="9">9人</option>
-                    <option value="10">10人</option>
-                </select>
-            </label>
-            <div class="form-error-number">
-                @error('number')
-                {{ $message }}
-                @enderror
-            </div>
+            <table class="edit-form-table">
+                <tr class="edit-form-table-tr">
+                    <td class="edit-table-title">Date</td>
+                    <td class="edit-table-td">
+                        <input class="reserve-date" type="date" name="reserve_date" id="reserve_date">
+                        <div class="form-error-date">
+                            @error('reserve_date')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </td>
+                </tr>
+                <tr class="edit-form-table-tr">
+                    <td class="edit-table-title">Time</td>
+                    <td class="edit-table-td">
+                        <label class="reserve-select-time">
+                            <select class="reserve-time" id="start_time" name="start_time">
+                                <option value="">選択してください</option>
+                                @foreach($business_hour as $hour)
+                                <option value="{{ $hour }}">{{ $hour }}</option>
+                                @endforeach
+                            </select>
+                        </label>
+                        <div class="form-error-time">
+                            @error('start_time')
+                            {{ $message }}
+                            @enderror
+                    </td>
+                </tr>
+                <tr class="edit-form-table-tr">
+                    <td class="edit-table-title">Number</td>
+                    <td class="edit-table-td">
+                        <label class="reserve-select-number">
+                            <select class="reserve-number" id="number" name="number">
+                                <option value="">選択してください</option>
+                                <option value="1">1人</option>
+                                <option value="2">2人</option>
+                                <option value="3">3人</option>
+                                <option value="4">4人</option>
+                                <option value="5">5人</option>
+                                <option value="6">6人</option>
+                                <option value="7">7人</option>
+                                <option value="8">8人</option>
+                                <option value="9">9人</option>
+                                <option value="10">10人</option>
+                            </select>
+                        </label>
+                        <div class="form-error-number">
+                            @error('number')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </td>
+                </tr>
+            </table>
             @if(session('message'))
             <div class="reserve-edit-alarm">
                 {{ session('message') }}

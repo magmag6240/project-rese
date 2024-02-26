@@ -69,7 +69,7 @@
 
 @media (min-width:320px) {
     .reserve-list {
-        position: absolute;
+        position: relative;
         width: 85vw;
     }
 }
@@ -421,6 +421,13 @@
     }
 }
 
+@media (min-width:425px) {
+    .reserve-edit-button {
+        width: 30vw;
+        font-size: 3vw;
+    }
+}
+
 @media (min-width:768px) {
     .reserve-edit-button {
         margin: 2vw 0;
@@ -456,12 +463,6 @@
     }
 }
 
-@media (min-width:768px) {
-    .reserve-null, .reserve-history-null {
-        margin: 3vw 6vw;
-    }
-}
-
 @media (min-width:1024px) {
     .reserve-null, .reserve-history-null {
         margin: 2vw 4vw;
@@ -478,6 +479,20 @@
     .reserve-null-text,
     .reserve-history-null-text {
         font-size: 4.3vw;
+    }
+}
+
+@media (min-width:375px) {
+    .reserve-null-text,
+    .reserve-history-null-text {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:425px) {
+    .reserve-null-text,
+    .reserve-history-null-text {
+        font-size: 3.7vw;
     }
 }
 
@@ -501,9 +516,8 @@
 
 @media (min-width:320px) {
     .like-shop {
-        width: 80vw;
-        position: absolute;
-        top: 400px;
+        width: 90vw;
+        position: relative;
     }
 }
 
@@ -537,21 +551,14 @@
     text-align: left;
 }
 
+@media (min-width:320px) {
+    .like-shop-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media (min-width:768px) {
-    .like-shop-list {
-        display: flex;
-        flex-flow: row wrap;
-    }
-}
-
-@media (min-width:1024px) {
-    .like-shop-list {
-        display: flex;
-        flex-flow: row wrap;
-    }
-}
-
-@media (min-width:1440px) {
     .like-shop-list {
         display: flex;
         flex-flow: row wrap;
@@ -565,6 +572,20 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0.2vw 0.2vw 1vw 0 #808080;
+}
+
+@media (min-width:320px) {
+    .shop {
+        width: 80%;
+        margin: 4vw 2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop {
+        width: 70%;
+        margin: 3vw 2vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -605,6 +626,27 @@
     font-weight: bold;
 }
 
+@media (min-width:320px) {
+    .shop-name {
+        font-size: 4vw;
+        margin: 1.7vw 2vw 0 2vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-name {
+        font-size: 3.7vw;
+        margin: 1.7vw 2vw 0 2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-name {
+        font-size: 3.5vw;
+        margin: 1.7vw 2vw 0 2vw;
+    }
+}
+
 @media (min-width:768px) {
     .shop-name {
         font-size: 2.5vw;
@@ -623,6 +665,27 @@
     .shop-name {
         font-size: 1.5vw;
         margin: 1vw 1.5vw 0 1.5vw;
+    }
+}
+
+@media (min-width:320px) {
+    .shop-info {
+        font-size: 3.5vw;
+        margin: 0.5vw 2vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-info {
+        font-size: 3.3vw;
+        margin: 0.5vw 2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-info {
+        font-size: 3vw;
+        margin: 0.5vw 2vw;
     }
 }
 
@@ -662,6 +725,33 @@
     cursor: pointer;
 }
 
+@media (min-width:320px) {
+    .shop-detail-button,
+    .evaluate-button {
+        font-size: 3.5vw;
+        padding: 0.8vw 1.6vw;
+        margin: 2vw 0 2vw 2vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-detail-button,
+    .evaluate-button {
+        font-size: 3.2vw;
+        padding: 0.8vw 1.6vw;
+        margin: 2vw 0 2vw 2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-detail-button,
+    .evaluate-button {
+        font-size: 3vw;
+        padding: 0.8vw 1.6vw;
+        margin: 2vw 0 2vw 2vw;
+    }
+}
+
 @media (min-width:768px) {
     .shop-detail-button, .evaluate-button {
         font-size: 1.7vw;
@@ -699,7 +789,7 @@
     background-color: #fff;
 }
 
-@media (min-width:768px) {
+@media (min-width:320px) {
     .like {
         margin-right: 2vw;
     }
@@ -722,6 +812,27 @@
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f004';
+}
+
+@media (min-width:320px) {
+    .like-link::before,
+    .unlike-link::before {
+        font-size: 7vw;
+    }
+}
+
+@media (min-width:375px) {
+    .like-link::before,
+    .unlike-link::before {
+        font-size: 6.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .like-link::before,
+    .unlike-link::before {
+        font-size: 6vw;
+    }
 }
 
 @media (min-width:768px) {
@@ -748,6 +859,13 @@
     position: relative;
 }
 
+@media (min-width:320px) {
+    .like-link,
+    .unlike-link {
+        top: 0;
+    }
+}
+
 @media (min-width:768px) {
     .like-link, .unlike-link {
         top: 1.4vw;
@@ -772,6 +890,12 @@
 
 .like-link::before {
     color: #808080;
+}
+
+@media (min-width:320px) {
+    .js-tab-panel {
+        width: 100%;
+    }
 }
 
 @media (min-width:768px) {
@@ -802,50 +926,57 @@
     padding: 5px 10px;
 }
 
+@media (min-width:320px) {
+    .active_tab, .inactive_tab,
+    .active_content, .inactive_content {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .active_tab,
+    .inactive_tab,
+    .active_content,
+    .inactive_content {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .active_tab,
+    .inactive_tab, .active_content,
+    .inactive_content {
+        font-size: 3vw;
+    }
+}
+
 @media (min-width:768px) {
-    .active_tab {
+    .active_tab, .inactive_tab,
+    .active_content, .inactive_content {
         font-size: 1.8vw;
     }
 }
 
 @media (min-width:1024px) {
-    .active_tab {
+    .active_tab, .inactive_tab,
+    .active_content, .inactive_content {
         font-size: 1.5vw;
     }
 }
 
 @media (min-width:1440px) {
-    .active_tab {
+    .active_tab, .inactive_tab,
+    .active_content, .inactive_content {
         font-size: 1.1vw;
     }
 }
 
 .inactive_tab {
     padding: 5px 10px;
-    font-size: 1.1vw;
-}
-
-@media (min-width:768px) {
-    .inactive_tab {
-        font-size: 1.8vw;
-    }
-}
-
-@media (min-width:1024px) {
-    .inactive_tab {
-        font-size: 1.5vw;
-    }
-}
-
-@media (min-width:1440px) {
-    .inactive_tab {
-        font-size: 1.1vw;
-    }
 }
 
 .active_content {
     display: inline;
-    font-size: 1.5vw;
 }
 
 .inactive_content {
