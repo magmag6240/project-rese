@@ -88,6 +88,7 @@
         </table>
         <button class="information-create-button" type="submit">新規作成</button>
     </form>
+    <a class="create-csv-link" href="{{ route('shop_manager.csv') }}">csvファイルからの新規登録はこちらから</a>
 </div>
 
 @endsection

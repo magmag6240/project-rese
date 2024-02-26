@@ -76,4 +76,33 @@ class Shop extends Model
         }
     }
 
+    public function csvHeader()
+    {
+        return [
+            'shop_name',
+            'shop_manager_id',
+            'prefecture_id',
+            'genre_id',
+            'shop_detail',
+            'image_url'
+        ];
+    }
+
+    public function getCsvData()
+    {
+        $data = DB::table('shops')->get();
+        return $data;
+    }
+
+    public function insertRow($row)
+    {
+        return [
+            $row->shop_name,
+            $row->shop_manager_id,
+            $row->prefecture_id,
+            $row->genre_id,
+            $row->shop_detail,
+            $row->image_url
+        ];
+    }
 }

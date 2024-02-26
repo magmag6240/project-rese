@@ -1,0 +1,331 @@
+
+.shop-manager-csv-content {
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0.2vw 0.2vw 0.2vw 0.1vw #808080;
+    background-color: #4169E1;
+}
+
+@media (min-width:320px) {
+    .shop-manager-csv-content {
+        width: 90vw;
+        padding: 1.9vw 0;
+        margin: 20vw 0;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-manager-csv-content {
+        margin: 17vw 0;
+    }
+}
+
+@media (min-width:768px) {
+    .shop-manager-csv-content {
+        width: 80vw;
+        margin: 8vw 0;
+        padding: 2vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manager-csv-content {
+        width: 75vw;
+        margin: 5vw 0;
+        padding: 2vw 0;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manager-csv-content {
+        width: 70vw;
+        margin: 1.5vw 0;
+        padding: 2vw 0;
+    }
+}
+
+.shop-create-title {
+    display: flex;
+    background-color: #4169E1;
+    align-self: center;
+    position: relative;
+}
+
+.shop-create-title-text {
+    font-weight: bold;
+    color: #fff;
+    background-color: #4169E1;
+}
+
+@media (min-width:320px) {
+    .shop-create-title-text {
+        font-size: 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-create-title-text{
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:768px) {
+    .shop-create-title-text {
+        font-size: 2.8vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-create-title-text {
+        font-size: 2.1vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-create-title-text {
+        font-size: 1.7vw;
+    }
+}
+
+@media (min-width:320px) {
+    .file-input {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width:375px) {
+    .file-input {
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width:425px) {
+    .file-input {
+        font-size: 3.3vw;
+    }
+}
+
+@media (min-width:768px) {
+    .file-input {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .file-input {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .file-input {
+        font-size: 1.2vw;
+    }
+}
+
+.shop-manager-button {
+    position: absolute;
+    border: none;
+    border-radius: 5px;
+    background-color: #E0FFFF;
+}
+
+@media (min-width:320px) {
+    .shop-manager-button {
+        top: 4vw;
+        left: -10vw;
+        height: 6.3vw;
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .shop-manager-button {
+        top: 3.8vw;
+        height: 6vw;
+        font-size: 4.3vw;
+    }
+}
+
+@media (min-width:425px) {
+    .shop-manager-button {
+        top: 3.7vw;
+        left: -9vw;
+        height: 5.5vw;
+        font-size: 3.8vw;
+    }
+}
+
+@media (min-width:768px) {
+    .shop-manager-button {
+        top: 2.1vw;
+        left: -6vw;
+        height: 3.3vw;
+        font-size: 2.8vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .shop-manager-button {
+        top: 1.6vw;
+        left: -5vw;
+        height: 2.5vw;
+        font-size: 2.1vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .shop-manager-button {
+        top: 1.3vw;
+        left: -4vw;
+        height: 2vw;
+        font-size: 1.7vw;
+    }
+}
+
+.shop-manager-home-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.create-form, .message {
+    background-color: #4169E1;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-input {
+    background-color: #41a1e1;
+}
+
+.message {
+    position: relative;
+    display: block;
+    align-self: center;
+    width: fit-content;
+    color: #f00;
+    background-color: #FFFACD;
+    border-radius: 5px;
+}
+
+@media (min-width:320px) {
+    .message {
+        font-size: 3.5vw;
+        padding: 0 1vw;
+        margin: 5vw 0;
+    }
+}
+
+@media (min-width:375px) {
+    .message {
+        font-size: 3.2vw;
+    }
+}
+
+@media (min-width:425px) {
+    .message {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width:768px) {
+    .message {
+        font-size: 1.6vw;
+        margin: 3vw 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .message {
+        font-size: 1.3vw;
+        padding: 0 0.7vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .message {
+        font-size: 1vw;
+        padding: 0 0.5vw;
+    }
+}
+
+@media (min-width:320px) {
+    .file-input {
+        padding: 3vw;
+        text-align: center;
+        align-self: center;
+        width: 90%;
+    }
+}
+
+@media (min-width:768px) {
+    .file-input {
+        padding: 1vw 5vw;
+        width: 70%;
+    }
+}
+
+@media (min-width:1024px) {
+    .file-input {
+        width: 65%;
+    }
+}
+
+.information-create-button {
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+    color: #fff;
+    background-color: #0000ff;
+}
+
+@media (min-width:320px) {
+    .information-create-button {
+        font-size: 4vw;
+        padding: 1vw 2vw;
+        margin-top: 2vw;
+        margin-bottom: 5vw;
+    }
+}
+
+@media (min-width:375px) {
+    .information-create-button {
+        font-size: 3.7vw;
+        margin-bottom: 4vw;
+    }
+}
+
+@media (min-width:425px) {
+    .information-create-button {
+        font-size: 3.3vw;
+    }
+}
+
+@media (min-width:768px) {
+    .information-create-button {
+        font-size: 1.9vw;
+        margin-top: 2vw;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:1024px) {
+    .information-create-button {
+        font-size: 1.5vw;
+        padding: 0.7vw 1.4vw;
+        margin-top: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .information-create-button {
+        font-size: 1.2vw;
+        padding: 0.5vw 1vw;
+        margin-top: 1vw;
+    }
+}
+

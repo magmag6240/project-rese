@@ -52,7 +52,7 @@
     position: relative;
 }
 
-.shop-create-title-text {
+.shop-create-title-text, .create-csv-link {
     font-weight: bold;
     color: #fff;
     background-color: #4169E1;
@@ -85,6 +85,39 @@
 @media (min-width:1440px) {
     .shop-create-title-text {
         font-size: 1.7vw;
+    }
+}
+
+@media (min-width:320px) {
+    .create-csv-link {
+        font-size: 4.3vw;
+        text-decoration: none;
+        padding: 7vw;
+    }
+}
+
+@media (min-width:375px) {
+    .create-csv-link {
+        font-size: 3.7vw;
+    }
+}
+
+@media (min-width:768px) {
+    .create-csv-link {
+        font-size: 2vw;
+        padding: 3vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .create-csv-link {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width:1440px) {
+    .create-csv-link {
+        font-size: 1.3vw;
     }
 }
 

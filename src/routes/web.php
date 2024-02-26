@@ -9,6 +9,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\MyPageController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ShopManager\CsvController;
 use App\Http\Controllers\ShopManager\ShopManagerController;
 use App\Http\Controllers\ShopManager\ShopManagerLoginController;
 use App\Http\Controllers\ShopManager\ShopManagerMailController;
@@ -56,6 +57,8 @@ Route::prefix('shop_manager')->group(function () {
 
     Route::middleware('auth:shop_manager')->group(function () {
         Route::get('/', [ShopManagerController::class, 'index']);
+        Route::get('/csv_import', [CsvController::class, 'import'])->name('shop_manager.csv');
+        Route::post('/csv_import', [CsvController::class, 'upload'])->name('shop_manager.csv.post');
         Route::get('/new', [ShopManagerController::class, 'new'])->name('shop_manager.new');
         Route::post('/store', [ShopManagerController::class, 'store'])->name('shop_manager.store');
         Route::get('/shop_list', [ShopManagerController::class, 'shop_list'])->name('shop_manager.shop_list');

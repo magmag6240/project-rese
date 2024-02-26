@@ -531,10 +531,10 @@
 
 @media (min-width:1024px) {
     .like-shop {
-        width: 56vw;
+        width: 50vw;
         position: absolute;
         top: 0;
-        left: 45vw;
+        left: 50vw;
     }
 }
 

@@ -24,7 +24,7 @@ class ShopRequest extends FormRequest
     public function rules()
     {
         return [
-            'shop_name' => ['required', 'string', 'max:191'],
+            'shop_name' => ['required', 'string', 'max:50'],
             'prefecture_id' => ['required', 'numeric', 'max:47'],
             'genre_id' => ['required', 'numeric'],
             'shop_detail' => ['required', 'string'],
