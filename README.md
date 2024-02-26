@@ -4,7 +4,7 @@
 
 【イメージ】
 
-<img width="743" alt="home" src="https://github.com/magmag6240/project-rese/assets/139316621/a1b39103-a7da-495b-aac1-79a6c5fc3b76">
+<img width="743" alt="home" src="Rese.png">
 
 
 
